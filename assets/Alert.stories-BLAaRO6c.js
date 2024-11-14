@@ -1,0 +1,30 @@
+import{j as t}from"./jsx-runtime-DR9Q75dM.js";import{r as m}from"./index-DRjF_FHU.js";import{c as f}from"./index-DEHCCq9W.js";import{B as n}from"./SVpyu8SL-kb1JahyB.js";import{o as S}from"./Close-ycDl8qzo.js";import{o as W}from"./Error-8rQN8J_B.js";import{o as R}from"./Info-Dq1_dlTC.js";import{c as V}from"./index-Bb4qSo10.js";const $=({title:e,titleId:r,...a})=>n.jsxs("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 18 18",fill:"currentColor",width:"1.125rem",height:"1.125rem","aria-labelledby":r,...a,children:[e?n.jsx("title",{id:r,children:e}):null,n.jsx("path",{d:"M8.044 9.787 6.919 8.681a.65.65 0 0 0-.469-.206.65.65 0 0 0-.469.206.656.656 0 0 0 0 .956l1.594 1.594a.65.65 0 0 0 .469.207.65.65 0 0 0 .468-.207l3.507-3.506a.656.656 0 0 0 0-.956.65.65 0 0 0-.469-.207.65.65 0 0 0-.469.207zM9 16.2a7 7 0 0 1-2.794-.562A7.3 7.3 0 0 1 3.91 14.09a7.3 7.3 0 0 1-1.547-2.297A7 7 0 0 1 1.8 9q0-1.5.562-2.803a7.257 7.257 0 0 1 3.844-3.834A7 7 0 0 1 9 1.8q1.5 0 2.803.562a7.29 7.29 0 0 1 3.834 3.835Q16.2 7.5 16.2 9q0 1.481-.562 2.794a7.26 7.26 0 0 1-3.835 3.843A7 7 0 0 1 9 16.2"})]}),k=({title:e,titleId:r,...a})=>n.jsxs("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 18 18",fill:"currentColor",width:"1.125rem",height:"1.125rem","aria-labelledby":r,...a,children:[e?n.jsx("title",{id:r,children:e}):null,n.jsx("path",{d:"m9 9.956 2.175 2.175a.62.62 0 0 0 .478.197.7.7 0 0 0 .478-.215.656.656 0 0 0 0-.956L9.956 8.991l2.175-2.167a.654.654 0 0 0 0-.955.656.656 0 0 0-.956 0L9 8.044 6.825 5.869a.65.65 0 0 0-.469-.207.65.65 0 0 0-.469.207.656.656 0 0 0-.001.956L8.044 9l-2.175 2.175a.61.61 0 0 0-.197.469.68.68 0 0 0 .215.469.656.656 0 0 0 .955.001zm.005 6.244a7 7 0 0 1-2.799-.562A7.3 7.3 0 0 1 3.91 14.09a7.3 7.3 0 0 1-1.547-2.296A7 7 0 0 1 1.8 8.99q0-1.49.562-2.794a7.26 7.26 0 0 1 3.843-3.834A7 7 0 0 1 9.01 1.8q1.49 0 2.794.562a7.29 7.29 0 0 1 3.834 3.839q.563 1.308.563 2.794a7 7 0 0 1-.562 2.799 7.26 7.26 0 0 1-3.839 3.843 7 7 0 0 1-2.794.563"})]}),E=V("relative flex flex-row items-center rounded-md px-4 py-3 text-sm",{variants:{variant:{information:"bg-neutral-150",confirmation:"bg-success",warning:"bg-warning",error:"bg-error"}},defaultVariants:{variant:"information"}}),h={information:"text-neutral-600",confirmation:"text-success-action",warning:"text-warning-action",error:"text-error-action"},I={information:t.jsx(R,{width:24,height:24}),confirmation:t.jsx($,{width:24,height:24}),warning:t.jsx(W,{width:24,height:24}),error:t.jsx(k,{width:24,height:24})},d=m.forwardRef(({className:e,variant:r="information",onClose:a,children:p,...q},B)=>t.jsxs("div",{ref:B,role:"alert",className:f(E({variant:r}),e),...q,children:[t.jsx("div",{className:`mr-4 flex items-center ${h[r]}`,children:I[r]}),t.jsx("div",{children:p}),a&&t.jsx(S,{width:24,height:24,className:`ml-4 flex self-start cursor-pointer ${h[r]}`,onClick:a,role:"button"})]}));d.displayName="Alert";const _=m.forwardRef(({className:e,...r},a)=>t.jsx("h5",{ref:a,className:f("my-0 text-lg",e),...r}));_.displayName="AlertTitle";const N=m.forwardRef(({className:e,...r},a)=>t.jsx("div",{ref:a,className:f("text-sm [&_p]:leading-relaxed",e),...r}));N.displayName="AlertDescription";const o=Object.assign(d,{Title:_,Description:N});try{d.displayName="Alert",d.__docgenInfo={description:"Component that displays an alert to draw attention, supports multiple variants.",displayName:"Alert",props:{onClose:{defaultValue:null,description:`Optional callback function that is triggered when the alert's close button is clicked.
+Can be used to remove or hide the alert from the view.`,name:"onClose",required:!1,type:{name:"(() => void)"}},variant:{defaultValue:{value:"information"},description:`variants for the different types of alerts
+information, confirmation, warning, error`,name:"variant",required:!1,type:{name:"enum",value:[{value:'"information"'},{value:'"confirmation"'},{value:'"warning"'},{value:'"error"'}]}}}}}catch{}const J={component:o,argTypes:{variant:{control:{type:"select",options:["information","confirmation","warning","error"]}}},decorators:[(e,{args:r})=>{const[a,p]=m.useState(!0);return r.onClose&&(r.onClose=()=>p(!1)),t.jsx(t.Fragment,{children:a&&t.jsx(e,{...r})})}]},i={args:{variant:"information"},render:e=>t.jsx(o,{...e,children:t.jsx(o.Description,{children:"Boodschap van alert."})})},s={args:{variant:"information"},render:e=>t.jsxs(o,{...e,children:[t.jsx(o.Title,{children:"Custom title"}),t.jsx(o.Description,{children:"Boodschap van alert."})]})},l={args:{variant:"information",onClose:()=>alert("Alert closed!")},render:i.render},c={args:{variant:"information",onClose:()=>alert("Alert closed!")},render:s.render};var u,g,x;i.parameters={...i.parameters,docs:{...(u=i.parameters)==null?void 0:u.docs,source:{originalSource:`{
+  args: {
+    variant: "information"
+  },
+  render: args => <Alert {...args}>
+      <Alert.Description>Boodschap van alert.</Alert.Description>
+    </Alert>
+}`,...(x=(g=i.parameters)==null?void 0:g.docs)==null?void 0:x.source}}};var v,w,A;s.parameters={...s.parameters,docs:{...(v=s.parameters)==null?void 0:v.docs,source:{originalSource:`{
+  args: {
+    variant: "information"
+  },
+  render: args => <Alert {...args}>
+      <Alert.Title>Custom title</Alert.Title>
+      <Alert.Description>Boodschap van alert.</Alert.Description>
+    </Alert>
+}`,...(A=(w=s.parameters)==null?void 0:w.docs)==null?void 0:A.source}}};var j,C,b;l.parameters={...l.parameters,docs:{...(j=l.parameters)==null?void 0:j.docs,source:{originalSource:`{
+  args: {
+    variant: "information",
+    onClose: () => alert("Alert closed!")
+  },
+  render: Default.render
+}`,...(b=(C=l.parameters)==null?void 0:C.docs)==null?void 0:b.source}}};var y,D,T;c.parameters={...c.parameters,docs:{...(y=c.parameters)==null?void 0:y.docs,source:{originalSource:`{
+  args: {
+    variant: "information",
+    onClose: () => alert("Alert closed!")
+  },
+  render: WithTitle.render
+}`,...(T=(D=c.parameters)==null?void 0:D.docs)==null?void 0:T.source}}};const K=["Default","WithTitle","Closeable","CloseableWithTitle"];export{l as Closeable,c as CloseableWithTitle,i as Default,s as WithTitle,K as __namedExportsOrder,J as default};

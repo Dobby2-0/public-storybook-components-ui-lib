@@ -1,0 +1,1 @@
+import{R as a,r as n}from"./index-DRjF_FHU.js";const r=n.createContext({});function i(e){let{getContainer:t}=e,{getContainer:o}=c();return a.createElement(r.Provider,{value:{getContainer:t===null?null:t??o}},e.children)}function c(){var e;return(e=n.useContext(r))!==null&&e!==void 0?e:{}}export{i as $,c as a};
