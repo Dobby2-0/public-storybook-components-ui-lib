@@ -4,4 +4,4 @@ import { ClassValue } from 'clsx';
  */
 export declare const cn: (...inputs: ClassValue[]) => string;
 export declare const capitalize: (value: string) => string;
-export declare const getClassName: (value: string | ((selected: boolean) => string) | undefined, selected?: boolean) => string;
+export declare const getClassName: <T>(className: string | ((value?: T) => string) | undefined, value?: T) => string;
