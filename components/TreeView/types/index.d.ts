@@ -8,15 +8,17 @@ export interface TreeItem {
     };
     className?: string;
     children?: TreeItem[] | ReactNode;
-    onClick?: (item: TreeItem) => void;
+    onClick?: (item: TreeItem, selected: TreeItemState["selected"]) => void;
 }
 export interface TreeItemState {
-    parents: string[];
-    children: string[];
+    /** IDs of ALL parent items */
+    parents: TreeItem["id"][];
+    /** IDs of ALL children items */
+    children: TreeItem["id"][];
     selected: boolean | "indeterminate";
     expanded: boolean;
 }
-export type TreeItemStateRecord = Record<TreeItem["id"], TreeItemState>;
+export type TreeViewState = Record<TreeItem["id"], TreeItemState>;
 export interface TreeViewClassNameObject {
     base?: string;
     branch?: string | ((selected?: TreeItemState["selected"]) => string);
@@ -31,6 +33,10 @@ export interface TreeViewDefaultIcons {
     /** Default icon for child elements */
     leaf?: ReactNode;
 }
+export type TreeViewSelection = Record<TreeItem["id"], {
+    item: TreeItem;
+    selected: TreeItemState["selected"];
+}>;
 export interface TreeViewProps {
     /** Selection mode for the entire tree */
     selectionMode?: "focus" | "checkbox";
@@ -43,7 +49,7 @@ export interface TreeViewProps {
     /** List of IDs of the items that should initially be selected, nodes will expand so the item is visible */
     defaultSelection?: TreeItem["id"] | TreeItem["id"][];
     /** function called when an item is selected */
-    onSelectionChange?: (selectionState: Record<TreeItem["id"], TreeItemState["selected"]>) => void;
+    onSelectionChange?: (selectionState: TreeViewSelection, trigger: TreeItem) => void;
     /** Object specifying the default icons to use */
     defaultIcons?: TreeViewDefaultIcons;
     /** Should the arrow trigger icon be hidden. Will be automatically hidden when asPopover is set to true */

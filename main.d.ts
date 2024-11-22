@@ -23,4 +23,4 @@ export { Switch } from './components/Switch/Switch';
 export { Table, type ColumnDefinition, type SortDescriptor, type TableProps, } from './components/Table/Table';
 export { Tabs } from './components/Tabs/Tabs';
 export { TextField } from './components/TextField/TextField';
-export { TreeView, type TreeItem } from './components/TreeView/TreeView.tsx';
+export { TreeView, type TreeItem, type TreeViewSelection, } from './components/TreeView/TreeView.tsx';
