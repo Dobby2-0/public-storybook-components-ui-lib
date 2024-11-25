@@ -2,7 +2,7 @@ import { VariantProps } from 'class-variance-authority';
 import { ReactNode } from '../../../node_modules/react';
 import { ButtonBaseProps } from './ButtonBase.tsx';
 declare const buttonVariants: (props?: ({
-    size?: "default" | "sm" | null | undefined;
+    size?: "sm" | "default" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
 interface ButtonProps extends ButtonBaseProps, VariantProps<typeof buttonVariants> {
     /**

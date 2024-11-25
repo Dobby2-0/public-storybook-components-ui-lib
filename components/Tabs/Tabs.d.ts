@@ -1,12 +1,14 @@
-import { ReactNode } from '../../../node_modules/react';
+import { ComponentPropsWithoutRef, ReactNode } from '../../../node_modules/react';
 import { TabsProps as AriaTabsProps } from 'react-aria-components';
+import { Pill } from '../Pill/Pill';
 interface TabItem {
     id: string;
     label: ReactNode;
     content: ReactNode;
-    labelSuffix?: ReactNode;
+    badge?: ReactNode;
+    badgeProps?: ComponentPropsWithoutRef<typeof Pill>;
 }
-interface TabsComponentProps extends Omit<AriaTabsProps, "children"> {
+interface TabsProps extends Omit<AriaTabsProps, "children"> {
     /**
      *  Array of items to be rendered as tabs
      */
@@ -21,7 +23,6 @@ interface TabsComponentProps extends Omit<AriaTabsProps, "children"> {
  *     id: "1",
  *     label: "Tab 1",
  *     content: "Content for Tab 1",
- *     pill: {children: "6"},
  *   },
  *   {
  *     id: "2",
@@ -31,5 +32,6 @@ interface TabsComponentProps extends Omit<AriaTabsProps, "children"> {
  * ]
  * <Tabs items={items} />
  */
-declare const Tabs: import('../../../node_modules/react').ForwardRefExoticComponent<TabsComponentProps & import('../../../node_modules/react').RefAttributes<HTMLDivElement>>;
+declare const Tabs: import('../../../node_modules/react').ForwardRefExoticComponent<TabsProps & import('../../../node_modules/react').RefAttributes<HTMLDivElement>>;
 export { Tabs };
+export type { TabItem };

@@ -14,10 +14,9 @@ export declare const TreeViewContext: import('../../../../node_modules/react').C
     classNames?: TreeViewClassNameObject;
     asPopover?: boolean | undefined;
     defaultIcons?: import('../types').TreeViewDefaultIcons | undefined;
-    forceRootIcons?: boolean | undefined;
     hideTriggerIcon?: boolean | undefined;
 } | null>;
-interface TreeViewContextValueProps extends Pick<TreeViewProps, "asPopover" | "defaultExpanded" | "defaultIcons" | "defaultSelection" | "forceRootIcons" | "hideTriggerIcon" | "items" | "onSelectionChange" | "selectionMode"> {
+interface TreeViewContextValueProps extends Pick<TreeViewProps, "asPopover" | "defaultExpanded" | "defaultIcons" | "defaultSelection" | "hideTriggerIcon" | "items" | "onSelectionChange" | "selectionMode"> {
     classNames?: TreeViewClassNameObject;
 }
 export declare const useTreeViewContextValue: ({ items, selectionMode, defaultSelection, defaultExpanded, onSelectionChange, ...otherProps }: TreeViewContextValueProps) => {
@@ -33,7 +32,6 @@ export declare const useTreeViewContextValue: ({ items, selectionMode, defaultSe
     classNames?: TreeViewClassNameObject;
     asPopover?: boolean | undefined;
     defaultIcons?: import('../types').TreeViewDefaultIcons | undefined;
-    forceRootIcons?: boolean | undefined;
     hideTriggerIcon?: boolean | undefined;
 };
 export {};
