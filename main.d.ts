@@ -7,7 +7,7 @@ export { BulkActions } from './components/BulkActions/BulkActions';
 export { Button } from './components/Button/Button';
 export { IconButton } from './components/Button/IconButton';
 export { Card } from './components/Card/Card';
-export { Checkbox } from './components/Checkbox/Checkbox';
+export { Checkbox, CheckboxGroup } from './components/Checkbox/Checkbox';
 export { ComboBox } from './components/ComboBox/ComboBox';
 export { Divider } from './components/Divider/Divider';
 export { DobbyContextProvider } from './components/DobbyContextProvider/DobbyContextProvider.tsx';
