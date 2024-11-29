@@ -18,6 +18,7 @@ export { Modal } from './components/Modal/Modal';
 export { Pagination } from './components/Pagination/Pagination';
 export { Pill } from './components/Pill/Pill';
 export { Popover } from './components/Popover/Popover';
+export { RadioGroup } from './components/RadioGroup/RadioGroup';
 export { Select } from './components/Select/Select';
 export { Switch } from './components/Switch/Switch';
 export { Table, type ColumnDefinition, type SortDescriptor, type TableProps, } from './components/Table/Table';
