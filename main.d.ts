@@ -1,5 +1,5 @@
 export * from './hooks';
-export { cn } from './utils';
+export { cn, localizeCurrency } from './utils';
 export { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from './components/Accordion/Accordion';
 export { Alert } from './components/Alert/Alert';
 export { Breadcrumbs } from './components/Breadcrumbs/Breadcrumbs';
