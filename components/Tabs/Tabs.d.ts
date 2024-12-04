@@ -9,10 +9,12 @@ interface TabItem {
     badgeProps?: ComponentPropsWithoutRef<typeof Pill>;
 }
 interface TabsProps extends Omit<AriaTabsProps, "children"> {
-    /**
-     *  Array of items to be rendered as tabs
-     */
+    /** Array of items to be rendered as tabs */
     items: TabItem[];
+    /** */
+    prefix?: ReactNode;
+    /** */
+    suffix?: ReactNode;
 }
 /**
  * Tabs component for displaying a set of tabs that can switch between different content panels.

@@ -2,7 +2,7 @@ import { VariantProps } from 'class-variance-authority';
 import { SelectProps as AriaSelectProps, ValidationResult as AriaValidationResult } from 'react-aria-components';
 import { ListItemWithId } from '../ListBox/ListBox.tsx';
 declare const selectVariants: (props?: ({
-    variant?: "default" | "contrast" | null | undefined;
+    variant?: "default" | "borderless" | "contrast" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
 interface ClassNameObject {
     base?: string;
