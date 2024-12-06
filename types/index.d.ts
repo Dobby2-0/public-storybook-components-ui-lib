@@ -11,4 +11,5 @@ export interface DobbyContextValue {
      */
     getContainer: () => HTMLElement | null;
     breakpoints: typeof breakpoints;
+    navigate: (to: string | number, state?: unknown) => void;
 }

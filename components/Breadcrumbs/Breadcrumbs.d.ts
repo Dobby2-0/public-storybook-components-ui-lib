@@ -27,3 +27,4 @@ interface BreadcrumbEllipsesItem {
 declare const Breadcrumbs: ({ items, separator, ...props }: BreadcrumbsProps) => import("react/jsx-runtime").JSX.Element;
 declare const BreadcrumbItem: ({ className, ...props }: AriaBreadcrumbProps) => import("react/jsx-runtime").JSX.Element;
 export { Breadcrumbs };
+export type { BreadcrumbItem };

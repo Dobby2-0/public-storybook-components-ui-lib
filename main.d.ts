@@ -2,7 +2,7 @@ export * from './hooks';
 export { cn, localizeCurrency } from './utils';
 export { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from './components/Accordion/Accordion';
 export { Alert } from './components/Alert/Alert';
-export { Breadcrumbs } from './components/Breadcrumbs/Breadcrumbs';
+export { Breadcrumbs, type BreadcrumbItem, } from './components/Breadcrumbs/Breadcrumbs';
 export { BulkActions } from './components/BulkActions/BulkActions';
 export { Button } from './components/Button/Button';
 export { IconButton } from './components/Button/IconButton';
