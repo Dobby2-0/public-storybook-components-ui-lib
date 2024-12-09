@@ -1,1 +1,0 @@
-import{r as o}from"./index-DRjF_FHU.js";const s={getContainer:()=>document.body,breakpoints:{sm:640,md:768,lg:1024,xl:1280,"2xl":1536},navigate:(t,e)=>{typeof t=="string"?history.pushState(e,"",t):history.go(t)}},r=o.createContext(s);export{r as D,s as d};
