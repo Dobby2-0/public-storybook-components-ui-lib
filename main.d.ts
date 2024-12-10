@@ -9,6 +9,7 @@ export { IconButton } from './components/Button/IconButton';
 export { Card } from './components/Card/Card';
 export { Checkbox, CheckboxGroup } from './components/Checkbox/Checkbox';
 export { ComboBox } from './components/ComboBox/ComboBox';
+export { DetailPageHeader } from './components/DetailPageHeader/DetailPageHeader';
 export { Divider } from './components/Divider/Divider';
 export { DobbyContextProvider } from './components/DobbyContextProvider/DobbyContextProvider.tsx';
 export { DropdownMenu } from './components/DropdownMenu/DropdownMenu';
