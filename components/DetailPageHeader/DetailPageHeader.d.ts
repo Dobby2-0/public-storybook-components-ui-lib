@@ -2,11 +2,11 @@ import { ReactNode } from '../../../node_modules/react';
 interface DetailPageHeaderProps {
     /** Title to be shown in the header.
      *
-     * Will not be displayed wehn children are set. */
+     * Will not be displayed when children are set. */
     title?: ReactNode;
     /** Subtitle to be shown in the header.
      *
-     * Will not be displayed wehn children are set. */
+     * Will not be displayed when children are set. */
     subtitle?: ReactNode;
     /** The CSS className for the element. */
     className?: string;
