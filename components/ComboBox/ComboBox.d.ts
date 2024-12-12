@@ -1,6 +1,8 @@
+import { dropdownInputVariants } from '../../styles/variants.ts';
+import { VariantProps } from 'class-variance-authority';
 import { ComboBoxProps as AriaComboBoxProps, InputProps as AriaInputProps, ValidationResult as AriaValidationResult } from 'react-aria-components';
 import { ListItemWithId } from '../ListBox/ListBox';
-interface ComboBoxProps<T extends object> extends Omit<AriaComboBoxProps<T>, "children" | "items"> {
+interface ComboBoxProps<T extends object> extends Omit<AriaComboBoxProps<T>, "children" | "items">, VariantProps<typeof dropdownInputVariants> {
     label?: string;
     placeholder?: AriaInputProps["placeholder"];
     description?: string | null;
@@ -12,5 +14,5 @@ interface ComboBoxProps<T extends object> extends Omit<AriaComboBoxProps<T>, "ch
  *
  * Based on `React-aria-components`
  */
-declare const ComboBox: <T extends object>({ label, placeholder, description, className, items, menuTrigger, ...props }: ComboBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const ComboBox: <T extends object>({ label, placeholder, description, variant, className, items, menuTrigger, ...props }: ComboBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { ComboBox };
