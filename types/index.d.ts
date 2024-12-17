@@ -1,4 +1,5 @@
 import { breakpoints } from '@dobby2-0/styleguide';
+import { default as i18next } from 'i18next';
 /**
  * Removes `null` as a possible value from all properties of an object.
  */
@@ -28,5 +29,9 @@ export interface DobbyContextValue {
      * The navigate function to use internally and expose through the useDobbyContext hook, to keep everything consistent across apps
      */
     navigate: (to: string | number, options?: NavigateOptions) => void;
+    /**
+     * The i18next instance to use for translations
+     */
+    i18nextInstance?: typeof i18next;
 }
 export {};
