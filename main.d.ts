@@ -26,3 +26,4 @@ export { Table, type ColumnDefinition, type SortDescriptor, type TableProps, } f
 export { Tabs, type TabItem } from './components/Tabs/Tabs';
 export { TextField } from './components/TextField/TextField';
 export { TreeView, type TreeItem, type TreeViewSelection, } from './components/TreeView/TreeView.tsx';
+export { Upload } from './components/Upload/Upload';
