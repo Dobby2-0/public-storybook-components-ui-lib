@@ -1,21 +1,19 @@
 import { ReactNode } from '../../../node_modules/react';
 import { BreadcrumbProps as AriaBreadcrumbProps, BreadcrumbsProps as AriaBreadcrumbsProps } from 'react-aria-components';
-interface BreadcrumbsProps extends Omit<AriaBreadcrumbsProps<BreadcrumbItem | BreadcrumbEllipsesItem>, "children"> {
+interface BreadcrumbsProps extends Omit<AriaBreadcrumbsProps<BreadcrumbItem | "ellipsis">, "children"> {
     /**
      * Array of items used to build the hierarchy
      */
-    items: (BreadcrumbItem | BreadcrumbEllipsesItem)[];
+    items: (BreadcrumbItem | "ellipsis")[];
     /**
      * Optional parameter to overwrite the default `<ChevronForward/>` icon used to separate items
      */
     separator?: ReactNode;
 }
 interface BreadcrumbItem {
-    label: string;
+    id: string;
+    label: ReactNode;
     url?: string;
-}
-interface BreadcrumbEllipsesItem {
-    ellipses: true;
 }
 /**
  * Breadcrumb component to display hierarchical order of parent items leading to current item.
