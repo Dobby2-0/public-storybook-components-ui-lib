@@ -10,6 +10,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
     onCancelEditing?: () => void;
     /** Function called when the user wants to save the changes made */
     onSaveChanges?: () => void;
+    editButtonText?: string;
 }
 declare const Card: import('../../../node_modules/react').ForwardRefExoticComponent<CardProps & import('../../../node_modules/react').RefAttributes<HTMLDivElement>>;
 export { Card };
