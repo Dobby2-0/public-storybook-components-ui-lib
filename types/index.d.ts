@@ -39,6 +39,15 @@ export interface CollectionItem {
     id: string;
     label: ReactNode;
 }
+/** Universal Address type, used in multiple API's */
+export interface Address {
+    street?: string;
+    number?: string;
+    box?: string;
+    postalCode?: string;
+    city?: string;
+    country?: string;
+}
 export type ResolverFunction<T, U> = (item: T) => U;
 export type FieldResolver<T, U> = keyof T | ResolverFunction<T, U>;
 export type ResolverFunctionWithProps<T, U, V> = (item: T, extraProps: V) => U;
