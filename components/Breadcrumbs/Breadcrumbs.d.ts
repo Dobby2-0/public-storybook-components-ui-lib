@@ -1,3 +1,4 @@
+import { CollectionItem } from '../../types';
 import { ReactNode } from '../../../node_modules/react';
 import { BreadcrumbProps as AriaBreadcrumbProps, BreadcrumbsProps as AriaBreadcrumbsProps } from 'react-aria-components';
 interface BreadcrumbsProps extends Omit<AriaBreadcrumbsProps<BreadcrumbItem | "ellipsis">, "children"> {
@@ -10,9 +11,7 @@ interface BreadcrumbsProps extends Omit<AriaBreadcrumbsProps<BreadcrumbItem | "e
      */
     separator?: ReactNode;
 }
-interface BreadcrumbItem {
-    id: string;
-    label: ReactNode;
+interface BreadcrumbItem extends CollectionItem {
     url?: string;
 }
 /**

@@ -1,5 +1,6 @@
+import { CollectionItem } from '../../types';
 import { Content, DropdownMenuProps as DropdownMenuBaseProps, Item } from '@radix-ui/react-dropdown-menu';
-import { ComponentPropsWithoutRef, ReactNode } from '../../../node_modules/react';
+import { ComponentPropsWithoutRef } from '../../../node_modules/react';
 interface DropdownMenuProps extends Omit<DropdownMenuBaseProps, "onOpenChange"> {
     /** Array of items used to build the hierarchy */
     items: (MenuItem | MenuSeparator)[];
@@ -12,9 +13,7 @@ interface DropdownMenuProps extends Omit<DropdownMenuBaseProps, "onOpenChange"> 
     /** Whether to remove the radius on the floating end of the content on the side of the trigger */
     alignContentBorder?: boolean;
 }
-interface MenuItem {
-    id: string;
-    label: ReactNode;
+interface MenuItem extends CollectionItem {
     onClick?: DropdownMenuItemProps["onClick"];
     children?: (MenuItem | MenuSeparator)[];
 }

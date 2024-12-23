@@ -1,9 +1,8 @@
+import { CollectionItem } from '../../types';
 import { ComponentPropsWithoutRef, ReactNode } from '../../../node_modules/react';
 import { TabsProps as AriaTabsProps } from 'react-aria-components';
 import { Pill } from '../Pill/Pill';
-interface TabItem {
-    id: string;
-    label: ReactNode;
+interface TabItem extends CollectionItem {
     content: ReactNode;
     badge?: ReactNode;
     badgeProps?: ComponentPropsWithoutRef<typeof Pill>;

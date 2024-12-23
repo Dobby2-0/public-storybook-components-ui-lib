@@ -1,5 +1,6 @@
 import { breakpoints } from '@dobby2-0/styleguide';
 import { default as i18next } from 'i18next';
+import { ReactNode } from '../../node_modules/react';
 /**
  * Removes `null` as a possible value from all properties of an object.
  */
@@ -34,4 +35,12 @@ export interface DobbyContextValue {
      */
     i18nextInstance?: typeof i18next;
 }
+export interface CollectionItem {
+    id: string;
+    label: ReactNode;
+}
+export type ResolverFunction<T, U> = (item: T) => U;
+export type FieldResolver<T, U> = keyof T | ResolverFunction<T, U>;
+export type ResolverFunctionWithProps<T, U, V> = (item: T, extraProps: V) => U;
+export type FieldResolverWithProps<T, U, V> = keyof T | ResolverFunctionWithProps<T, U, V>;
 export {};
