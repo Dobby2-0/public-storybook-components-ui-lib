@@ -19,6 +19,10 @@ export interface TreeItemState {
     expanded: boolean;
 }
 export type TreeViewState = Record<TreeItem["id"], TreeItemState>;
+export interface TreeViewData {
+    flatItems: Record<TreeItem["id"], TreeItem>;
+    state: TreeViewState;
+}
 export interface TreeViewClassNameObject {
     base?: string;
     branch?: string | ((selected?: TreeItemState["selected"]) => string);
