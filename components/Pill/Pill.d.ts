@@ -2,7 +2,7 @@ import { ExcludeNull } from '../../types';
 import { VariantProps } from 'class-variance-authority';
 import { HTMLAttributes, PropsWithChildren, ReactElement, SVGAttributes } from '../../../node_modules/react';
 declare const pillVariants: (props?: ({
-    variant?: "warning" | "error" | "contrast" | "success" | "info" | "highlight" | "active" | "info-alt" | null | undefined;
+    variant?: "warning" | "error" | "accent" | "contrast" | "info-1" | "info-2" | "info-3" | "info-4" | "success" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
 export interface PillProps extends HTMLAttributes<HTMLDivElement>, ExcludeNull<VariantProps<typeof pillVariants>>, PropsWithChildren {
     /**
