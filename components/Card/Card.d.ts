@@ -3,7 +3,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
     /** Optional heading element for the panel */
     heading?: ReactNode;
     /** Should the edit button be shown */
-    showEditButton?: boolean;
+    enableEditing?: boolean;
     /** Sets the initial state of the component for editing */
     defaultEditing?: boolean;
     /** Function called when the editing state changes */
