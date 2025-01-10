@@ -16,6 +16,7 @@ export { DobbyContextProvider } from './components/DobbyContextProvider/DobbyCon
 export { DropdownMenu } from './components/DropdownMenu/DropdownMenu';
 export { List } from './components/List/List';
 export { ListBox } from './components/ListBox/ListBox';
+export { Loader } from './components/Loader/Loader';
 export { Modal } from './components/Modal/Modal';
 export { Pagination } from './components/Pagination/Pagination';
 export { Pill } from './components/Pill/Pill';
