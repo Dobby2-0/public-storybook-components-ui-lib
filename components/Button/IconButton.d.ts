@@ -4,5 +4,5 @@ import { ButtonBaseProps } from './ButtonBase.tsx';
  *
  * Can only contain an icon, no text
  */
-declare const IconButton: ({ className, children, ...props }: ButtonBaseProps) => import("react/jsx-runtime").JSX.Element;
+declare const IconButton: ({ className, isLoading, children, ...props }: Omit<ButtonBaseProps, "replaceContentWhileLoading">) => import("react/jsx-runtime").JSX.Element;
 export { IconButton };

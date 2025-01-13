@@ -4,7 +4,7 @@ import { ButtonBaseProps } from './ButtonBase.tsx';
 declare const buttonVariants: (props?: ({
     size?: "sm" | "default" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
-interface ButtonProps extends ButtonBaseProps, VariantProps<typeof buttonVariants> {
+interface ButtonProps extends Omit<ButtonBaseProps, "replaceContentWhileLoading">, VariantProps<typeof buttonVariants> {
     /**
      * Content added on the left side of child content
      */
