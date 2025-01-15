@@ -1,10 +1,33 @@
 import { Attachment, FileListProps } from '../FileList/FileList.tsx';
 import { DropZoneProps as AriaDropZoneProps, FileTriggerProps } from 'react-aria-components';
-interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">, CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes">, Pick<FileListProps, "actionButtons"> {
-    onFilesChange?: (files: Attachment[]) => void;
-    value?: Attachment[];
+declare enum RejectReason {
+    FILE_TYPE = "fileType",
+    FILE_SIZE = "fileSize"
 }
+interface FileInputProps extends CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes"> {
+    /**
+     * current value (controlled)
+     *
+     * A utility function `fileToAttachment` is provided by this library to convert a `File` or an array of `File` to the required format.
+     */
+    file?: Attachment;
+    /** callback to handle file selection */
+    onFileSelectionChange?: (file: Attachment) => void;
+}
+interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">, CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes">, Pick<FileListProps, "actionButtons"> {
+    /**
+     * current value (controlled)
+     *
+     * A utility function `fileToAttachment` is provided by this library to convert a `File` or an array of `File` to the required format.
+     */
+    files?: Attachment[];
+    /** callback to handle file selection */
+    onFileSelectionChange?: (files: Attachment[]) => void;
+}
+type FileAddResult = Omit<Attachment, "loading"> | void;
 interface CommonUploadProps {
+    /** error message to be displayed */
+    errorMessage?: string;
     /** Label for the file input/dropzone */
     label?: string;
     /** Description for the input/dropzone */
@@ -18,26 +41,19 @@ interface CommonUploadProps {
      * The parameter is a File object instead of an Attachment.\
      * If this callback returns an Attachment, it will be added to the list of files. Otherwise, the default Attachment transformation will be applied.
      */
-    onFileAdd?: (file: File) => Attachment | void | Promise<Attachment | void>;
-}
-interface UploadBaseProps<T> extends CommonUploadProps {
+    onFileAdd?: (file: File) => FileAddResult | Promise<FileAddResult>;
     /**
-     * current value (controlled)
-     *
-     * A utility function `fileToAttachment` is provided by this library to convert a `File` or an array of `File` to the required format.
+     * Callback that is triggered when a file is rejected due to file type or size constraints.\
+     * The RejectReason enum is exported through this component: `Upload.RejectReason`.
      */
-    value?: T;
-    /** optionally render DropZone instead of FileInput */
-    isDropZone?: boolean;
-    /** error message to be displayed */
-    errorMessage?: string;
-    /** callback to handle file selection */
-    onFilesChange?: (file: T) => void;
+    onFileReject?: (file: File, reason: RejectReason) => void;
 }
-interface FileInputUploadProps extends UploadBaseProps<Attachment> {
+interface FileInputUploadProps extends CommonUploadProps, Pick<FileInputProps, "file" | "onFileSelectionChange" | "acceptedFileTypes"> {
+    /** optionally render DropZone instead of FileInput */
     isDropZone?: false;
 }
-interface DropZoneUploadProps extends UploadBaseProps<Attachment[]>, Pick<FileTriggerProps, "acceptedFileTypes">, Pick<DropZoneProps, "actionButtons"> {
+interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes"> {
+    /** optionally render DropZone instead of FileInput */
     isDropZone: true;
 }
 /**
@@ -45,5 +61,8 @@ interface DropZoneUploadProps extends UploadBaseProps<Attachment[]>, Pick<FileTr
  *
  *  based on `react-aria-components`
  */
-declare const Upload: ({ errorMessage, ...props }: FileInputUploadProps | DropZoneUploadProps) => import("react/jsx-runtime").JSX.Element;
+declare const Upload: {
+    ({ errorMessage, ...props }: FileInputUploadProps | DropZoneUploadProps): import("react/jsx-runtime").JSX.Element;
+    RejectReason: typeof RejectReason;
+};
 export { Upload };
