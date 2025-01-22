@@ -28,5 +28,5 @@ interface TextFieldProps extends AriaTextFieldProps {
  *   isRequired
  * />
  */
-declare const TextField: ({ label, description, errorMessage, textArea, placeholder, prefix, suffix, type, className, ...props }: TextFieldProps) => import("react/jsx-runtime").JSX.Element;
+declare const TextField: import('../../../node_modules/react').ForwardRefExoticComponent<TextFieldProps & import('../../../node_modules/react').RefAttributes<HTMLDivElement>>;
 export { TextField };
