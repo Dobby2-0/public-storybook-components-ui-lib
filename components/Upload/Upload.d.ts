@@ -1,4 +1,5 @@
 import { Attachment, FileListProps } from '../FileList/FileList.tsx';
+import { ReactNode } from '../../../node_modules/react';
 import { DropZoneProps as AriaDropZoneProps, FileTriggerProps } from 'react-aria-components';
 declare enum RejectReason {
     FILE_TYPE = "fileType",
@@ -23,6 +24,8 @@ interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">,
     files?: Attachment[];
     /** callback to handle file selection */
     onFileSelectionChange?: (files: Attachment[]) => void;
+    /** Callback that is triggered when the `onFileAdd` callback rejects with an error */
+    onFileAddError?: (file: Attachment, error?: string) => ReactNode | void;
 }
 type FileAddResult = Omit<Attachment, "loading"> | void;
 interface CommonUploadProps {
@@ -52,7 +55,7 @@ interface FileInputUploadProps extends CommonUploadProps, Pick<FileInputProps, "
     /** optionally render DropZone instead of FileInput */
     isDropZone?: false;
 }
-interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes"> {
+interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes" | "onFileAddError"> {
     /** optionally render DropZone instead of FileInput */
     isDropZone: true;
 }

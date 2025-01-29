@@ -1,3 +1,4 @@
+import { ButtonProps } from '../Button/Button.tsx';
 import { HTMLAttributes, ReactNode } from '../../../node_modules/react';
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
     /** Optional heading element for the panel */
@@ -14,6 +15,10 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
     onSaveChanges?: () => void | Promise<void>;
     /** Text for the edit button */
     editButtonText?: string;
+    /** Extra button props for the save button */
+    saveButtonProps?: ButtonProps;
+    /** Extra button props for the cancel button */
+    cancelButtonProps?: ButtonProps;
 }
 declare const Card: import('../../../node_modules/react').ForwardRefExoticComponent<CardProps & import('../../../node_modules/react').RefAttributes<HTMLDivElement>>;
 export { Card };
