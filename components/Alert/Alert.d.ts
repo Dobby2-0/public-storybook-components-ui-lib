@@ -4,12 +4,16 @@ import { HTMLAttributes } from '../../../node_modules/react';
 declare const alertVariants: (props?: ({
     variant?: "information" | "confirmation" | "warning" | "error" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
-export interface AlertProps extends HTMLAttributes<HTMLDivElement>, ExcludeNull<VariantProps<typeof alertVariants>> {
+interface AlertProps extends HTMLAttributes<HTMLDivElement>, ExcludeNull<VariantProps<typeof alertVariants>> {
     /**
      * Optional callback function that is triggered when the alert's close button is clicked.
      * Can be used to remove or hide the alert from the view.
      */
     onClose?: () => void;
+    /**
+     * optional parm to hide the icon in the alert
+     */
+    hideIcon?: boolean;
 }
 /**
  * Component that displays an alert to draw attention, supports multiple variants.
@@ -24,3 +28,4 @@ declare const AlertWithSubComponents: import('../../../node_modules/react').Forw
     Description: import('../../../node_modules/react').ForwardRefExoticComponent<HTMLAttributes<HTMLParagraphElement> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>>;
 };
 export { AlertWithSubComponents as Alert };
+export type { AlertProps };

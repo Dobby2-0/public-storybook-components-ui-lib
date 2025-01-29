@@ -29,7 +29,6 @@ export { Switch } from './components/Switch/Switch';
 export { Table, type ColumnDefinition, type SortDescriptor, type TableProps, } from './components/Table/Table';
 export { Tabs, type TabItem } from './components/Tabs/Tabs';
 export { TextField } from './components/TextField/TextField';
-export { ToastProvider } from './components/Toast/ToastProvider';
 export { Tooltip } from './components/Tooltip/Tooltip';
 export { TreeView, type TreeItem, type TreeViewSelection, } from './components/TreeView/TreeView.tsx';
 export { Upload } from './components/Upload/Upload';

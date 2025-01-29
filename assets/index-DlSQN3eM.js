@@ -1,0 +1,1 @@
+import{r as o}from"./index-DRjF_FHU.js";const s={getContainer:()=>document.body,breakpoints:{sm:640,md:768,lg:1024,xl:1280,"2xl":1536},navigate:(t,{state:e}={})=>{typeof t=="string"?history.pushState(e,"",new URL(t,location.origin).href):history.go(t)},maxVisibleToasts:5},n=o.createContext(s),r=o.createContext({toasts:[],toast:()=>{}});export{n as D,r as T,s as d};

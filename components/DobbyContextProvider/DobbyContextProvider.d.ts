@@ -6,7 +6,7 @@ interface DobbyContextProviderProps extends Partial<Omit<DobbyContextValue, "i18
  * Wrapper component that provides a unified context to its children
  */
 declare const DobbyContextProvider: {
-    ({ getContainer, breakpoints, navigate, i18nextInstance, children, }: PropsWithChildren<DobbyContextProviderProps>): import("react/jsx-runtime").JSX.Element;
+    ({ getContainer, breakpoints, navigate, i18nextInstance, maxVisibleToasts, children, }: PropsWithChildren<DobbyContextProviderProps>): import("react/jsx-runtime").JSX.Element;
     displayName: string;
 };
 export { DobbyContextProvider };

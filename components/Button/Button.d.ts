@@ -2,7 +2,7 @@ import { VariantProps } from 'class-variance-authority';
 import { ReactNode } from '../../../node_modules/react';
 import { ButtonBaseProps } from './ButtonBase.tsx';
 declare const buttonVariants: (props?: ({
-    size?: "sm" | "default" | null | undefined;
+    size?: "default" | "sm" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
 interface ButtonProps extends Omit<ButtonBaseProps, "replaceContentWhileLoading">, VariantProps<typeof buttonVariants> {
     /**
