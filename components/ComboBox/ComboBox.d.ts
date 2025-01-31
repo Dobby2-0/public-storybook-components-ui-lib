@@ -7,6 +7,7 @@ interface ComboBoxProps<T extends object> extends Omit<AriaComboBoxProps<T>, "ch
     placeholder?: AriaInputProps["placeholder"];
     description?: string | null;
     errorMessage?: string | ((validation: AriaValidationResult) => string);
+    loading?: boolean;
     onSelectionChange?: (selectedItem?: T) => void;
 }
 /**
@@ -14,5 +15,5 @@ interface ComboBoxProps<T extends object> extends Omit<AriaComboBoxProps<T>, "ch
  *
  * Based on `React-aria-components`
  */
-declare const ComboBox: <T extends object>({ label, placeholder, description, variant, className, items, menuTrigger, onSelectionChange, idResolver, ...props }: ComboBoxProps<T> & ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const ComboBox: <T extends object>({ label, placeholder, description, variant, className, items, menuTrigger, onSelectionChange, idResolver, loading, ...props }: ComboBoxProps<T> & ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { ComboBox };
