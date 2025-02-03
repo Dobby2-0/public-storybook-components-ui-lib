@@ -18,6 +18,7 @@ export { FileList, fileToAttachment, type Attachment, } from './components/FileL
 export { Form, useFormField } from './components/Form/Form';
 export { List } from './components/List/List';
 export { ListBox } from './components/ListBox/ListBox';
+export { ListFilters, type FilterDefinition, } from './components/ListFilters/ListFilters';
 export { Loader } from './components/Loader/Loader';
 export { Modal } from './components/Modal/Modal';
 export { Pagination } from './components/Pagination/Pagination';
