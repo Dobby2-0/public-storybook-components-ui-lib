@@ -1,0 +1,38 @@
+import{R as d}from"./RadioGroup-BK-hABQQ.js";import"./jsx-runtime-DR9Q75dM.js";import"./index-DRjF_FHU.js";import"./index-By-mRCMU.js";import"./useFocusRing-C6fsr26g.js";import"./index-rX-Bn4lm.js";import"./platform-SeyP_Zfo.js";import"./FieldError-yiHUmxL5.js";import"./Text-B95919dy.js";import"./useLabels-BwPHAfF6.js";import"./Form-CGpa7FVA.js";import"./useControlledState-uSQY0H5C.js";import"./FocusScope-fwsqHtrM.js";import"./context-gTjI1DPt.js";import"./useFormReset-Bw3xsAfu.js";import"./useFocusable-DTzT9VHy.js";import"./usePress-Do_Sz9oM.js";import"./openLink--SV7cA94.js";import"./VisuallyHidden-DFrqKlNW.js";const G={component:d,argTypes:{label:{control:"text"},description:{control:"text"},orientation:{control:"radio",options:["vertical","horizontal"]}}},o={args:{label:"Select an option",description:"Choose one of the following options.",orientation:"vertical",items:[{label:"Option 1",id:"option1"},{label:"Option 2",id:"option2"},{label:"Option 3",id:"option3"}]}},t={args:{...o.args,defaultValue:"option1",isDisabled:!0,items:[{label:"Option 1",id:"option1"},{label:"Option 2",id:"option2"},{label:"Option 3",id:"option3"}]}},i={args:{...o.args,orientation:"horizontal"}};var n,e,r;o.parameters={...o.parameters,docs:{...(n=o.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  args: {
+    label: "Select an option",
+    description: "Choose one of the following options.",
+    orientation: "vertical",
+    items: [{
+      label: "Option 1",
+      id: "option1"
+    }, {
+      label: "Option 2",
+      id: "option2"
+    }, {
+      label: "Option 3",
+      id: "option3"
+    }]
+  }
+}`,...(r=(e=o.parameters)==null?void 0:e.docs)==null?void 0:r.source}}};var a,p,s;t.parameters={...t.parameters,docs:{...(a=t.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {
+    ...Default.args,
+    defaultValue: "option1",
+    isDisabled: true,
+    items: [{
+      label: "Option 1",
+      id: "option1"
+    }, {
+      label: "Option 2",
+      id: "option2"
+    }, {
+      label: "Option 3",
+      id: "option3"
+    }]
+  }
+}`,...(s=(p=t.parameters)==null?void 0:p.docs)==null?void 0:s.source}}};var l,m,c;i.parameters={...i.parameters,docs:{...(l=i.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    ...Default.args,
+    orientation: "horizontal"
+  }
+}`,...(c=(m=i.parameters)==null?void 0:m.docs)==null?void 0:c.source}}};const T=["Default","Disabled","Horizontal"];export{o as Default,t as Disabled,i as Horizontal,T as __namedExportsOrder,G as default};
