@@ -12,6 +12,7 @@ interface ListBoxBasePropsInternal<T extends object> {
      * If a function is provided, it will be called with an item as the first argument. It must return a string.
      */
     idResolver?: FieldResolver<T, string>;
+    loading?: boolean;
 }
 interface ListBoxWithItemLabelProps<T extends object> extends ListBoxBasePropsInternal<T> {
     children?: never;
@@ -34,6 +35,6 @@ type ListBoxBaseProps<T extends object> = ListBoxWithItemLabelProps<T> | ListBox
  *
  * Based on `React-aria-components`
  */
-declare const ListBox: <T extends object>({ items, idResolver, ...props }: Omit<AriaListBoxProps<T>, "children"> & ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const ListBox: <T extends object>({ items, loading, idResolver, ...props }: Omit<AriaListBoxProps<T>, "children"> & ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { ListBox, ListBoxCollection, ListBoxHeader, ListBoxItem, ListBoxSection };
 export type { ListBoxBaseProps };
