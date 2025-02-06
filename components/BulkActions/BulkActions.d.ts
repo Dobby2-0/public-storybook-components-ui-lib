@@ -1,7 +1,7 @@
-import { ListBoxBaseProps } from '../ListBox/ListBox.tsx';
+import { ListBoxProps } from '../ListBox/ListBox.tsx';
 import { CollectionItem } from '../../types';
 interface BulkActionsProps<T extends object> {
-    actions: ListBoxBaseProps<T>["items"];
+    actions: ListBoxProps<T>["items"];
     /** Array of items on which the action should be performed */
     count?: number;
 }

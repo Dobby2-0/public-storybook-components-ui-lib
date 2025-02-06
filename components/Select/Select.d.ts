@@ -1,4 +1,4 @@
-import { ListBoxBaseProps } from '../ListBox/ListBox.tsx';
+import { ListBoxProps } from '../ListBox/ListBox.tsx';
 import { MultiSelectProps } from './MultiSelect.tsx';
 import { SingleSelectProps } from './SingleSelect.tsx';
 interface SingleSelectBaseProps<T extends object> extends SingleSelectProps<T> {
@@ -13,6 +13,6 @@ type SelectProps<T extends object> = SingleSelectBaseProps<T> | MultiSelectBaseP
  *
  * Based on `React-aria-components`
  */
-declare const Select: <T extends object>(props: SelectProps<T> & ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const Select: <T extends object>(props: SelectProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { Select };
 export type { MultiSelectBaseProps, SingleSelectBaseProps };

@@ -1,4 +1,4 @@
-import { ListBoxBaseProps } from '../ListBox/ListBox.tsx';
+import { ListBoxProps } from '../ListBox/ListBox.tsx';
 import { SelectCommonProps } from './SelectBase';
 interface SingleSelectProps<T extends object> extends SelectCommonProps<T> {
     /** Handler that is called when the selection changes. */
@@ -9,5 +9,5 @@ interface SingleSelectProps<T extends object> extends SelectCommonProps<T> {
  *
  * Based on `React-aria-components`
  */
-declare const SingleSelect: <T extends object>({ label, placeholder, description, variant, className, items, disallowEmptySelection, selectedKey, defaultSelectedKey, onSelectionChange, idResolver, ...props }: SingleSelectProps<T> & ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const SingleSelect: <T extends object>({ label, placeholder, description, variant, className, items, disallowEmptySelection, selectedKey, defaultSelectedKey, onSelectionChange, idResolver, onLoadMore, ...props }: SingleSelectProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { SingleSelect, type SingleSelectProps };

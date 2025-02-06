@@ -1,4 +1,4 @@
-import { ListBoxBaseProps } from '../ListBox/ListBox.tsx';
+import { ListBoxProps } from '../ListBox/ListBox.tsx';
 import { GridListProps as AriaGridListProps } from 'react-aria-components';
 interface ClassNameObject {
     base?: string;
@@ -9,6 +9,6 @@ interface GridListProps extends Omit<AriaGridListProps<unknown>, "items" | "clas
     className: string | ClassNameObject;
     onOrderChange?: (items: string[]) => void;
 }
-declare const GridList: <T extends object>({ items, idResolver, className, onOrderChange, ...props }: GridListProps & ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const GridList: <T extends object>({ items, idResolver, className, onOrderChange, ...props }: GridListProps & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { GridList };
 export type { GridListProps };

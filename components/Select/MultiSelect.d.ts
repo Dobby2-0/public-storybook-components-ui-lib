@@ -1,4 +1,4 @@
-import { ListBoxBaseProps } from '../ListBox/ListBox.tsx';
+import { ListBoxProps } from '../ListBox/ListBox.tsx';
 import { SelectCommonProps } from './SelectBase';
 import { Key } from 'react-aria-components';
 interface MultiSelectProps<T extends object> extends SelectCommonProps<T> {
@@ -14,5 +14,5 @@ interface MultiSelectProps<T extends object> extends SelectCommonProps<T> {
  *
  * Based on `React-aria-components`
  */
-declare const MultiSelect: <T extends object>({ label, placeholder, description, variant, className, items, disallowEmptySelection, selectedKeys, defaultSelectedKeys, disabledKeys, onSelectionChange, idResolver, ...props }: MultiSelectProps<T> & ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const MultiSelect: <T extends object>({ label, placeholder, description, variant, className, items, disallowEmptySelection, selectedKeys, defaultSelectedKeys, disabledKeys, onSelectionChange, idResolver, onLoadMore, ...props }: MultiSelectProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { MultiSelect, type MultiSelectProps };
