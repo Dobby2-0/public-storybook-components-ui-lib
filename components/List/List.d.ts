@@ -2,6 +2,7 @@ import { HtmlHTMLAttributes, PropsWithChildren, ReactNode } from '../../../node_
 interface ListProps extends PropsWithChildren<HtmlHTMLAttributes<HTMLUListElement>> {
     /** custom divider for the list */
     divider?: ReactNode;
+    hideDivider?: boolean;
 }
 /**
  * A List component that renders children as a list, with an optional custom divider between list items.
@@ -13,5 +14,5 @@ interface ListProps extends PropsWithChildren<HtmlHTMLAttributes<HTMLUListElemen
  *   <div>Item 3</div>
  * </List>
  */
-declare const List: ({ children, divider, className, ...props }: ListProps) => import("react/jsx-runtime").JSX.Element;
+declare const List: ({ children, divider, hideDivider, className, ...props }: ListProps) => import("react/jsx-runtime").JSX.Element;
 export { List };
