@@ -5,10 +5,10 @@ declare const ListBoxSection: <T extends object>(props: import('react-aria-compo
 declare const ListBoxCollection: typeof AriaCollection;
 declare const ListBoxHeader: ({ className, ...props }: ComponentProps<typeof AriaHeader>) => import("react/jsx-runtime").JSX.Element;
 interface ListBoxBaseProps<T> extends AriaListBoxProps<T> {
-    onLoadMore?: () => void;
+    isLoading?: boolean;
 }
-declare const ListBoxBase: <T extends object>({ className, onLoadMore, ...props }: ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
-declare const ListBoxItem: <T extends object>({ className, children, ...props }: AriaListBoxItemProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const ListBoxBase: <T extends object>({ className, isLoading, ...props }: ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const ListBoxItem: import('../../../node_modules/react').ForwardRefExoticComponent<AriaListBoxItemProps<never> & import('../../../node_modules/react').RefAttributes<HTMLElement>>;
 interface ListBoxPropsInternal<T extends object> {
     items: T[];
     /**
@@ -17,7 +17,8 @@ interface ListBoxPropsInternal<T extends object> {
      */
     idResolver?: FieldResolver<T, string>;
     loading?: boolean;
-    onLoadMore?: ListBoxBaseProps<T>["onLoadMore"];
+    /** Callback function called when reaching the bottom of the list. Expects a boolean return to indicate wether more pages are still available */
+    onLoadMore?: () => Promise<boolean>;
 }
 interface ListBoxWithItemLabelProps<T extends object> extends ListBoxPropsInternal<T> {
     children?: never;
@@ -40,6 +41,6 @@ type ListBoxProps<T extends object> = ListBoxWithItemLabelProps<T> | ListBoxWith
  *
  * Based on `React-aria-components`
  */
-declare const ListBox: <T extends object>({ items, loading, idResolver, ...props }: Omit<AriaListBoxProps<T>, "children"> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const ListBox: <T extends object>({ items, loading, onLoadMore, idResolver, ...props }: Omit<AriaListBoxProps<T>, "children"> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { ListBox, ListBoxBase, ListBoxCollection, ListBoxHeader, ListBoxItem, ListBoxSection, };
 export type { ListBoxProps };
