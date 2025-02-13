@@ -1,0 +1,9 @@
+import{j as e}from"./jsx-runtime-DiklIkkE.js";import{c as y}from"./index-By-mRCMU.js";import{r as j}from"./index-DRjF_FHU.js";import{D as b}from"./Divider-BTxO-jjQ.js";const t=({children:a,divider:v,hideDivider:f,className:g,...D})=>e.jsx("ul",{className:y("space-y-[15px]",g),...D,children:j.Children.map(a,(x,_)=>e.jsxs(e.Fragment,{children:[!f&&_!==0&&(v??e.jsx(b,{})),e.jsx("li",{children:x})]}))});try{t.displayName="List",t.__docgenInfo={description:"A List component that renders children as a list, with an optional custom divider between list items.",displayName:"List",props:{divider:{defaultValue:null,description:"custom divider for the list",name:"divider",required:!1,type:{name:"ReactNode"}},hideDivider:{defaultValue:null,description:"",name:"hideDivider",required:!1,type:{name:"boolean"}}}}}catch{}const E={component:t,argTypes:{children:{table:{disable:!0}}},args:{children:["First item","Second item","Third item"]}},r={},i={args:{divider:e.jsx("div",{children:"************"})}},s={args:{hideDivider:!0}};var d,o,n;r.parameters={...r.parameters,docs:{...(d=r.parameters)==null?void 0:d.docs,source:{originalSource:"{}",...(n=(o=r.parameters)==null?void 0:o.docs)==null?void 0:n.source}}};var c,m,p;i.parameters={...i.parameters,docs:{...(c=i.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  args: {
+    divider: <div>************</div>
+  }
+}`,...(p=(m=i.parameters)==null?void 0:m.docs)==null?void 0:p.source}}};var l,u,h;s.parameters={...s.parameters,docs:{...(l=s.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    hideDivider: true
+  }
+}`,...(h=(u=s.parameters)==null?void 0:u.docs)==null?void 0:h.source}}};const q=["Default","CustomDivider","WithoutDivider"];export{i as CustomDivider,r as Default,s as WithoutDivider,q as __namedExportsOrder,E as default};

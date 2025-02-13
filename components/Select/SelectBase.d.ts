@@ -1,7 +1,7 @@
 import { ListBox } from '../ListBox/ListBox.tsx';
 import { dropdownInputVariants } from '../../styles/variants.ts';
 import { VariantProps } from 'class-variance-authority';
-import { ComponentPropsWithoutRef, CSSProperties, PropsWithChildren, ReactNode, RefObject } from '../../../node_modules/react';
+import { ComponentPropsWithoutRef, CSSProperties, PropsWithChildren, ReactNode } from '../../../node_modules/react';
 import { ButtonProps as AriaButtonProps, PopoverProps as AriaPopoverProps, SelectProps as AriaSelectProps, ValidationResult as AriaValidationResult } from 'react-aria-components';
 interface ClassNameObject {
     base?: string;
@@ -28,9 +28,13 @@ interface SelectPopoverProps extends Omit<AriaPopoverProps, "children">, PropsWi
 declare const SelectPopover: ({ className, children, ...props }: SelectPopoverProps) => import("react/jsx-runtime").JSX.Element;
 declare const SelectListBox: <T extends object>({ className, ...props }: ComponentPropsWithoutRef<typeof ListBox<T>>) => import("react/jsx-runtime").JSX.Element;
 interface SelectBaseProps<T extends object> extends Pick<SelectCommonProps<T>, "className" | "variant"> {
-    triggerRef: RefObject<HTMLButtonElement>;
+    label?: string;
+    description?: string;
+    popoverContent: ReactNode;
     children: ReactNode;
+    popoverOpen: boolean;
+    onPopoverOpenChange: (isOpen: boolean) => void;
 }
-declare const SelectBase: <T extends object>({ className, triggerRef, variant, children, }: SelectBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const SelectBase: <T extends object>({ label, description, className, variant, popoverContent, children, popoverOpen, onPopoverOpenChange, ...props }: SelectBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { SelectBase, SelectListBox, SelectPopover, SelectTrigger, SelectValue };
 export type { SelectCommonProps };
