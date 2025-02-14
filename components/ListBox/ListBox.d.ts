@@ -7,7 +7,7 @@ declare const ListBoxHeader: ({ className, ...props }: ComponentProps<typeof Ari
 interface ListBoxBaseProps<T> extends AriaListBoxProps<T> {
     isLoading?: boolean;
 }
-declare const ListBoxBase: <T extends object>({ className, isLoading, ...props }: ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const ListBoxBase: <T extends object>({ className, isLoading, onScroll, ...props }: ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
 declare const ListBoxItem: import('../../../node_modules/react').ForwardRefExoticComponent<AriaListBoxItemProps<never> & import('../../../node_modules/react').RefAttributes<HTMLElement>>;
 interface ListBoxPropsInternal<T extends object> {
     items: T[];
