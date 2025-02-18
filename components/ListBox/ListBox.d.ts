@@ -17,6 +17,8 @@ interface ListBoxPropsInternal<T extends object> {
      */
     idResolver?: FieldResolver<T, string>;
     loading?: boolean;
+    /** Allows disabling the loader when initial page of data indicates no more pages are available */
+    hasNextPage?: boolean;
     /** Callback function called when reaching the bottom of the list. Expects a boolean return to indicate wether more pages are still available */
     onLoadMore?: () => Promise<boolean>;
 }
@@ -41,6 +43,6 @@ type ListBoxProps<T extends object> = ListBoxWithItemLabelProps<T> | ListBoxWith
  *
  * Based on `React-aria-components`
  */
-declare const ListBox: <T extends object>({ items, loading, onLoadMore, idResolver, ...props }: Omit<AriaListBoxProps<T>, "children"> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const ListBox: <T extends object>({ items, loading, onLoadMore, hasNextPage, idResolver, ...props }: Omit<AriaListBoxProps<T>, "children"> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { ListBox, ListBoxBase, ListBoxCollection, ListBoxHeader, ListBoxItem, ListBoxSection, };
 export type { ListBoxProps };
