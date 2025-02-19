@@ -15,14 +15,19 @@ interface Attachment {
     /** A promise that resolves when the file is done loading */
     loading?: Promise<Attachment | void>;
 }
-type ActionButtonFunction = (file: Attachment) => void | Promise<void>;
-type ActionButton = boolean | ActionButtonFunction;
+interface DefaultActionHandlers {
+    view: (url: Attachment["url"]) => void;
+    download: (url: Attachment["url"], fileName: Attachment["name"]) => void;
+    delete: (fileId: Attachment["id"]) => void;
+}
+type ActionButtonFunction<T = undefined> = T extends undefined ? (file: Attachment) => void | Promise<void> : (file: Attachment, original: T) => void | Promise<void>;
+type ActionButton<T = undefined> = boolean | ActionButtonFunction<T>;
 interface ActionButtons {
-    view?: ActionButton;
-    download?: ActionButton;
+    view?: ActionButton<DefaultActionHandlers["view"]>;
+    download?: ActionButton<DefaultActionHandlers["download"]>;
     delete?: ActionButton;
 }
-type ActionButtonRenderFunction = (file: Attachment) => ReactElement;
+type ActionButtonRenderFunction = (file: Attachment, defaultActionHandlers: DefaultActionHandlers) => ReactElement;
 interface FileListProps {
     /**
      * List of files to display.
