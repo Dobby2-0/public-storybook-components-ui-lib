@@ -7,13 +7,19 @@ interface TabItem extends CollectionItem {
     badge?: ReactNode;
     badgeProps?: ComponentPropsWithoutRef<typeof Pill>;
 }
-interface TabsProps extends Omit<AriaTabsProps, "children"> {
+interface ClassNameObject {
+    base?: string;
+    content?: string;
+}
+interface TabsProps extends Omit<AriaTabsProps, "children" | "className"> {
     /** Array of items to be rendered as tabs */
     items: TabItem[];
-    /** */
+    /** Content to be added before the tablist */
     prefix?: ReactNode;
-    /** */
+    /** Content to be added after the tablist */
     suffix?: ReactNode;
+    /** Styling for the tablist and optionally its content */
+    className?: string | ClassNameObject;
 }
 /**
  * Tabs component for displaying a set of tabs that can switch between different content panels.
