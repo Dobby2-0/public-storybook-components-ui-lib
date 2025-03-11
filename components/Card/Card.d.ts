@@ -3,6 +3,8 @@ import { HTMLAttributes, ReactNode } from '../../../node_modules/react';
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
     /** Optional heading element for the panel */
     heading?: ReactNode;
+    /** Remove the border underneath the optional heading */
+    removeHeadingBorder?: boolean;
     /** Should the edit button be shown */
     enableEditing?: boolean;
     /** Sets the initial state of the component for editing */
