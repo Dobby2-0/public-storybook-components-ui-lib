@@ -66,7 +66,7 @@ export interface Address {
     street?: string;
     number?: string;
     box?: string;
-    postalCode?: string;
+    postalcode?: string;
     city?: string;
     country?: string;
 }
