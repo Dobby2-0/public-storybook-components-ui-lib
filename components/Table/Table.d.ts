@@ -19,15 +19,20 @@ interface InternalColumnDefinition extends ColumnDefinition {
     isRowHeader?: ColumnProps["isRowHeader"];
 }
 interface TableProps extends AriaTableProps {
+    /** Default column configuration */
     columns: ColumnDefinition[];
+    /** data array with objects conforming to the defined columns */
     dataSource: (Record<"id", string> & Record<string, string | ReactNode>)[];
+    /** add a button at the end of the row, indicating navigation is possible */
     addRowButton?: boolean;
+    /** optional identifier used for locally storing column configuration */
+    id?: string;
 }
 /**
  * A table displays data in rows and columns and enables a user to navigate its contents via directional navigation keys, and optionally supports row selection and sorting.
  *
  * Based on `React-aria-components`
  */
-declare const Table: ({ columns, dataSource, addRowButton, onRowAction, ...props }: TableProps) => import("react/jsx-runtime").JSX.Element | undefined;
+declare const Table: ({ id, columns, dataSource, addRowButton, onRowAction, ...props }: TableProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export { Table };
 export type { ColumnDefinition, InternalColumnDefinition, SortDescriptor, TableProps, };
