@@ -1,7 +1,7 @@
 export * from './hooks';
 export { buildAddressString, capitalize, cn, localizeCurrency } from './utils';
 export * from './utils/date';
-export { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from './components/Accordion/Accordion';
+export { Accordion, AccordionContent, AccordionHeader, AccordionItem, AccordionTrigger, } from './components/Accordion/Accordion';
 export { Alert } from './components/Alert/Alert';
 export { Breadcrumbs, type BreadcrumbItem, } from './components/Breadcrumbs/Breadcrumbs';
 export { BulkActions } from './components/BulkActions/BulkActions';

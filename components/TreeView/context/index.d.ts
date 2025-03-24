@@ -12,14 +12,16 @@ export declare const TreeViewContext: import('../../../../node_modules/react').C
     classNames: TreeViewClassNameObject | undefined;
     asPopover: boolean | undefined;
     hideTriggerIcon: boolean | undefined;
+    enableBranchSelection: boolean;
+    onlyToggleOnTriggerIcon: boolean;
 } | null>;
-interface TreeViewContextValueProps extends Pick<TreeViewProps, "asPopover" | "defaultExpanded" | "defaultIcons" | "defaultSelection" | "hideTriggerIcon" | "items" | "onSelectionChange" | "selectionMode"> {
+interface TreeViewContextValueProps extends Pick<TreeViewProps, "asPopover" | "defaultExpanded" | "defaultIcons" | "defaultSelection" | "hideTriggerIcon" | "items" | "onSelectionChange" | "selectionMode" | "enableBranchSelection" | "onlyToggleOnTriggerIcon"> {
     classNames?: TreeViewClassNameObject;
 }
 /**
  * Manages the internal state of the TreeView component
  */
-export declare const useTreeViewManager: ({ items, selectionMode, defaultSelection, defaultExpanded, onSelectionChange, defaultIcons, classNames, asPopover, hideTriggerIcon, }: TreeViewContextValueProps) => {
+export declare const useTreeViewManager: ({ items, selectionMode, defaultSelection, defaultExpanded, onSelectionChange, defaultIcons, classNames, asPopover, hideTriggerIcon, enableBranchSelection, onlyToggleOnTriggerIcon, }: TreeViewContextValueProps) => {
     contextValue: {
         treeViewData: import('../types').TreeViewData;
         selectionMode: "checkbox" | "focus" | undefined;
@@ -31,6 +33,8 @@ export declare const useTreeViewManager: ({ items, selectionMode, defaultSelecti
         classNames: TreeViewClassNameObject | undefined;
         asPopover: boolean | undefined;
         hideTriggerIcon: boolean | undefined;
+        enableBranchSelection: boolean;
+        onlyToggleOnTriggerIcon: boolean;
     };
     itemsInternal: TreeItem[];
 };

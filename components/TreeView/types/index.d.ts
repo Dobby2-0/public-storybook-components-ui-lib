@@ -62,4 +62,8 @@ export interface TreeViewProps {
     asPopover?: boolean;
     /** force icons for the highest level items. Branches with no icon provided wil get a folder with an initial */
     forceRootIcons?: boolean;
+    /** enable selecting a branch */
+    enableBranchSelection?: boolean;
+    /** will expand/collapse a branch only when clicking the trigger icon */
+    onlyToggleOnTriggerIcon?: boolean;
 }
