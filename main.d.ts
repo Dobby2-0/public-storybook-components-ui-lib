@@ -8,6 +8,7 @@ export { BulkActions } from './components/BulkActions/BulkActions';
 export { Button } from './components/Button/Button';
 export { IconButton } from './components/Button/IconButton';
 export { Card } from './components/Card/Card';
+export { CardBasic } from './components/CardBasic/CardBasic.tsx';
 export { Checkbox, CheckboxGroup } from './components/Checkbox/Checkbox';
 export { ComboBox } from './components/ComboBox/ComboBox';
 export { DetailPageHeader } from './components/DetailPageHeader/DetailPageHeader';

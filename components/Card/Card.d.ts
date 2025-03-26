@@ -22,5 +22,8 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
     /** Extra button props for the cancel button */
     cancelButtonProps?: ButtonProps;
 }
+/**
+ * @Deprecated Use the `CardBasic` component from `@dobby2-0/components` instead.
+ * */
 declare const Card: import('../../../node_modules/react').ForwardRefExoticComponent<CardProps & import('../../../node_modules/react').RefAttributes<HTMLDivElement>>;
 export { Card };
