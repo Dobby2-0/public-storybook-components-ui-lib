@@ -11,6 +11,7 @@ export { Card } from './components/Card/Card';
 export { CardBasic } from './components/CardBasic/CardBasic.tsx';
 export { Checkbox, CheckboxGroup } from './components/Checkbox/Checkbox';
 export { ComboBox } from './components/ComboBox/ComboBox';
+export { DateTimePicker } from './components/DateTimePicker/DateTimePicker';
 export { DetailPageHeader } from './components/DetailPageHeader/DetailPageHeader';
 export { Divider } from './components/Divider/Divider';
 export { DobbyContextProvider } from './components/DobbyContextProvider/DobbyContextProvider.tsx';
