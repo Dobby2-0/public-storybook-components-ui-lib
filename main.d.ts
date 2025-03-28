@@ -15,7 +15,7 @@ export { DetailPageHeader } from './components/DetailPageHeader/DetailPageHeader
 export { Divider } from './components/Divider/Divider';
 export { DobbyContextProvider } from './components/DobbyContextProvider/DobbyContextProvider.tsx';
 export { FileList, fileToAttachment, type Attachment, } from './components/FileList/FileList';
-export { Form, useFormField } from './components/Form/Form';
+export { Form, useFormField, useFormRef } from './components/Form/Form';
 export { List } from './components/List/List';
 export { ListBox } from './components/ListBox/ListBox';
 export { ListFilters, type FilterDefinition, } from './components/ListFilters/ListFilters';

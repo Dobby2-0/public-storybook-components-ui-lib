@@ -1,4 +1,4 @@
-import { CSSProperties, HTMLAttributes, ReactElement, ReactNode } from '../../../node_modules/react';
+import { CSSProperties, ForwardedRef, HTMLAttributes, ReactElement, ReactNode } from '../../../node_modules/react';
 import { ControllerProps, FieldPath, FieldValues, FormProviderProps, UseControllerProps, UseFormHandleSubmit } from 'react-hook-form';
 interface FormFieldProps<TFieldValues extends FieldValues, TName extends FieldPath<TFieldValues>> extends UseControllerProps<TFieldValues, TName> {
     render?: never;
@@ -23,8 +23,12 @@ declare const useFormField: () => {
     formDescriptionId: string;
     formMessageId: string;
 };
+interface FormRef {
+    submit: () => Promise<void>;
+}
+declare const useFormRef: () => import('../../../node_modules/react').RefObject<FormRef>;
 interface FormProps<TFieldValues extends FieldValues, TContext, TTransformedValues extends FieldValues | undefined> extends FormProviderProps<TFieldValues, TContext, TTransformedValues> {
-    onSubmit?: Parameters<UseFormHandleSubmit<TFieldValues, TTransformedValues>>[0];
+    onSubmit: Parameters<UseFormHandleSubmit<TFieldValues, TTransformedValues>>[0];
     onError?: Parameters<UseFormHandleSubmit<TFieldValues, TTransformedValues>>[1];
     style?: CSSProperties;
     className?: string;
@@ -42,7 +46,9 @@ interface FormProps<TFieldValues extends FieldValues, TContext, TTransformedValu
  * - `Form.Label`
  * - `Form.Message`
  */
-declare const Form: (<TFieldValues extends FieldValues, TContext, TTransformedValues extends FieldValues | undefined>({ onSubmit, className, style, handleSubmit, children, ...props }: FormProps<TFieldValues, TContext, TTransformedValues>) => import("react/jsx-runtime").JSX.Element) & {
+declare const Form: (<TFieldValues extends FieldValues, TContext, TTransformedValues extends FieldValues | undefined>(props: FormProps<TFieldValues, TContext, TTransformedValues> & {
+    ref?: ForwardedRef<FormRef>;
+}) => ReactElement) & {
     Field: <TFieldValues extends FieldValues = FieldValues, TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>>(props: FormFieldProps<TFieldValues, TName> | FormFieldWithRenderProps<TFieldValues, TName>) => import("react/jsx-runtime").JSX.Element;
     Item: import('../../../node_modules/react').ForwardRefExoticComponent<HTMLAttributes<HTMLDivElement> & import('../../../node_modules/react').RefAttributes<HTMLDivElement>>;
     Label: import('../../../node_modules/react').ForwardRefExoticComponent<Omit<Omit<import('@radix-ui/react-label').LabelProps & import('../../../node_modules/react').RefAttributes<HTMLLabelElement>, "ref"> & import('../../../node_modules/react').RefAttributes<HTMLLabelElement>, "ref"> & import('../../../node_modules/react').RefAttributes<HTMLLabelElement>>;
@@ -50,4 +56,4 @@ declare const Form: (<TFieldValues extends FieldValues, TContext, TTransformedVa
     Description: import('../../../node_modules/react').ForwardRefExoticComponent<Omit<HTMLAttributes<HTMLParagraphElement> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>, "ref"> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>>;
     Message: import('../../../node_modules/react').ForwardRefExoticComponent<Omit<HTMLAttributes<HTMLParagraphElement> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>, "ref"> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>>;
 };
-export { Form, useFormField };
+export { Form, useFormField, useFormRef };
