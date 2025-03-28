@@ -14,14 +14,15 @@ export declare const TreeViewContext: import('../../../../node_modules/react').C
     hideTriggerIcon: boolean | undefined;
     enableBranchSelection: boolean;
     onlyToggleOnTriggerIcon: boolean;
+    leafRenderer: ((props: import('../../../../node_modules/react').HTMLAttributes<HTMLElement> & import('react-aria').PressEvents, item?: TreeItem) => import('../../../../node_modules/react').ReactNode) | undefined;
 } | null>;
-interface TreeViewContextValueProps extends Pick<TreeViewProps, "asPopover" | "defaultExpanded" | "defaultIcons" | "defaultSelection" | "hideTriggerIcon" | "items" | "onSelectionChange" | "selectionMode" | "enableBranchSelection" | "onlyToggleOnTriggerIcon"> {
+interface TreeViewContextValueProps extends Pick<TreeViewProps, "asPopover" | "defaultExpanded" | "defaultIcons" | "defaultSelection" | "hideTriggerIcon" | "items" | "onSelectionChange" | "selectionMode" | "enableBranchSelection" | "onlyToggleOnTriggerIcon" | "leafRenderer"> {
     classNames?: TreeViewClassNameObject;
 }
 /**
  * Manages the internal state of the TreeView component
  */
-export declare const useTreeViewManager: ({ items, selectionMode, defaultSelection, defaultExpanded, onSelectionChange, defaultIcons, classNames, asPopover, hideTriggerIcon, enableBranchSelection, onlyToggleOnTriggerIcon, }: TreeViewContextValueProps) => {
+export declare const useTreeViewManager: ({ items, selectionMode, defaultSelection, defaultExpanded, onSelectionChange, defaultIcons, classNames, asPopover, hideTriggerIcon, enableBranchSelection, onlyToggleOnTriggerIcon, leafRenderer, }: TreeViewContextValueProps) => {
     contextValue: {
         treeViewData: import('../types').TreeViewData;
         selectionMode: "checkbox" | "focus" | undefined;
@@ -35,6 +36,7 @@ export declare const useTreeViewManager: ({ items, selectionMode, defaultSelecti
         hideTriggerIcon: boolean | undefined;
         enableBranchSelection: boolean;
         onlyToggleOnTriggerIcon: boolean;
+        leafRenderer: ((props: import('../../../../node_modules/react').HTMLAttributes<HTMLElement> & import('react-aria').PressEvents, item?: TreeItem) => import('../../../../node_modules/react').ReactNode) | undefined;
     };
     itemsInternal: TreeItem[];
 };

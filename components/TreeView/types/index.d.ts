@@ -1,4 +1,5 @@
-import { ReactNode } from '../../../../node_modules/react';
+import { PressEvents } from '@react-types/shared/src/events';
+import { HTMLAttributes, ReactNode } from '../../../../node_modules/react';
 export interface TreeItem {
     id: string;
     label: string;
@@ -66,4 +67,6 @@ export interface TreeViewProps {
     enableBranchSelection?: boolean;
     /** will expand/collapse a branch only when clicking the trigger icon */
     onlyToggleOnTriggerIcon?: boolean;
+    /** Use custom component for the tree leafs instead of regular button */
+    leafRenderer?: (props: HTMLAttributes<HTMLElement> & PressEvents, item?: TreeItem) => ReactNode;
 }
