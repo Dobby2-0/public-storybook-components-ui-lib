@@ -17,6 +17,7 @@ interface ComboBoxCommonProps extends VariantProps<typeof dropdownInputVariants>
     style?: CSSProperties;
     loading?: boolean;
     isDisabled?: boolean;
+    disallowEmptySelection?: boolean;
 }
 interface ComboBoxListBoxProps {
     className?: string;
