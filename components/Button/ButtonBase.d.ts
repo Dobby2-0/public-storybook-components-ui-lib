@@ -3,7 +3,7 @@ import { VariantProps } from 'class-variance-authority';
 import { PropsWithChildren } from '../../../node_modules/react';
 import { ButtonProps as AriaButtonProps, PressEvent } from 'react-aria-components';
 declare const buttonBaseVariants: (props?: ({
-    variant?: "primary" | "secondary" | "delete" | "ghost" | null | undefined;
+    variant?: "primary" | "secondary" | "delete" | "ghost" | "basic" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
 interface ButtonBaseProps extends Omit<AriaButtonProps, "children" | "onPress">, ExcludeNull<VariantProps<typeof buttonBaseVariants>>, PropsWithChildren {
     /** Disables button and shows loading indicator */
