@@ -1,0 +1,1 @@
+import{a as o}from"./useFocusRing-C4BMZp44.js";import{r as a,R as f}from"./index-YTOF1_EJ.js";const n=a.createContext({}),x=a.forwardRef(function(e,t){[e,t]=o(e,t,n);let{elementType:r="span",...c}=e;return f.createElement(r,{className:"react-aria-Text",...c,ref:t})});export{x as $,n as a};

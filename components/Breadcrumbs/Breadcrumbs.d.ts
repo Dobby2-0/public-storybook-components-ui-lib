@@ -1,5 +1,6 @@
+import { Menu } from '../Menu/Menu.tsx';
 import { CollectionItem } from '../../types';
-import { ReactNode } from '../../../node_modules/react';
+import { ComponentProps, ReactNode } from '../../../node_modules/react';
 import { BreadcrumbProps as AriaBreadcrumbProps, BreadcrumbsProps as AriaBreadcrumbsProps } from 'react-aria-components';
 interface BreadcrumbsProps extends Omit<AriaBreadcrumbsProps<BreadcrumbItem | "ellipsis">, "children"> {
     /**
@@ -10,9 +11,15 @@ interface BreadcrumbsProps extends Omit<AriaBreadcrumbsProps<BreadcrumbItem | "e
      * Optional parameter to overwrite the default `<ChevronForward/>` icon used to separate items
      */
     separator?: ReactNode;
+    /** callback used when clicking an item without url */
+    onItemClick?: (item: BreadcrumbItem) => void;
 }
 interface BreadcrumbItem extends CollectionItem {
     url?: string;
+    menuProps?: BreadcrumbItemMenuProps;
+}
+interface BreadcrumbItemMenuProps extends Omit<ComponentProps<typeof Menu>, "children"> {
+    addDropdownIcon?: boolean;
 }
 /**
  * Breadcrumb component to display hierarchical order of parent items leading to current item.
@@ -21,7 +28,7 @@ interface BreadcrumbItem extends CollectionItem {
  *
  * Based on `react-aria-componets`'s breadcrumbs
  */
-declare const Breadcrumbs: ({ items, separator, ...props }: BreadcrumbsProps) => import("react/jsx-runtime").JSX.Element;
+declare const Breadcrumbs: ({ items, separator, onItemClick, ...props }: BreadcrumbsProps) => import("react/jsx-runtime").JSX.Element;
 declare const BreadcrumbItem: ({ className, ...props }: AriaBreadcrumbProps) => import("react/jsx-runtime").JSX.Element;
 export { Breadcrumbs };
 export type { BreadcrumbItem };
