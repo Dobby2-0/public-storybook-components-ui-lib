@@ -15,8 +15,12 @@ interface SelectCommonProps<T extends object> extends Omit<AriaSelectProps<T>, "
     className?: string | ClassNameObject;
     style?: CSSProperties;
     disallowEmptySelection?: boolean;
+    loading?: boolean;
 }
-declare const SelectTrigger: import('../../../node_modules/react').ForwardRefExoticComponent<AriaButtonProps & import('../../../node_modules/react').RefAttributes<HTMLButtonElement>>;
+interface SelectTriggerProps extends AriaButtonProps {
+    loading?: boolean;
+}
+declare const SelectTrigger: import('../../../node_modules/react').ForwardRefExoticComponent<SelectTriggerProps & import('../../../node_modules/react').RefAttributes<HTMLButtonElement>>;
 interface SelectValueProps extends PropsWithChildren {
     label?: ReactNode;
     showLabelAsPlaceholder?: boolean;
@@ -27,7 +31,7 @@ interface SelectPopoverProps extends Omit<AriaPopoverProps, "children">, PropsWi
 }
 declare const SelectPopover: ({ className, children, ...props }: SelectPopoverProps) => import("react/jsx-runtime").JSX.Element;
 declare const SelectListBox: <T extends object>({ className, ...props }: ComponentPropsWithoutRef<typeof ListBox<T>>) => import("react/jsx-runtime").JSX.Element;
-interface SelectBaseProps<T extends object> extends Pick<SelectCommonProps<T>, "className" | "variant"> {
+interface SelectBaseProps<T extends object> extends Pick<SelectCommonProps<T>, "className" | "variant" | "loading"> {
     label?: string;
     description?: string;
     popoverContent: ReactNode;
@@ -35,6 +39,6 @@ interface SelectBaseProps<T extends object> extends Pick<SelectCommonProps<T>, "
     popoverOpen: boolean;
     onPopoverOpenChange: (isOpen: boolean) => void;
 }
-declare const SelectBase: <T extends object>({ label, description, className, variant, popoverContent, children, popoverOpen, onPopoverOpenChange, ...props }: SelectBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const SelectBase: <T extends object>({ label, description, className, variant, popoverContent, children, popoverOpen, onPopoverOpenChange, loading, ...props }: SelectBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { SelectBase, SelectListBox, SelectPopover, SelectTrigger, SelectValue };
 export type { SelectCommonProps };
