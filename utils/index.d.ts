@@ -1,4 +1,5 @@
 import { Address, FieldResolver, FieldResolverWithProps } from '../types';
+import { SeverityLevel } from '@sentry/react';
 import { ClassValue } from 'clsx';
 /**
  * React classnames utility that combines Tailwind's twMerge with clsx.
@@ -10,3 +11,4 @@ export declare const localizeCurrency: (amount?: number, locale?: string) => str
 export declare const buildAddressString: (address?: Address) => string;
 export declare const resolveField: <T, U>(item: T, fieldResolver?: FieldResolver<T, U>) => string | U;
 export declare const resolveFieldWithProps: <T, U, V>(item: T, extraCallbackProps: V, fieldResolver?: FieldResolverWithProps<T, U, V>) => string | U;
+export declare const captureEvent: (message: string, level: SeverityLevel) => string;

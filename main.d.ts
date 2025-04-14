@@ -1,5 +1,5 @@
 export * from './hooks';
-export { buildAddressString, capitalize, cn, localizeCurrency } from './utils';
+export { buildAddressString, capitalize, captureEvent, cn, localizeCurrency, } from './utils';
 export * from './utils/date';
 export { Accordion, AccordionContent, AccordionHeader, AccordionItem, AccordionTrigger, } from './components/Accordion/Accordion';
 export { Alert } from './components/Alert/Alert';
@@ -15,6 +15,7 @@ export { DateTimePicker } from './components/DateTimePicker/DateTimePicker';
 export { DetailPageHeader } from './components/DetailPageHeader/DetailPageHeader';
 export { Divider } from './components/Divider/Divider';
 export { DobbyContextProvider } from './components/DobbyContextProvider/DobbyContextProvider.tsx';
+export { ErrorBoundary } from './components/Error/ErrorBoundary.tsx';
 export { FileList, fileToAttachment, type Attachment, } from './components/FileList/FileList';
 export { Form, useFormField, useFormRef } from './components/Form/Form';
 export { List } from './components/List/List';
