@@ -27,5 +27,5 @@ interface MenuItem extends Omit<AriaMenuItemProps, "children"> {
 interface MenuSeparator extends AriaSeparatorProps {
     separator?: boolean;
 }
-declare const Menu: <T extends object>({ items, children, ...props }: MenuProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const Menu: <T extends object>({ items, isOpen, onOpenChange, children, ...props }: MenuProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { Menu };
