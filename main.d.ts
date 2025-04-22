@@ -16,6 +16,8 @@ export { DetailPageHeader } from './components/DetailPageHeader/DetailPageHeader
 export { Divider } from './components/Divider/Divider';
 export { DobbyContextProvider } from './components/DobbyContextProvider/DobbyContextProvider.tsx';
 export { ErrorBoundary } from './components/Error/ErrorBoundary.tsx';
+export { ErrorPage } from './components/Error/ErrorPage.tsx';
+export { RouterErrorElement } from './components/Error/RouterErrorElement.tsx';
 export { FileList, fileToAttachment, type Attachment, } from './components/FileList/FileList';
 export { Form, useFormField, useFormRef } from './components/Form/Form';
 export { List } from './components/List/List';

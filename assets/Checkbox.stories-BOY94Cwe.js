@@ -1,0 +1,18 @@
+import{C}from"./Checkbox-DAZf3L4w.js";import"./jsx-runtime-F1iDwNaf.js";import"./index-YTOF1_EJ.js";import"./index-D8pzxCuu.js";import"./Check-d3BnqXpp.js";import"./RSPContexts-uj8S1pO4.js";import"./useFocusRing-D-wgUUcc.js";import"./platform-DO9ne4TU.js";import"./Form-BLKTcZvd.js";import"./usePress-p5sBLxVT.js";import"./openLink-8mltwmIb.js";import"./useToggleState-DfnBzNsv.js";import"./useFormReset--6kUkuP1.js";import"./useFocusable-vmrPwuET.js";import"./useControlledState-BLnGQsC8.js";import"./VisuallyHidden-CDgroY5D.js";const B={component:C},e={},r={args:{defaultSelected:!0}},a={args:{isIndeterminate:!0}},s={args:{children:"Label"}},t={args:{children:"This one is disabled",isDisabled:!0}};var o,i,c;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:"{}",...(c=(i=e.parameters)==null?void 0:i.docs)==null?void 0:c.source}}};var n,m,d;r.parameters={...r.parameters,docs:{...(n=r.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  args: {
+    defaultSelected: true
+  }
+}`,...(d=(m=r.parameters)==null?void 0:m.docs)==null?void 0:d.source}}};var p,l,u;a.parameters={...a.parameters,docs:{...(p=a.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  args: {
+    isIndeterminate: true
+  }
+}`,...(u=(l=a.parameters)==null?void 0:l.docs)==null?void 0:u.source}}};var g,b,h;s.parameters={...s.parameters,docs:{...(g=s.parameters)==null?void 0:g.docs,source:{originalSource:`{
+  args: {
+    children: "Label"
+  }
+}`,...(h=(b=s.parameters)==null?void 0:b.docs)==null?void 0:h.source}}};var f,D,S;t.parameters={...t.parameters,docs:{...(f=t.parameters)==null?void 0:f.docs,source:{originalSource:`{
+  args: {
+    children: "This one is disabled",
+    isDisabled: true
+  }
+}`,...(S=(D=t.parameters)==null?void 0:D.docs)==null?void 0:S.source}}};const F=["Default","DefaultChecked","Indeterminate","WithLabel","Disabled"];export{e as Default,r as DefaultChecked,t as Disabled,a as Indeterminate,s as WithLabel,F as __namedExportsOrder,B as default};

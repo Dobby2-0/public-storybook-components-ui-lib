@@ -11,4 +11,4 @@ export declare const localizeCurrency: (amount?: number, locale?: string) => str
 export declare const buildAddressString: (address?: Address) => string;
 export declare const resolveField: <T, U>(item: T, fieldResolver?: FieldResolver<T, U>) => string | U;
 export declare const resolveFieldWithProps: <T, U, V>(item: T, extraCallbackProps: V, fieldResolver?: FieldResolverWithProps<T, U, V>) => string | U;
-export declare const captureEvent: (message: string, level: SeverityLevel) => string;
+export declare const captureEvent: (message: string, level: SeverityLevel) => string | undefined;
