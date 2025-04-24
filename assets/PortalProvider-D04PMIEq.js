@@ -1,1 +1,0 @@
-import{R as a,r as n}from"./index-YTOF1_EJ.js";const r=n.createContext({});function d(e){let{getContainer:t}=e,{getContainer:o}=c();return a.createElement(r.Provider,{value:{getContainer:t===null?void 0:t??o}},e.children)}function c(){var e;return(e=n.useContext(r))!==null&&e!==void 0?e:{}}export{d as $,c as a};

@@ -27,12 +27,14 @@ interface TableProps extends AriaTableProps {
     addRowButton?: boolean;
     /** optional identifier used for locally storing column configuration */
     id?: string;
+    /** disable the options menu for toggling/re-ordering columns */
+    disableColumnOptions?: boolean;
 }
 /**
  * A table displays data in rows and columns and enables a user to navigate its contents via directional navigation keys, and optionally supports row selection and sorting.
  *
  * Based on `React-aria-components`
  */
-declare const Table: ({ id, columns, dataSource, addRowButton, onRowAction, ...props }: TableProps) => import("react/jsx-runtime").JSX.Element | undefined;
+declare const Table: ({ id, columns, dataSource, addRowButton, onRowAction, disableColumnOptions, ...props }: TableProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export { Table };
 export type { ColumnDefinition, InternalColumnDefinition, SortDescriptor, TableProps, };

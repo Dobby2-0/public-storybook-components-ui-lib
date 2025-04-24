@@ -1,7 +1,7 @@
 import { FieldResolver, FieldResolverWithProps, ResolverFunctionWithProps } from '../../types';
 import { ComponentProps, ReactNode } from '../../../node_modules/react';
 import { Collection as AriaCollection, Header as AriaHeader, ListBoxItemProps as AriaListBoxItemProps, ListBoxProps as AriaListBoxProps } from 'react-aria-components';
-declare const ListBoxSection: <T extends object>(props: import('react-aria-components').ListBoxSectionProps<T> & React.RefAttributes<HTMLElement>) => React.ReactElement | null;
+declare const ListBoxSection: <T extends object>(props: import('react-aria-components').ListBoxSectionProps<T> & React.RefAttributes<HTMLElement>) => React.ReactNode;
 declare const ListBoxCollection: typeof AriaCollection;
 declare const ListBoxHeader: ({ className, ...props }: ComponentProps<typeof AriaHeader>) => import("react/jsx-runtime").JSX.Element;
 interface ListBoxBaseProps<T> extends AriaListBoxProps<T> {
