@@ -1,0 +1,16 @@
+import{j as g}from"./jsx-runtime-F1iDwNaf.js";import{B as d}from"./Button-C63t3WzL.js";import{a as l}from"./Popover-DTBk134k.js";import"./index-YTOF1_EJ.js";import"./index-D8pzxCuu.js";import"./index-D35RSF8M.js";import"./useFocusRing-oRcX7meB.js";import"./platform-DO9ne4TU.js";import"./ButtonBase-ByBJ6-Lj.js";import"./Loader-Baa5_8E0.js";import"./Button-Cw0J1ZsA.js";import"./Hidden-D7ttFcTv.js";import"./usePress-DLzaRTNK.js";import"./openLink-DdIfhzZQ.js";import"./index-Cjh3zZyl.js";import"./index-BhTLYoCu.js";import"./Dialog-veHidkC1.js";import"./RSPContexts-uj8S1pO4.js";import"./Separator-BPiyIXYd.js";import"./useDescription-D9n-bgck.js";import"./FocusScope-ClNrKT5a.js";import"./context-C679USxU.js";import"./useControlledState-DSc3NtNd.js";import"./Text-CcVvtRkI.js";import"./PressResponder-1Ab0Ccdw.js";import"./ariaHideOutside-B1lZiDRj.js";import"./PortalProvider-BV92Uc6C.js";import"./getScrollParent-CjSlHuQm.js";import"./useLabels-CMjnz4Yz.js";import"./VisuallyHidden-CdGMfvlm.js";const M={component:l,argTypes:{}},r={args:{children:g.jsx(d,{children:"Open popover"}),content:"Popover content"}},o={args:{...r.args,overlayArrow:!0}},t={args:{...r.args,placement:"right"}};var e,p,a;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`{
+  args: {
+    children: <Button>Open popover</Button>,
+    content: "Popover content"
+  }
+}`,...(a=(p=r.parameters)==null?void 0:p.docs)==null?void 0:a.source}}};var s,m,i;o.parameters={...o.parameters,docs:{...(s=o.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  args: {
+    ...Default.args,
+    overlayArrow: true
+  }
+}`,...(i=(m=o.parameters)==null?void 0:m.docs)==null?void 0:i.source}}};var n,c,u;t.parameters={...t.parameters,docs:{...(n=t.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  args: {
+    ...Default.args,
+    placement: "right"
+  }
+}`,...(u=(c=t.parameters)==null?void 0:c.docs)==null?void 0:u.source}}};const N=["Default","WithArrow","PositionRight"];export{r as Default,t as PositionRight,o as WithArrow,N as __namedExportsOrder,M as default};
