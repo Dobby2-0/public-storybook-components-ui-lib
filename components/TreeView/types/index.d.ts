@@ -51,6 +51,8 @@ export interface TreeViewProps {
     className?: string | TreeViewClassNameObject;
     /** Expand all nodes in the tree on component mount */
     defaultExpanded?: boolean;
+    /** List of IDs of the items that should be selected, nodes will expand so the item is visible */
+    selectedItem?: TreeItem["id"] | TreeItem["id"][];
     /** List of IDs of the items that should initially be selected, nodes will expand so the item is visible */
     defaultSelection?: TreeItem["id"] | TreeItem["id"][];
     /** function called when an item is selected */

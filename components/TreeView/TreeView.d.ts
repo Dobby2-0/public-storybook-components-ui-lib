@@ -4,6 +4,6 @@ import { TreeItem, TreeViewProps, TreeViewSelection } from './types';
  *
  * Based on ´@radix-ui/react-accordion´
  */
-declare const TreeView: ({ items, selectionMode, defaultSelection, defaultExpanded, defaultIcons, hideTriggerIcon, forceRootIcons, className, asPopover, onSelectionChange, enableBranchSelection, onlyToggleOnTriggerIcon, leafRenderer, }: TreeViewProps) => import("react/jsx-runtime").JSX.Element;
+declare const TreeView: ({ items, selectionMode, selectedItem, defaultSelection, defaultExpanded, defaultIcons, hideTriggerIcon, forceRootIcons, className, asPopover, onSelectionChange, enableBranchSelection, onlyToggleOnTriggerIcon, leafRenderer, }: TreeViewProps) => import("react/jsx-runtime").JSX.Element;
 export { TreeView };
 export type { TreeItem, TreeViewSelection };
