@@ -12,7 +12,7 @@ interface MenuBaseProps<T extends object> extends Omit<AriaMenuProps<T>, "items"
     /**  */
     className?: string | ClassNameObject;
 }
-declare const MenuItem: ({ children, className, ...props }: AriaMenuItemProps) => import("react/jsx-runtime").JSX.Element;
+declare const MenuBase: <T extends object>({ placement, offset, className, ...props }: MenuBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
 declare const MenuSeparator: ({ className, ...props }: AriaSeparatorProps) => import("react/jsx-runtime").JSX.Element;
 interface MenuProps<T extends object> extends Omit<AriaMenuProps<T>, "items" | "className">, Omit<AriaMenuTriggerProps, "children">, MenuBaseProps<T> {
     /** Array of items used to build the hierarchy */
@@ -20,7 +20,7 @@ interface MenuProps<T extends object> extends Omit<AriaMenuProps<T>, "items" | "
     /** Element to be shown as menu trigger */
     children: ReactNode;
 }
-interface MenuItem extends Omit<AriaMenuItemProps, "children"> {
+export interface MenuItem extends Omit<AriaMenuItemProps, "children"> {
     label?: ReactNode;
     children?: (MenuItem | MenuSeparator)[];
 }
@@ -28,4 +28,6 @@ interface MenuSeparator extends AriaSeparatorProps {
     separator?: boolean;
 }
 declare const Menu: <T extends object>({ items, isOpen, onOpenChange, children, ...props }: MenuProps<T>) => import("react/jsx-runtime").JSX.Element;
-export { Menu };
+type MenuContentProps<T extends object> = Omit<MenuProps<T>, "items" | "children">;
+declare const createMenuContent: <T extends object>(items: (MenuItem | MenuSeparator)[], props: MenuContentProps<T>) => import("react/jsx-runtime").JSX.Element[];
+export { createMenuContent, Menu, MenuBase };
