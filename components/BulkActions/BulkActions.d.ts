@@ -8,7 +8,7 @@ interface BulkActionsProps<T extends object> {
 interface BulkAction extends CollectionItem {
     /** Function to be called when the action is selected */
     action?: () => void;
-    /** Function the disable a specific item action */
+    /** Whether the action should be disabled */
     disabled?: boolean;
 }
 /**
