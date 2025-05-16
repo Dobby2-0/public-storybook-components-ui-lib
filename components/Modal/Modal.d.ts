@@ -8,7 +8,10 @@ interface ModalContentProps extends Omit<ComponentProps<typeof AriaModal>, "chil
     children?: AriaDialogProps["children"];
     role?: AriaDialogProps["role"];
     closeButton?: boolean;
+    title?: string;
+    footer?: (close: () => void) => ReactNode;
 }
+declare const ModalContent: ({ className, children, side, role, closeButton, title, footer, ...props }: ModalContentProps) => import("react/jsx-runtime").JSX.Element;
 interface ModalProps extends Omit<ModalContentProps, "children"> {
     /** The trigger component, e.g. a button, to open the modal */
     trigger: ReactNode;
@@ -37,4 +40,4 @@ interface ModalProps extends Omit<ModalContentProps, "children"> {
  * </Modal>
  */
 declare const Modal: ({ trigger, title, children, footer, overlayClassName, isOpen, onOpenChange, isDismissable, isKeyboardDismissDisabled, ...props }: ModalProps) => import("react/jsx-runtime").JSX.Element;
-export { Modal };
+export { Modal, ModalContent };
