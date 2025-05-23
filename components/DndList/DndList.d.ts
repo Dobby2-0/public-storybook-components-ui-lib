@@ -1,3 +1,4 @@
+import { arrayMove } from '@dnd-kit/sortable';
 import { ReactNode } from '../../../node_modules/react';
 type ItemWithId = Record<never, unknown> & {
     id: string | number;
@@ -5,8 +6,10 @@ type ItemWithId = Record<never, unknown> & {
 interface DndListProps<T extends ItemWithId> {
     /** Array of items used in the list */
     items: T[];
-    /** Handler called when order change */
+    /** Handler called when order change, gets updated array of items */
     onChange?: (items: T[]) => void;
+    /** Handler called when order change, gets dragged item and dropped position index */
+    onDragEnd?: (item: T, newIndex: number) => void;
     /** Child function that handles rendering for each item */
     children: (item: T) => ReactNode;
     /** The CSS className for the element */
@@ -14,7 +17,7 @@ interface DndListProps<T extends ItemWithId> {
     /** Wheter re-ordering should be disabled */
     disabled?: boolean;
 }
-declare const DndList: (<T extends ItemWithId>({ items, onChange, children, className, disabled, }: DndListProps<T>) => import("react/jsx-runtime").JSX.Element) & {
+declare const DndList: (<T extends ItemWithId>({ items, onChange, onDragEnd, children, className, disabled, }: DndListProps<T>) => import("react/jsx-runtime").JSX.Element) & {
     Item: ({ id, children }: {
         children?: ReactNode | undefined;
     } & {
@@ -22,4 +25,4 @@ declare const DndList: (<T extends ItemWithId>({ items, onChange, children, clas
     }) => import("react/jsx-runtime").JSX.Element;
     DragHandle: () => import("react/jsx-runtime").JSX.Element;
 };
-export { DndList };
+export { arrayMove, DndList };
