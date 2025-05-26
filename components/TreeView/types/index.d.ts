@@ -7,6 +7,7 @@ export interface TreeItem {
         default?: ReactNode;
         expanded?: ReactNode;
     };
+    defaultExpanded?: boolean;
     className?: string;
     children?: TreeItem[] | ReactNode;
     onClick?: (item: TreeItem, selected: TreeItemState["selected"]) => void;
