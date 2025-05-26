@@ -15,7 +15,7 @@ export { DateTimePicker } from './components/DateTimePicker/DateTimePicker';
 export { DetailPageHeader } from './components/DetailPageHeader/DetailPageHeader';
 export { Divider } from './components/Divider/Divider';
 export { DndList } from './components/DndList/DndList.tsx';
-export { DobbyContextProvider } from './components/DobbyContextProvider/DobbyContextProvider.tsx';
+export { DobbyContextProvider, PortalProvider, } from './components/DobbyContextProvider/DobbyContextProvider.tsx';
 export { ErrorBoundary } from './components/Error/ErrorBoundary.tsx';
 export { ErrorPage } from './components/Error/ErrorPage.tsx';
 export { RouterErrorElement } from './components/Error/RouterErrorElement.tsx';

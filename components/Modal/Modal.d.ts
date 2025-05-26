@@ -39,5 +39,5 @@ interface ModalProps extends Omit<ModalContentProps, "children"> {
  *   <p>This is the modal content.</p>
  * </Modal>
  */
-declare const Modal: ({ trigger, title, children, footer, overlayClassName, isOpen, onOpenChange, isDismissable, isKeyboardDismissDisabled, ...props }: ModalProps) => import("react/jsx-runtime").JSX.Element;
+declare const Modal: ({ trigger, title, children, footer, overlayClassName, isOpen, onOpenChange, isDismissable, isKeyboardDismissDisabled, shouldCloseOnInteractOutside, ...props }: ModalProps) => import("react/jsx-runtime").JSX.Element;
 export { Modal, ModalContent };

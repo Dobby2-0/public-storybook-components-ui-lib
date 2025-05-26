@@ -9,7 +9,7 @@ type ComboBoxFilterProps = ComponentProps<typeof ComboBox> & {
     /** Type of filter */
     filterType: "combobox";
 };
-type FilterDefinition = Pick<SelectFilterProps | ComboBoxFilterProps, "filterType" | "items" | "placeholder" | "labelResolver"> & {
+type FilterDefinition = Pick<SelectFilterProps | ComboBoxFilterProps, "filterType" | "items" | "placeholder" | "labelResolver" | "className"> & {
     /** Unique name of the filter, also used as label/placeholder */
     name: string;
 };
@@ -17,7 +17,7 @@ interface FilterBarProps {
     /** Definition of all filters. */
     filters: FilterDefinition[];
     /** Initial values of te filters, uses the filter `name` to link to the component. */
-    filterValues?: Record<string, never>;
+    filterValues?: Record<string, unknown>;
     /** Callback function called whan a filter changes value, returns the value of all "touched" filters. */
     onFilterChange?: (filters: Record<string, string | string[] | boolean | undefined>) => void;
     /** The CSS className for the element. */
