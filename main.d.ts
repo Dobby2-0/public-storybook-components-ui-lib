@@ -1,5 +1,5 @@
 export * from './hooks';
-export { buildAddressString, capitalize, captureEvent, cn, localizeCurrency, } from './utils';
+export { buildAddressString, capitalize, captureEvent, cn, downloadFile, localizeCurrency, } from './utils';
 export * from './utils/date';
 export { Accordion, AccordionContent, AccordionHeader, AccordionItem, AccordionTrigger, } from './components/Accordion/Accordion';
 export { Alert } from './components/Alert/Alert';
