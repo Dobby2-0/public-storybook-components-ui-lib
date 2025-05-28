@@ -19,6 +19,7 @@ export { DobbyContextProvider, PortalProvider, } from './components/DobbyContext
 export { ErrorBoundary } from './components/Error/ErrorBoundary.tsx';
 export { ErrorPage } from './components/Error/ErrorPage.tsx';
 export { RouterErrorElement } from './components/Error/RouterErrorElement.tsx';
+export { FileIcon } from './components/FileIcon/FileIcon';
 export { FileList, fileToAttachment, type Attachment, } from './components/FileList/FileList';
 export { Form, useFormField, useFormRef } from './components/Form/Form';
 export { List } from './components/List/List';
