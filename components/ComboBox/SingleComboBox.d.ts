@@ -10,6 +10,8 @@ interface SingleComboBoxProps<T extends object> extends ComboBoxCommonProps, Omi
     onSelectionChange?: (selectedItem: T | undefined) => void;
     /** Callback triggered when the open state of the popover changes. */
     onOpenChange?: (isOpen: boolean) => void;
+    /** Allows the combobox to be used like a menu */
+    keepSelectionClear?: boolean;
 }
-declare const SingleComboBox: <T extends object>({ placeholder, className, items, selectedKey, defaultSelectedKey, onSelectionChange, onOpenChange, idResolver, ...props }: SingleComboBoxProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const SingleComboBox: <T extends object>({ placeholder, className, items, selectedKey, defaultSelectedKey, onSelectionChange, onOpenChange, idResolver, keepSelectionClear, ...props }: SingleComboBoxProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { SingleComboBox, type SingleComboBoxProps };
