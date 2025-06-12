@@ -1,9 +1,11 @@
 import { VariantProps } from 'class-variance-authority';
 import { ComponentProps, ReactNode } from '../../../node_modules/react';
-import { DialogProps as AriaDialogProps, Modal as AriaModal } from 'react-aria-components';
+import { DialogProps as AriaDialogProps, Modal as AriaModal, ModalOverlayProps as AriaModalOverlayProps } from 'react-aria-components';
 declare const sheetVariants: (props?: ({
     side?: "left" | "right" | "bottom" | "top" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
+/** Modal overlay element, can be used with ModalContent */
+declare const ModalOverlay: ({ className, isDismissable, ...props }: AriaModalOverlayProps) => import("react/jsx-runtime").JSX.Element;
 interface ModalContentProps extends Omit<ComponentProps<typeof AriaModal>, "children">, VariantProps<typeof sheetVariants> {
     children?: AriaDialogProps["children"];
     role?: AriaDialogProps["role"];
@@ -11,6 +13,7 @@ interface ModalContentProps extends Omit<ComponentProps<typeof AriaModal>, "chil
     title?: string;
     footer?: (close: () => void) => ReactNode;
 }
+/** Standalone Modal element without trigger element, can be used together with the ModalOverlay */
 declare const ModalContent: ({ className, children, side, role, closeButton, title, footer, ...props }: ModalContentProps) => import("react/jsx-runtime").JSX.Element;
 interface ModalProps extends Omit<ModalContentProps, "children"> {
     /** The trigger component, e.g. a button, to open the modal */
@@ -40,4 +43,4 @@ interface ModalProps extends Omit<ModalContentProps, "children"> {
  * </Modal>
  */
 declare const Modal: ({ trigger, title, children, footer, overlayClassName, isOpen, onOpenChange, isDismissable, isKeyboardDismissDisabled, shouldCloseOnInteractOutside, ...props }: ModalProps) => import("react/jsx-runtime").JSX.Element;
-export { Modal, ModalContent };
+export { Modal, ModalContent, ModalOverlay };

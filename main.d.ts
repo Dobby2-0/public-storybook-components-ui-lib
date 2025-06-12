@@ -28,7 +28,7 @@ export { ListBox } from './components/ListBox/ListBox';
 export { ListFilters, type FilterDefinition, } from './components/ListFilters/ListFilters';
 export { Loader } from './components/Loader/Loader';
 export { Menu, type MenuItem } from './components/Menu/Menu';
-export { Modal, ModalContent } from './components/Modal/Modal';
+export { Modal, ModalContent, ModalOverlay } from './components/Modal/Modal';
 export { Pagination } from './components/Pagination/Pagination';
 export { Pill } from './components/Pill/Pill';
 export { Popover } from './components/Popover/Popover';
