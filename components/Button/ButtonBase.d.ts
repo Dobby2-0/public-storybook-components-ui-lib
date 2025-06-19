@@ -1,3 +1,4 @@
+import { TooltipProps } from '../Tooltip/Tooltip.tsx';
 import { ExcludeNull } from '../../types';
 import { VariantProps } from 'class-variance-authority';
 import { PropsWithChildren } from '../../../node_modules/react';
@@ -12,7 +13,11 @@ interface ButtonBaseProps extends Omit<AriaButtonProps, "children" | "onPress">,
     replaceContentWhileLoading?: boolean;
     /** Handler that is called when the press is released over the target */
     onPress?: (e: PressEvent) => void | Promise<void>;
+    /** Optional tooltip to show when hovering the button */
+    tooltip?: TooltipProps["content"];
+    /** Customization options for the tooltip */
+    tooltipProps?: Omit<TooltipProps, "content">;
 }
-declare const ButtonBase: ({ className, variant, isLoading, replaceContentWhileLoading, children, ...props }: ButtonBaseProps) => import("react/jsx-runtime").JSX.Element;
+declare const ButtonBase: ({ className, variant, isLoading, replaceContentWhileLoading, children, tooltip, tooltipProps, ...props }: ButtonBaseProps) => import("react/jsx-runtime").JSX.Element;
 export { ButtonBase };
 export type { ButtonBaseProps };
