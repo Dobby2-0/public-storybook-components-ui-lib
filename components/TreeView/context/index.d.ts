@@ -15,14 +15,16 @@ export declare const TreeViewContext: import('../../../../node_modules/react').C
     enableBranchSelection: boolean;
     onlyToggleOnTriggerIcon: boolean;
     leafRenderer: ((props: import('../../../../node_modules/react').HTMLAttributes<HTMLElement> & import('react-aria').PressEvents, item?: TreeItem) => import('../../../../node_modules/react').ReactNode) | undefined;
+    enableTooltip: boolean;
+    tooltipProps: Omit<import('../../Tooltip/Tooltip').TooltipProps, "content"> | undefined;
 } | null>;
-interface TreeViewContextValueProps extends Pick<TreeViewProps, "asPopover" | "defaultExpanded" | "defaultIcons" | "selectedItem" | "defaultSelection" | "hideTriggerIcon" | "items" | "onSelectionChange" | "selectionMode" | "enableBranchSelection" | "onlyToggleOnTriggerIcon" | "leafRenderer"> {
+interface TreeViewContextValueProps extends Pick<TreeViewProps, "asPopover" | "defaultExpanded" | "defaultIcons" | "selectedItem" | "defaultSelection" | "hideTriggerIcon" | "items" | "onSelectionChange" | "selectionMode" | "enableBranchSelection" | "onlyToggleOnTriggerIcon" | "leafRenderer" | "enableTooltip" | "tooltipProps"> {
     classNames?: TreeViewClassNameObject;
 }
 /**
  * Manages the internal state of the TreeView component
  */
-export declare const useTreeViewManager: ({ items, selectionMode, selectedItem, defaultSelection, defaultExpanded, onSelectionChange, defaultIcons, classNames, asPopover, hideTriggerIcon, enableBranchSelection, onlyToggleOnTriggerIcon, leafRenderer, }: TreeViewContextValueProps) => {
+export declare const useTreeViewManager: ({ items, selectionMode, selectedItem, defaultSelection, defaultExpanded, onSelectionChange, defaultIcons, classNames, asPopover, hideTriggerIcon, enableBranchSelection, onlyToggleOnTriggerIcon, leafRenderer, enableTooltip, tooltipProps, }: TreeViewContextValueProps) => {
     contextValue: {
         treeViewData: import('../types').TreeViewData;
         selectionMode: "checkbox" | "focus" | undefined;
@@ -37,6 +39,8 @@ export declare const useTreeViewManager: ({ items, selectionMode, selectedItem, 
         enableBranchSelection: boolean;
         onlyToggleOnTriggerIcon: boolean;
         leafRenderer: ((props: import('../../../../node_modules/react').HTMLAttributes<HTMLElement> & import('react-aria').PressEvents, item?: TreeItem) => import('../../../../node_modules/react').ReactNode) | undefined;
+        enableTooltip: boolean;
+        tooltipProps: Omit<import('../../Tooltip/Tooltip').TooltipProps, "content"> | undefined;
     };
     itemsInternal: TreeItem[];
 };

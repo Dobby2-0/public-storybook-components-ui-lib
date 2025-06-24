@@ -1,3 +1,4 @@
+import { TooltipProps } from '../../Tooltip/Tooltip.tsx';
 import { PressEvents } from '@react-types/shared/src/events';
 import { HTMLAttributes, ReactNode } from '../../../../node_modules/react';
 export interface TreeItem {
@@ -72,4 +73,8 @@ export interface TreeViewProps {
     onlyToggleOnTriggerIcon?: boolean;
     /** Use custom component for the tree leafs instead of regular button */
     leafRenderer?: (props: HTMLAttributes<HTMLElement> & PressEvents, item?: TreeItem) => ReactNode;
+    /** Whether to enable tooltips on the TreeViewPopover trigger */
+    enableTooltip?: boolean;
+    /** Tooltip custmoization */
+    tooltipProps?: Omit<TooltipProps, "content">;
 }

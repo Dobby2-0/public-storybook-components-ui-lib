@@ -15,12 +15,14 @@ interface TooltipProps extends Omit<AriaTooltipProps, "children" | "style">, Pro
      * Set to true when not using a button element as a trigger.
      * */
     customTrigger?: boolean;
+    /** Optionally disable the tooltip */
+    disabled?: boolean;
 }
 /**
  * A tooltip displays a description of an element on hover or focus.
  *
  * Based on `react-aria-components`
  */
-declare const Tooltip: ({ children, content, overlayArrow, asPopoverOnTouchScreen, customTrigger, ...props }: TooltipProps) => import("react/jsx-runtime").JSX.Element;
+declare const Tooltip: ({ children, content, overlayArrow, asPopoverOnTouchScreen, customTrigger, disabled, ...props }: TooltipProps) => string | number | boolean | import("react/jsx-runtime").JSX.Element | Iterable<ReactNode> | null | undefined;
 export { Tooltip };
 export type { TooltipProps };

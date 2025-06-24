@@ -10,9 +10,15 @@ interface RichTextEditorProps {
     disabled?: boolean;
     /** configuration object for setting the available toolbar options */
     toolbarOptions?: EditorToolbarOptions;
+    /**
+     * Wether the content container should be resizable
+     *
+     * @Default true
+     */
+    resizable?: boolean;
 }
 /**
  * RichTextEditor component based on `@tiptap/react`.
  */
-declare const RichTextEditor: ({ value, onChange, className, disabled, toolbarOptions, }: RichTextEditorProps) => import("react/jsx-runtime").JSX.Element | null;
+declare const RichTextEditor: ({ value, onChange, className, disabled, toolbarOptions, resizable, }: RichTextEditorProps) => import("react/jsx-runtime").JSX.Element | null;
 export { RichTextEditor };
