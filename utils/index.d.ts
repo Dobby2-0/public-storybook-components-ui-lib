@@ -14,3 +14,9 @@ export declare const resolveFieldWithProps: <T, U, V>(item: T, extraCallbackProp
 export declare const captureEvent: (message: string, level: SeverityLevel) => string | undefined;
 /** Initiates a native browser download */
 export declare const downloadFile: (url: string, name: string) => Promise<void>;
+/**
+ * Concatenates the first and last name to a single string and omits any falsy values.
+ *
+ * By defalt the last name is shown first, followed by the first name.
+ */
+export declare const showFullName: (firstName?: string | null, lastName?: string | null, reverseOrder?: boolean) => string;
