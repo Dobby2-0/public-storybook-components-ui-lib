@@ -1,5 +1,5 @@
 import { ReactNode } from '../../../node_modules/react';
-import { TextFieldProps as AriaTextFieldProps } from 'react-aria-components';
+import { TextAreaProps as AriaTextAreaProps, TextFieldProps as AriaTextFieldProps } from 'react-aria-components';
 interface TextFieldProps extends AriaTextFieldProps {
     /** Label above the input */
     label?: string;
@@ -9,6 +9,8 @@ interface TextFieldProps extends AriaTextFieldProps {
     errorMessage?: string;
     /** If true, renders a textarea instead of an input */
     textArea?: boolean;
+    /** The number of visible text lines for the textarea */
+    rows?: AriaTextAreaProps["rows"];
     /** Optional placeholder text */
     placeholder?: string;
     /** Optional element added before the Textfield input */
