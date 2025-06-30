@@ -52,11 +52,13 @@ interface FileListProps {
         error?: string;
         file: Attachment;
     }) => ReactNode | void;
+    className?: string;
+    contrastMode?: boolean;
 }
 /**
  * Displays a list of files with optional action buttons.
  */
-declare const FileList: ({ files, actionButtons, onFilesChange, onFileLoadingError, }: FileListProps) => import("react/jsx-runtime").JSX.Element;
+declare const FileList: ({ files, actionButtons, onFilesChange, onFileLoadingError, className, contrastMode, }: FileListProps) => import("react/jsx-runtime").JSX.Element;
 type FileToAttachmentResult<T> = T extends File ? Attachment : Attachment[];
 declare const fileToAttachment: <T extends File | File[]>(file: T) => FileToAttachmentResult<T>;
 export { FileList, fileToAttachment };

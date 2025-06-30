@@ -15,7 +15,7 @@ interface FileInputProps extends CommonUploadProps, Pick<FileTriggerProps, "acce
     /** callback to handle file selection */
     onFileSelectionChange?: (file: Attachment) => void;
 }
-interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">, CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes">, Pick<FileListProps, "actionButtons"> {
+interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">, CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes">, Pick<FileListProps, "actionButtons" | "contrastMode"> {
     /**
      * current value (controlled)
      *
@@ -28,6 +28,10 @@ interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">,
     onFileAddError?: (file: Attachment, error?: string) => ReactNode | void;
 }
 type FileAddResult = Omit<Attachment, "loading"> | void;
+interface ClassNameObject {
+    base?: string;
+    fileList?: string;
+}
 interface CommonUploadProps {
     /** error message to be displayed */
     errorMessage?: string;
@@ -36,7 +40,7 @@ interface CommonUploadProps {
     /** Description for the input/dropzone */
     description?: string;
     /** CSS classname for the component */
-    className?: string;
+    className?: string | ClassNameObject;
     /** Maximum file size in bytes */
     fileSizeLimit?: number;
     /**
@@ -55,7 +59,7 @@ interface FileInputUploadProps extends CommonUploadProps, Pick<FileInputProps, "
     /** optionally render DropZone instead of FileInput */
     isDropZone?: false;
 }
-interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes" | "onFileAddError"> {
+interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes" | "onFileAddError" | "contrastMode"> {
     /** optionally render DropZone instead of FileInput */
     isDropZone: true;
 }
