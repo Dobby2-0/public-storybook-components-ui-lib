@@ -35,6 +35,7 @@ export { Popover } from './components/Popover/Popover';
 export { RadioGroup } from './components/RadioGroup/RadioGroup';
 export { RichTextEditor } from './components/RichTextEditor/RichTextEditor';
 export { Select } from './components/Select/Select.tsx';
+export { SelectBase } from './components/Select/SelectBase.tsx';
 export { Switch } from './components/Switch/Switch';
 export { Table, type ColumnDefinition, type SortDescriptor, type TableProps, } from './components/Table/Table';
 export { Tabs, type TabItem } from './components/Tabs/Tabs';
