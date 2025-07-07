@@ -37,6 +37,7 @@ export { RichTextEditor } from './components/RichTextEditor/RichTextEditor';
 export { Select } from './components/Select/Select.tsx';
 export { SelectBase } from './components/Select/SelectBase.tsx';
 export { Switch } from './components/Switch/Switch';
+export { AgGridTable } from './components/Table/Ag-grid-table';
 export { Table, type ColumnDefinition, type SortDescriptor, type TableProps, } from './components/Table/Table';
 export { Tabs, type TabItem } from './components/Tabs/Tabs';
 export { TextField } from './components/TextField/TextField';
