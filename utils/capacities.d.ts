@@ -15,6 +15,10 @@ export declare const getBuildingIdsFromOwnerCapacities: (capacities: string) => 
  */
 export declare const getLotIdsFromOwnerCapacities: (capacities: string) => string[];
 /**
+ * Get the capacity for a specific owner ID from a string of capacities.
+ */
+export declare const getOwnerCapacityOwnerId: (capacities: string, ownerId: string) => string | undefined;
+/**
  * Get the capacity for a specific building ID from a string of capacities.
  */
 export declare const getOwnerCapacityByBuildingId: (capacities: string, buildingId: string) => string | undefined;
