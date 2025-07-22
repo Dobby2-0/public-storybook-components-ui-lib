@@ -3,6 +3,7 @@ interface FiltersBlockProps extends PropsWithChildren {
     filterWidth: number;
     className?: string;
     activeFilters?: number;
+    forceMobile?: boolean;
 }
-declare const ResponsiveFilterBar: ({ activeFilters, filterWidth, className, children, }: FiltersBlockProps) => import("react/jsx-runtime").JSX.Element;
+declare const ResponsiveFilterBar: ({ activeFilters, filterWidth, className, children, forceMobile, }: FiltersBlockProps) => import("react/jsx-runtime").JSX.Element;
 export { ResponsiveFilterBar };

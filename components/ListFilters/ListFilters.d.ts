@@ -14,6 +14,8 @@ type FilterDefinition = Pick<SelectFilterProps | ComboBoxFilterProps, "filterTyp
     name: string;
 };
 interface FilterBarProps {
+    /** Forces the filter bar to be displayed in mobile mode. */
+    forceMobile?: boolean;
     /** Definition of all filters. */
     filters: FilterDefinition[];
     /** Initial values of te filters, uses the filter `name` to link to the component. */
@@ -28,6 +30,6 @@ interface FilterBarProps {
  *
  * Support Singl-/MultiSelect & Combobox filters
  */
-declare const ListFilters: ({ filters, filterValues, onFilterChange, className, }: FilterBarProps) => import("react/jsx-runtime").JSX.Element;
+declare const ListFilters: ({ filters, filterValues, onFilterChange, className, forceMobile, }: FilterBarProps) => import("react/jsx-runtime").JSX.Element;
 export { ListFilters };
 export type { FilterDefinition };
