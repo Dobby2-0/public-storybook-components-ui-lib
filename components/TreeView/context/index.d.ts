@@ -6,7 +6,7 @@ export declare const TreeViewContext: import('../../../../node_modules/react').C
     selectionMode: "checkbox" | "focus" | undefined;
     onSelectionChange: (id: string, selected: boolean) => void;
     onExpandChange: (itemId: TreeItem["id"], expanded: boolean) => void;
-    registerPopoverRef: (ref: RefObject<PopoverContentRef>) => void;
+    registerPopoverRef: (ref: RefObject<PopoverContentRef | null>) => void;
     closeAllPopovers: () => void;
     defaultIcons: import('../types').TreeViewDefaultIcons | undefined;
     classNames: TreeViewClassNameObject | undefined;
@@ -30,7 +30,7 @@ export declare const useTreeViewManager: ({ items, selectionMode, selectedItem, 
         selectionMode: "checkbox" | "focus" | undefined;
         onSelectionChange: (id: string, selected: boolean) => void;
         onExpandChange: (itemId: TreeItem["id"], expanded: boolean) => void;
-        registerPopoverRef: (ref: RefObject<PopoverContentRef>) => void;
+        registerPopoverRef: (ref: RefObject<PopoverContentRef | null>) => void;
         closeAllPopovers: () => void;
         defaultIcons: import('../types').TreeViewDefaultIcons | undefined;
         classNames: TreeViewClassNameObject | undefined;

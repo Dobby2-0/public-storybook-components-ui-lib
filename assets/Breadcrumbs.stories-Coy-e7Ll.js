@@ -1,0 +1,70 @@
+import{I as He,v as Me,K as Le,r as p,e as o,j as a,c as u}from"./iframe-CkSYBG_a.js";import{s as ze}from"./Dashboard-DqQHXBD0.js";import{s as G}from"./MoreHoriz-B0UAuRb6.js";import{B as We}from"./Button-D1OIx_zW.js";import{M as Ue}from"./Menu-Dk76MR-X.js";import{i as Ke}from"./ChevronForward-DOpB8PRT.js";import{s as Oe}from"./KeyboardArrowDown-Yl24jo4p.js";import{h as Ge,m as Je,i as Ze,j as Qe}from"./Separator-CY-qgb1e.js";import{j as Xe,k,a as C,e as J,f as Ye,g as er,h as Z,C as rr,$ as Q}from"./utils-DLSS263E.js";import{$ as ar}from"./usePress-D9Q6cESK.js";import{c as sr}from"./Button-DrCeR2IJ.js";import"./preload-helper-Dp1pzeXC.js";import"./ButtonBase-DXBFRlfj.js";import"./Loader-BXcMOFC4.js";import"./Tooltip-CubrmChN.js";import"./index-CKfOdylt.js";import"./RSPContexts-8Pqb7FMg.js";import"./index-D_tAX6-P.js";import"./index-CzNFAoCv.js";import"./Hidden-CyHnZAj4.js";import"./FocusScope-DNkZkZxq.js";import"./Text-DnVCXFQ3.js";import"./VisuallyHidden-COww4Kj4.js";import"./Check-V9FbMaZt.js";function tr(r,e){let{elementType:s="a",onPress:l,onPressStart:n,onPressEnd:t,onClick:d,isDisabled:i,...m}=r,f={};s!=="a"&&(f={role:"link",tabIndex:i?void 0:0});let{focusableProps:$}=Xe(r,e),{pressProps:b,isPressed:qe}=ar({onPress:l,onPressStart:n,onPressEnd:t,onClick:d,isDisabled:i,ref:e}),we=k(m,{labelable:!0}),Re=C($,b),Fe=He(),Te=Me(r);return{isPressed:qe,linkProps:C(we,Te,{...Re,...f,"aria-disabled":i||void 0,"aria-current":r["aria-current"],onClick:S=>{var P;(P=b.onClick)===null||P===void 0||P.call(b,S),Le(S,Fe,r.href,r.routerOptions)}})}}var X={};X={breadcrumbs:"عناصر الواجهة"};var Y={};Y={breadcrumbs:"Трохи хляб"};var ee={};ee={breadcrumbs:"Popis cesty"};var re={};re={breadcrumbs:"Brødkrummer"};var ae={};ae={breadcrumbs:"Breadcrumbs"};var se={};se={breadcrumbs:"Πλοηγήσεις breadcrumb"};var te={};te={breadcrumbs:"Breadcrumbs"};var ne={};ne={breadcrumbs:"Migas de pan"};var de={};de={breadcrumbs:"Lingiread"};var le={};le={breadcrumbs:"Navigointilinkit"};var ie={};ie={breadcrumbs:"Chemin de navigation"};var oe={};oe={breadcrumbs:"שבילי ניווט"};var ce={};ce={breadcrumbs:"Navigacijski putovi"};var ue={};ue={breadcrumbs:"Morzsamenü"};var me={};me={breadcrumbs:"Breadcrumb"};var be={};be={breadcrumbs:"パンくずリスト"};var pe={};pe={breadcrumbs:"탐색 표시"};var fe={};fe={breadcrumbs:"Naršymo kelias"};var $e={};$e={breadcrumbs:"Atpakaļceļi"};var he={};he={breadcrumbs:"Navigasjonsstier"};var xe={};xe={breadcrumbs:"Broodkruimels"};var ve={};ve={breadcrumbs:"Struktura nawigacyjna"};var ge={};ge={breadcrumbs:"Caminho detalhado"};var ye={};ye={breadcrumbs:"Categorias"};var Pe={};Pe={breadcrumbs:"Miez de pâine"};var De={};De={breadcrumbs:"Навигация"};var Ce={};Ce={breadcrumbs:"Navigačné prvky Breadcrumbs"};var Be={};Be={breadcrumbs:"Drobtine"};var Ne={};Ne={breadcrumbs:"Putanje navigacije"};var je={};je={breadcrumbs:"Sökvägar"};var ke={};ke={breadcrumbs:"İçerik haritaları"};var Se={};Se={breadcrumbs:"Навігаційна стежка"};var Ee={};Ee={breadcrumbs:"导航栏"};var Ie={};Ie={breadcrumbs:"導覽列"};var _e={};_e={"ar-AE":X,"bg-BG":Y,"cs-CZ":ee,"da-DK":re,"de-DE":ae,"el-GR":se,"en-US":te,"es-ES":ne,"et-EE":de,"fi-FI":le,"fr-FR":ie,"he-IL":oe,"hr-HR":ce,"hu-HU":ue,"it-IT":me,"ja-JP":be,"ko-KR":pe,"lt-LT":fe,"lv-LV":$e,"nb-NO":he,"nl-NL":xe,"pl-PL":ve,"pt-BR":ge,"pt-PT":ye,"ro-RO":Pe,"ru-RU":De,"sk-SK":Ce,"sl-SI":Be,"sr-SP":Ne,"sv-SE":je,"tr-TR":ke,"uk-UA":Se,"zh-CN":Ee,"zh-TW":Ie};function nr(r){return r&&r.__esModule?r.default:r}function dr(r){let{"aria-label":e,...s}=r,l=sr(nr(_e),"@react-aria/breadcrumbs");return{navProps:{...k(s,{labelable:!0}),"aria-label":e||l.format("breadcrumbs")}}}const Ae=p.createContext(null),Ve=p.forwardRef(function(e,s){[e,s]=J(e,s,Ae);let l=e.href&&!e.isDisabled?"a":"span",{linkProps:n,isPressed:t}=tr({...e,elementType:l},s),{hoverProps:d,isHovered:i}=Ye(e),{focusProps:m,isFocused:f,isFocusVisible:$}=er(),b=Z({...e,defaultClassName:"react-aria-Link",values:{isCurrent:!!e["aria-current"],isDisabled:e.isDisabled||!1,isPressed:t,isHovered:i,isFocused:f,isFocusVisible:$}});return o.createElement(l,{ref:s,slot:e.slot||void 0,...C(b,n,d,m),"data-focused":f||void 0,"data-hovered":i||void 0,"data-pressed":t||void 0,"data-focus-visible":$||void 0,"data-current":!!e["aria-current"]||void 0,"data-disabled":e.isDisabled||void 0},b.children)}),B=p.createContext(null),lr=p.forwardRef(function(e,s){[e,s]=J(e,s,B);let{CollectionRoot:l}=p.useContext(Je),{navProps:n}=dr(e);return o.createElement(Ze,{content:o.createElement(Qe,e)},t=>{var d;return o.createElement("ol",{ref:s,...n,slot:e.slot||void 0,style:e.style,className:(d=e.className)!==null&&d!==void 0?d:"react-aria-Breadcrumbs"},o.createElement(B.Provider,{value:e},o.createElement(l,{collection:t})))})}),ir=Ge("item",function(e,s,l){let n=l.nextKey==null,{isDisabled:t,onAction:d}=rr(B),i={"aria-current":n?"page":null,isDisabled:t||n,onPress:()=>d==null?void 0:d(l.key)},m=Z({...l.props,children:l.rendered,values:{isDisabled:t||n,isCurrent:n},defaultClassName:"react-aria-Breadcrumb"});return o.createElement("li",{...k(e),...m,ref:s,"data-disabled":t||n||void 0,"data-current":n||void 0},o.createElement(Ae.Provider,{value:i},m.children))}),N=({items:r,separator:e,onItemClick:s,...l})=>{const n=p.useMemo(()=>Array.from(r).map((t,d)=>t==="ellipsis"?{id:`${t}-${d}`,ellipsis:!0}:t),[r]);return a.jsx(or,{items:n,dependencies:[n],...l,children:t=>a.jsx(j,{children:(()=>{var d;return"ellipsis"in t?a.jsxs(a.Fragment,{children:[a.jsx(mr,{}),a.jsx(D,{children:e})]}):n.at(-1)===t?a.jsx(br,{children:t.label}):(d=t.menuProps)!=null&&d.items?a.jsxs(a.Fragment,{children:[a.jsx(ur,{label:t.label,addDropdownIcon:t.menuProps.addDropdownIcon,...t.menuProps}),a.jsx(D,{children:e})]}):a.jsxs(a.Fragment,{children:[a.jsx(cr,{href:t.url,onPress:()=>!t.url&&(s==null?void 0:s(t)),children:t.label}),a.jsx(D,{children:e})]})})()})})},or=({className:r,...e})=>a.jsx(lr,{className:u("flex flex-wrap items-center gap-1.5 break-words text-[0.875rem] text-neutral-900 sm:gap-2",r),...e}),j=({className:r,...e})=>a.jsx(ir,{className:u("inline-flex items-center gap-1.5 sm:gap-2",r),...e}),cr=({className:r,...e})=>a.jsx(Ve,{className:Q(r,s=>u("transition-colors text-neutral-700 cursor-pointer","data-hovered:text-foreground","data-disabled:pointer-events-none data-disabled:opacity-50","data-current:pointer-events-auto data-current:opacity-100",s)),...e}),D=({children:r,className:e,...s})=>a.jsx("span",{role:"presentation","aria-hidden":"true",className:u("text-neutral-500 shrink-0",e),...s,children:r??a.jsx(Ke,{})}),ur=({label:r,addDropdownIcon:e=!1,...s})=>a.jsx(Ue,{...s,children:a.jsx(We,{variant:"ghost",suffix:e&&a.jsx(Oe,{}),className:u("rounded-sm px-0.5 shrink-0 text-neutral-700 font-normal",e&&"px-1.5 [&>span]:pr-2"),children:r})}),mr=({className:r,...e})=>a.jsxs("span",{role:"presentation","aria-hidden":"true",className:u("flex size-7 items-center justify-center shrink-0",r),...e,children:[a.jsx(G,{className:"size-4"}),a.jsx("span",{className:"sr-only",children:"More"})]}),br=({className:r,...e})=>a.jsx(Ve,{className:Q(r,s=>u("text-foreground",s)),...e});try{N.displayName="Breadcrumbs",N.__docgenInfo={description:"Breadcrumb component to display hierarchical order of parent items leading to current item.\n\n`BreadcrumbItems` have an optional url to support navigation\n\nBased on `react-aria-componets`'s breadcrumbs",displayName:"Breadcrumbs",props:{items:{defaultValue:null,description:"Array of items used to build the hierarchy",name:"items",required:!0,type:{name:'(BreadcrumbItem | "ellipsis")[]'}},separator:{defaultValue:null,description:"Optional parameter to overwrite the default `<ChevronForward/>` icon used to separate items",name:"separator",required:!1,type:{name:"ReactNode"}},onItemClick:{defaultValue:null,description:"callback used when clicking an item without url",name:"onItemClick",required:!1,type:{name:"((item: BreadcrumbItem) => void)"}},isDisabled:{defaultValue:null,description:"Whether the breadcrumbs are disabled.",name:"isDisabled",required:!1,type:{name:"boolean"}},id:{defaultValue:null,description:"The element's unique identifier. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id).",name:"id",required:!1,type:{name:"string"}},"aria-label":{defaultValue:null,description:"Defines a string value that labels the current element.",name:"aria-label",required:!1,type:{name:"string"}},"aria-labelledby":{defaultValue:null,description:"Identifies the element (or elements) that labels the current element.",name:"aria-labelledby",required:!1,type:{name:"string"}},"aria-describedby":{defaultValue:null,description:"Identifies the element (or elements) that describes the object.",name:"aria-describedby",required:!1,type:{name:"string"}},"aria-details":{defaultValue:null,description:"Identifies the element (or elements) that provide a detailed, extended description for the object.",name:"aria-details",required:!1,type:{name:"string"}},slot:{defaultValue:null,description:"A slot name for the component. Slots allow the component to receive props from a parent component.\nAn explicit `null` value indicates that the local props completely override all props received from a parent.",name:"slot",required:!1,type:{name:"string | null"}},className:{defaultValue:null,description:"The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the element.",name:"className",required:!1,type:{name:"string"}},style:{defaultValue:null,description:"The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the element.",name:"style",required:!1,type:{name:"CSSProperties"}},dependencies:{defaultValue:null,description:"Values that should invalidate the item cache when using dynamic collections.",name:"dependencies",required:!1,type:{name:"readonly any[]"}},onAction:{defaultValue:null,description:"Handler that is called when a breadcrumb is clicked.",name:"onAction",required:!1,type:{name:"((key: Key) => void)"}}}}}catch{}try{j.displayName="BreadcrumbItem",j.__docgenInfo={description:"",displayName:"BreadcrumbItem",props:{id:{defaultValue:null,description:"A unique id for the breadcrumb, which will be passed to `onAction` when the breadcrumb is pressed.",name:"id",required:!1,type:{name:"Key"}},children:{defaultValue:null,description:"The children of the component. A function may be provided to alter the children based on component state.",name:"children",required:!1,type:{name:"ReactNode | ((values: BreadcrumbRenderProps & { defaultChildren: ReactNode; }) => ReactNode)"}},className:{defaultValue:null,description:"The CSS [className](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) for the element.",name:"className",required:!1,type:{name:"string"}},style:{defaultValue:null,description:"The inline [style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) for the element.",name:"style",required:!1,type:{name:"CSSProperties"}}}}}catch{}const Fr={component:N},c={args:{items:[{id:"home",label:"Home",url:"#"},{id:"page",label:"Page",url:"#"},{id:"detail",label:"Detail"}]}},h={args:{items:[{id:"home",label:"Home",url:"#"},"ellipsis",{id:"detail",label:"Detail"}]}},x={args:{isDisabled:!0,items:c.args.items}},v={args:{items:c.args.items,separator:"/"}},g={args:{items:[{id:"dashboard",label:a.jsxs("div",{className:"flex items-center gap-1",children:["Dashboard ",a.jsx(ze,{})]}),url:"#"},...c.args.items]}},y={args:{items:[{id:"home",label:"Home",url:"#"},{id:"dropdown",label:a.jsx(G,{}),menuProps:{items:[{id:"1",label:"Item 1"},{id:"2",label:"Item 2"}]}},{id:"detail",label:"Detail"}]}};var E,I,_;c.parameters={...c.parameters,docs:{...(E=c.parameters)==null?void 0:E.docs,source:{originalSource:`{
+  args: {
+    items: [{
+      id: "home",
+      label: "Home",
+      url: "#"
+    }, {
+      id: "page",
+      label: "Page",
+      url: "#"
+    }, {
+      id: "detail",
+      label: "Detail"
+    }]
+  }
+}`,...(_=(I=c.parameters)==null?void 0:I.docs)==null?void 0:_.source}}};var A,V,q;h.parameters={...h.parameters,docs:{...(A=h.parameters)==null?void 0:A.docs,source:{originalSource:`{
+  args: {
+    items: [{
+      id: "home",
+      label: "Home",
+      url: "#"
+    }, "ellipsis", {
+      id: "detail",
+      label: "Detail"
+    }]
+  }
+}`,...(q=(V=h.parameters)==null?void 0:V.docs)==null?void 0:q.source}}};var w,R,F;x.parameters={...x.parameters,docs:{...(w=x.parameters)==null?void 0:w.docs,source:{originalSource:`{
+  args: {
+    isDisabled: true,
+    items: Default.args!.items
+  }
+}`,...(F=(R=x.parameters)==null?void 0:R.docs)==null?void 0:F.source}}};var T,H,M;v.parameters={...v.parameters,docs:{...(T=v.parameters)==null?void 0:T.docs,source:{originalSource:`{
+  args: {
+    items: Default.args!.items,
+    separator: "/"
+  }
+}`,...(M=(H=v.parameters)==null?void 0:H.docs)==null?void 0:M.source}}};var L,z,W;g.parameters={...g.parameters,docs:{...(L=g.parameters)==null?void 0:L.docs,source:{originalSource:`{
+  args: {
+    items: [{
+      id: "dashboard",
+      label: <div className="flex items-center gap-1">
+            Dashboard <Dashboard />
+          </div>,
+      url: "#"
+    }, ...Default.args!.items!]
+  }
+}`,...(W=(z=g.parameters)==null?void 0:z.docs)==null?void 0:W.source}}};var U,K,O;y.parameters={...y.parameters,docs:{...(U=y.parameters)==null?void 0:U.docs,source:{originalSource:`{
+  args: {
+    items: [{
+      id: "home",
+      label: "Home",
+      url: "#"
+    }, {
+      id: "dropdown",
+      label: <MoreHoriz />,
+      menuProps: {
+        items: [{
+          id: "1",
+          label: "Item 1"
+        }, {
+          id: "2",
+          label: "Item 2"
+        }]
+      }
+    }, {
+      id: "detail",
+      label: "Detail"
+    }]
+  }
+}`,...(O=(K=y.parameters)==null?void 0:K.docs)==null?void 0:O.source}}};const Tr=["Default","Collapsed","Disabled","CustomSeparator","WithReactComponent","WithDropdownMenu"];export{h as Collapsed,v as CustomSeparator,c as Default,x as Disabled,y as WithDropdownMenu,g as WithReactComponent,Tr as __namedExportsOrder,Fr as default};

@@ -26,7 +26,7 @@ declare const useFormField: () => {
 interface FormRef {
     submit: () => Promise<void>;
 }
-declare const useFormRef: () => import('../../../node_modules/react').RefObject<FormRef>;
+declare const useFormRef: () => import('../../../node_modules/react').RefObject<FormRef | null>;
 interface FormProps<TFieldValues extends FieldValues, TContext, TTransformedValues extends FieldValues | undefined> extends FormProviderProps<TFieldValues, TContext, TTransformedValues> {
     onSubmit: Parameters<UseFormHandleSubmit<TFieldValues, TTransformedValues>>[0];
     onError?: Parameters<UseFormHandleSubmit<TFieldValues, TTransformedValues>>[1];
