@@ -1,14 +1,20 @@
 import { FieldResolver, FieldResolverWithProps, ResolverFunctionWithProps } from '../../types';
-import { ComponentProps, ReactNode } from '../../../node_modules/react';
+import { ComponentProps, ReactNode, Ref } from '../../../node_modules/react';
 import { Collection as AriaCollection, Header as AriaHeader, ListBoxItemProps as AriaListBoxItemProps, ListBoxProps as AriaListBoxProps } from 'react-aria-components';
-declare const ListBoxSection: <T extends object>(props: import('react-aria-components').ListBoxSectionProps<T> & React.RefAttributes<HTMLElement>) => React.ReactNode;
+declare const ListBoxSection: <T extends object>(props: import('react-aria-components').ListBoxSectionProps<T> & React.RefAttributes<HTMLElement>) => React.ReactElement | null;
 declare const ListBoxCollection: typeof AriaCollection;
 declare const ListBoxHeader: ({ className, ...props }: ComponentProps<typeof AriaHeader>) => import("react/jsx-runtime").JSX.Element;
 interface ListBoxBaseProps<T> extends AriaListBoxProps<T> {
     isLoading?: boolean;
 }
 declare const ListBoxBase: <T extends object>({ className, isLoading, onScroll, ...props }: ListBoxBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
-declare const ListBoxItem: import('../../../node_modules/react').ForwardRefExoticComponent<AriaListBoxItemProps<never> & import('../../../node_modules/react').RefAttributes<HTMLElement>>;
+interface ListBoxItemProps extends AriaListBoxItemProps<never> {
+    ref?: Ref<HTMLDivElement>;
+}
+declare const ListBoxItem: {
+    ({ className, children, ref, ...props }: ListBoxItemProps): import("react/jsx-runtime").JSX.Element;
+    displayName: string;
+};
 interface ListBoxPropsInternal<T extends object> {
     items: T[];
     /**

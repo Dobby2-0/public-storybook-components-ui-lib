@@ -1,3 +1,9 @@
-import { HTMLAttributes } from '../../../node_modules/react';
-declare const ErrorMessage: import('../../../node_modules/react').ForwardRefExoticComponent<HTMLAttributes<HTMLParagraphElement> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>>;
+import { HTMLAttributes, Ref } from '../../../node_modules/react';
+interface ErrorMessageProps extends HTMLAttributes<HTMLParagraphElement> {
+    ref?: Ref<HTMLParagraphElement>;
+}
+declare const ErrorMessage: {
+    ({ className, ref, ...props }: ErrorMessageProps): import("react/jsx-runtime").JSX.Element;
+    displayName: string;
+};
 export { ErrorMessage };

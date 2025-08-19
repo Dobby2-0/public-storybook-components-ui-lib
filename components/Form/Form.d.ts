@@ -1,4 +1,8 @@
-import { CSSProperties, ForwardedRef, HTMLAttributes, ReactElement, ReactNode } from '../../../node_modules/react';
+import { Description } from '../field/Description.tsx';
+import { ErrorMessage } from '../field/ErrorMessage.tsx';
+import { Label } from '../field/Label.tsx';
+import { Slot } from '@radix-ui/react-slot';
+import { ComponentPropsWithoutRef, CSSProperties, ForwardedRef, HTMLAttributes, ReactElement, ReactNode, Ref } from '../../../node_modules/react';
 import { ControllerProps, FieldPath, FieldValues, FormProviderProps, UseControllerProps, UseFormHandleSubmit } from 'react-hook-form';
 interface FormFieldProps<TFieldValues extends FieldValues, TName extends FieldPath<TFieldValues>> extends UseControllerProps<TFieldValues, TName> {
     render?: never;
@@ -10,6 +14,9 @@ interface FormFieldWithRenderProps<TFieldValues extends FieldValues, TName exten
     label?: never;
     description?: never;
     children?: never;
+}
+interface FormItemProps extends HTMLAttributes<HTMLDivElement> {
+    ref?: Ref<HTMLDivElement>;
 }
 declare const useFormField: () => {
     invalid: boolean;
@@ -23,6 +30,18 @@ declare const useFormField: () => {
     formDescriptionId: string;
     formMessageId: string;
 };
+interface FormLabelProps extends ComponentPropsWithoutRef<typeof Label> {
+    ref?: Ref<HTMLLabelElement>;
+}
+interface FormControlProps extends ComponentPropsWithoutRef<typeof Slot> {
+    ref?: Ref<HTMLElement>;
+}
+interface FormDescriptionProps extends ComponentPropsWithoutRef<typeof Description> {
+    ref?: Ref<HTMLParagraphElement>;
+}
+interface FormMessageProps extends ComponentPropsWithoutRef<typeof ErrorMessage> {
+    ref?: ForwardedRef<HTMLParagraphElement>;
+}
 interface FormRef {
     submit: () => Promise<void>;
 }
@@ -32,6 +51,7 @@ interface FormProps<TFieldValues extends FieldValues, TContext, TTransformedValu
     onError?: Parameters<UseFormHandleSubmit<TFieldValues, TTransformedValues>>[1];
     style?: CSSProperties;
     className?: string;
+    ref?: Ref<FormRef>;
 }
 /**
  * This Form component is a wrapper for react-hook-form, to simplify setup.\
@@ -50,10 +70,25 @@ declare const Form: (<TFieldValues extends FieldValues, TContext, TTransformedVa
     ref?: ForwardedRef<FormRef>;
 }) => ReactElement) & {
     Field: <TFieldValues extends FieldValues = FieldValues, TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>>(props: FormFieldProps<TFieldValues, TName> | FormFieldWithRenderProps<TFieldValues, TName>) => import("react/jsx-runtime").JSX.Element;
-    Item: import('../../../node_modules/react').ForwardRefExoticComponent<HTMLAttributes<HTMLDivElement> & import('../../../node_modules/react').RefAttributes<HTMLDivElement>>;
-    Label: import('../../../node_modules/react').ForwardRefExoticComponent<Omit<Omit<import('@radix-ui/react-label').LabelProps & import('../../../node_modules/react').RefAttributes<HTMLLabelElement>, "ref"> & import('../../../node_modules/react').RefAttributes<HTMLLabelElement>, "ref"> & import('../../../node_modules/react').RefAttributes<HTMLLabelElement>>;
-    Control: import('../../../node_modules/react').ForwardRefExoticComponent<Omit<import('@radix-ui/react-slot').SlotProps & import('../../../node_modules/react').RefAttributes<HTMLElement>, "ref"> & import('../../../node_modules/react').RefAttributes<HTMLElement>>;
-    Description: import('../../../node_modules/react').ForwardRefExoticComponent<Omit<HTMLAttributes<HTMLParagraphElement> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>, "ref"> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>>;
-    Message: import('../../../node_modules/react').ForwardRefExoticComponent<Omit<HTMLAttributes<HTMLParagraphElement> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>, "ref"> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>>;
+    Item: {
+        ({ className, ref, ...props }: FormItemProps): import("react/jsx-runtime").JSX.Element;
+        displayName: string;
+    };
+    Label: {
+        ({ className, ref, ...props }: FormLabelProps): import("react/jsx-runtime").JSX.Element;
+        displayName: string;
+    };
+    Control: {
+        ({ ref, ...props }: FormControlProps): import("react/jsx-runtime").JSX.Element;
+        displayName: string;
+    };
+    Description: {
+        ({ ref, ...props }: FormDescriptionProps): import("react/jsx-runtime").JSX.Element;
+        displayName: string;
+    };
+    Message: {
+        ({ children, ref, ...props }: FormMessageProps): import("react/jsx-runtime").JSX.Element | null;
+        displayName: string;
+    };
 };
 export { Form, useFormField, useFormRef };

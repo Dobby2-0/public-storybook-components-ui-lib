@@ -1,3 +1,9 @@
-import { HTMLAttributes } from '../../../node_modules/react';
-declare const Description: import('../../../node_modules/react').ForwardRefExoticComponent<HTMLAttributes<HTMLParagraphElement> & import('../../../node_modules/react').RefAttributes<HTMLParagraphElement>>;
+import { HTMLAttributes, Ref } from '../../../node_modules/react';
+interface DescriptionProps extends HTMLAttributes<HTMLParagraphElement> {
+    ref?: Ref<HTMLParagraphElement>;
+}
+declare const Description: {
+    ({ className, ref, ...props }: DescriptionProps): import("react/jsx-runtime").JSX.Element;
+    displayName: string;
+};
 export { Description };

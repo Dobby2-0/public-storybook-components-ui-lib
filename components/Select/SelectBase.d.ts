@@ -1,7 +1,7 @@
 import { ListBox } from '../ListBox/ListBox.tsx';
 import { dropdownInputVariants } from '../../styles/variants.ts';
 import { VariantProps } from 'class-variance-authority';
-import { ComponentPropsWithoutRef, CSSProperties, PropsWithChildren, ReactNode } from '../../../node_modules/react';
+import { ComponentPropsWithoutRef, CSSProperties, PropsWithChildren, ReactNode, Ref } from '../../../node_modules/react';
 import { ButtonProps as AriaButtonProps, PopoverProps as AriaPopoverProps, SelectProps as AriaSelectProps, ValidationResult as AriaValidationResult } from 'react-aria-components';
 interface ClassNameObject {
     base?: string;
@@ -16,11 +16,16 @@ interface SelectCommonProps<T extends object> extends Omit<AriaSelectProps<T>, "
     style?: CSSProperties;
     disallowEmptySelection?: boolean;
     loading?: boolean;
+    ref?: Ref<HTMLButtonElement>;
 }
 interface SelectTriggerProps extends AriaButtonProps {
     loading?: boolean;
+    ref?: Ref<HTMLButtonElement>;
 }
-declare const SelectTrigger: import('../../../node_modules/react').ForwardRefExoticComponent<SelectTriggerProps & import('../../../node_modules/react').RefAttributes<HTMLButtonElement>>;
+declare const SelectTrigger: {
+    ({ className, children, loading, isDisabled, ref, ...props }: SelectTriggerProps): import("react/jsx-runtime").JSX.Element;
+    displayName: string;
+};
 interface SelectValueProps extends PropsWithChildren {
     label?: ReactNode;
     showLabelAsPlaceholder?: boolean;
@@ -38,7 +43,8 @@ interface SelectBaseProps<T extends object> extends Pick<SelectCommonProps<T>, "
     children: ReactNode;
     popoverOpen: boolean;
     onPopoverOpenChange: (isOpen: boolean) => void;
+    ref?: Ref<HTMLButtonElement>;
 }
-declare const SelectBase: <T extends object>({ label, description, className, variant, popoverContent, children, popoverOpen, onPopoverOpenChange, loading, ...props }: SelectBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const SelectBase: <T extends object>({ label, description, className, variant, popoverContent, children, popoverOpen, onPopoverOpenChange, loading, ref, ...props }: SelectBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { SelectBase, SelectListBox, SelectPopover, SelectTrigger, SelectValue };
 export type { SelectCommonProps };
