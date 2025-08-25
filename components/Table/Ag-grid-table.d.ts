@@ -27,9 +27,15 @@ export interface AgGridTableProps<RowData extends {
     addRowButton?: boolean;
     /** Optional: disable column options */
     disableColumnOptions?: boolean;
+    /** Optional: menu items for options dropdown */
+    menuItems?: {
+        id: string;
+        label: string;
+        onAction: (rowId: string) => void;
+    }[];
 }
 declare const AgGridTable: <RowData extends {
     id: string;
-}>({ className, rowData, columnDefs, showRowCount, totalCount, rowModelType, cacheBlockSize, maxConcurrentDatasourceRequests, themeType, onDetailsClick, onRowSelectionChange, enableRowSelection, addRowButton, disableColumnOptions, id, ...agGridProps }: AgGridTableProps<RowData>) => import("react/jsx-runtime").JSX.Element;
+}>({ className, rowData, columnDefs, showRowCount, totalCount, rowModelType, cacheBlockSize, maxConcurrentDatasourceRequests, themeType, onDetailsClick, onRowSelectionChange, enableRowSelection, addRowButton, disableColumnOptions, menuItems, id, ...agGridProps }: AgGridTableProps<RowData>) => import("react/jsx-runtime").JSX.Element;
 export { AgGridTable };
 export type { ColDef, CustomCellRendererProps, GetRowIdParams, IDatasource };
