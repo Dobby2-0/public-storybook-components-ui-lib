@@ -34,6 +34,8 @@ interface TableProps extends AriaTableProps {
  * A table displays data in rows and columns and enables a user to navigate its contents via directional navigation keys, and optionally supports row selection and sorting.
  *
  * Based on `React-aria-components`
+ *
+ * @Deprecated Use the `AgGridTable` component from `@dobby2-0/components` instead.
  */
 declare const Table: ({ id, columns, dataSource, addRowButton, onRowAction, disableColumnOptions, ...props }: TableProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export { Table };

@@ -31,7 +31,9 @@ export { ListFilters, type FilterDefinition, } from './components/ListFilters/Li
 export { Loader } from './components/Loader/Loader';
 export { Menu, type MenuItem } from './components/Menu/Menu';
 export { Modal, ModalContent, ModalOverlay } from './components/Modal/Modal';
+export { NumberField } from './components/NumberField/NumberField';
 export { Pagination } from './components/Pagination/Pagination';
+export { PDFViewer } from './components/PDFViewer/PDFViewer';
 export { Pill } from './components/Pill/Pill';
 export { Popover } from './components/Popover/Popover';
 export { RadioGroup } from './components/RadioGroup/RadioGroup';
