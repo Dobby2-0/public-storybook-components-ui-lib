@@ -4,6 +4,7 @@ export * from './utils/capacities';
 export * from './utils/create-datasource';
 export * from './utils/date';
 export * from './utils/number-order';
+export * from './utils/rte-utils';
 export { Accordion, AccordionContent, AccordionHeader, AccordionItem, AccordionTrigger, } from './components/Accordion/Accordion';
 export { Alert } from './components/Alert/Alert';
 export { Breadcrumbs, type BreadcrumbItem, } from './components/Breadcrumbs/Breadcrumbs';
