@@ -36,7 +36,7 @@ interface SelectPopoverProps extends Omit<AriaPopoverProps, "children">, PropsWi
 }
 declare const SelectPopover: ({ className, children, ...props }: SelectPopoverProps) => import("react/jsx-runtime").JSX.Element;
 declare const SelectListBox: <T extends object>({ className, ...props }: ComponentPropsWithoutRef<typeof ListBox<T>>) => import("react/jsx-runtime").JSX.Element;
-interface SelectBaseProps<T extends object> extends Pick<SelectCommonProps<T>, "className" | "variant" | "loading"> {
+interface SelectBaseProps<T extends object> extends Pick<SelectCommonProps<T>, "className" | "variant" | "loading" | "isDisabled"> {
     label?: string;
     description?: string;
     popoverContent: ReactNode;
