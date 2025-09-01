@@ -20,3 +20,7 @@ export declare const downloadFile: (url: string, name: string) => Promise<void>;
  * By defalt the last name is shown first, followed by the first name.
  */
 export declare const showFullName: (firstName?: string | null, lastName?: string | null, reverseOrder?: boolean) => string;
+/**
+ * Formats a number according to the specified locale and options.
+ */
+export declare const formatNumber: (value?: number, language?: string, options?: Intl.NumberFormatOptions) => string | undefined;

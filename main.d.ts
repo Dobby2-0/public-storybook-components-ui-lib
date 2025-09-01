@@ -1,5 +1,5 @@
 export * from './hooks';
-export { buildAddressString, capitalize, captureEvent, cn, downloadFile, localizeCurrency, showFullName, } from './utils';
+export { buildAddressString, capitalize, captureEvent, cn, downloadFile, formatNumber, localizeCurrency, showFullName, } from './utils';
 export * from './utils/capacities';
 export * from './utils/create-datasource';
 export * from './utils/date';
@@ -11,6 +11,7 @@ export { Breadcrumbs, type BreadcrumbItem, } from './components/Breadcrumbs/Brea
 export { BulkActions } from './components/BulkActions/BulkActions';
 export { Button } from './components/Button/Button';
 export { IconButton } from './components/Button/IconButton';
+export { Canvas, type CanvasRef } from './components/Canvas/Canvas';
 export { Card } from './components/Card/Card';
 export { CardBasic } from './components/CardBasic/CardBasic.tsx';
 export { Checkbox, CheckboxGroup } from './components/Checkbox/Checkbox';
