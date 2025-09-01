@@ -9,6 +9,7 @@ interface EditorToolbarOptions {
     bulletList?: boolean;
     orderedList?: boolean;
     table?: boolean;
+    undoRedo?: boolean;
     tagMenu?: MenuItem[];
 }
 interface EditorToolbarProps {

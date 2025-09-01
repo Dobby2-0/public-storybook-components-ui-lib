@@ -20,5 +20,5 @@ interface RichTextEditorProps {
 /**
  * RichTextEditor component based on `@tiptap/react`.
  */
-declare const RichTextEditor: ({ value, onChange, className, disabled, toolbarOptions, resizable, }: RichTextEditorProps) => import("react/jsx-runtime").JSX.Element | null;
+declare const RichTextEditor: ({ value, onChange, className, disabled, toolbarOptions, resizable, }: RichTextEditorProps) => import("react/jsx-runtime").JSX.Element;
 export { RichTextEditor };
