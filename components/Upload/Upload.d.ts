@@ -14,6 +14,8 @@ interface FileInputProps extends CommonUploadProps, Pick<FileTriggerProps, "acce
     file?: Attachment;
     /** callback to handle file selection */
     onFileSelectionChange?: (file: Attachment) => void;
+    hiddenInput?: boolean;
+    customTrigger?: (isLoading: boolean) => ReactNode;
 }
 interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">, CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes">, Pick<FileListProps, "actionButtons" | "contrastMode"> {
     /**
@@ -55,7 +57,7 @@ interface CommonUploadProps {
      */
     onFileReject?: (file: File, reason: RejectReason) => void;
 }
-interface FileInputUploadProps extends CommonUploadProps, Pick<FileInputProps, "file" | "onFileSelectionChange" | "acceptedFileTypes"> {
+interface FileInputUploadProps extends CommonUploadProps, Pick<FileInputProps, "file" | "onFileSelectionChange" | "acceptedFileTypes" | "hiddenInput" | "customTrigger"> {
     /** optionally render DropZone instead of FileInput */
     isDropZone?: false;
 }
