@@ -17,6 +17,8 @@ interface NavigateOptions {
      * Whether to resolve relative URLs against the current origin, only used when `to` is a string and the context is configured to use this property.
      */
     fromRoot?: boolean;
+    /** Wether to replace the current history entry, only used when `to` is a string */
+    replace?: boolean;
 }
 export interface DobbyContextValue {
     /**
