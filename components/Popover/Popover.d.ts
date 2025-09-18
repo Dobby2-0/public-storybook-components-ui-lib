@@ -1,5 +1,5 @@
 import { PropsWithChildren, ReactNode, Ref } from '../../../node_modules/react';
-import { PopoverProps as AriaPopoverProps } from 'react-aria-components';
+import { PopoverProps as AriaPopoverProps, ContextValue, PopoverContext } from 'react-aria-components';
 interface PopoverContentProps extends Omit<PopoverProps, "content" | "children">, PropsWithChildren {
     /** Should the popover make use of the popoverDialog component */
     enableDialog?: boolean;
@@ -30,5 +30,5 @@ interface PopoverProps extends Omit<AriaPopoverProps, "containerPadding" | "chil
  * </Popover>
  */
 declare const Popover: import('../../../node_modules/react').ForwardRefExoticComponent<PopoverProps & import('../../../node_modules/react').RefAttributes<PopoverContentRef>>;
-export { Popover, PopoverContent };
-export type { PopoverContentRef };
+export { Popover, PopoverContent, PopoverContext };
+export type { ContextValue, PopoverContentRef, AriaPopoverProps as PopoverProps };

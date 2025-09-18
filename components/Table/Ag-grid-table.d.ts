@@ -1,8 +1,13 @@
-import { ColDef, GetRowIdParams, IDatasource } from 'ag-grid-community';
+import { ColDef, GetRowIdParams, IDatasource, SortChangedEvent } from 'ag-grid-community';
 import { AgGridReactProps, CustomCellRendererProps } from 'ag-grid-react';
 interface ClassNameObject {
     base?: string;
     grid?: string;
+}
+interface Sort {
+    column: string;
+    direction?: "ASC" | "DESC";
+    value?: Record<string, Sort["direction"]>;
 }
 export interface AgGridTableProps<RowData extends {
     id: string;
@@ -38,4 +43,4 @@ declare const AgGridTable: <RowData extends {
     id: string;
 }>({ className, rowData, columnDefs, showRowCount, totalCount, rowModelType, cacheBlockSize, maxConcurrentDatasourceRequests, themeType, onDetailsClick, onRowSelectionChange, enableRowSelection, addRowButton, disableColumnOptions, menuItems, id, ...agGridProps }: AgGridTableProps<RowData>) => import("react/jsx-runtime").JSX.Element;
 export { AgGridTable };
-export type { ColDef, CustomCellRendererProps, GetRowIdParams, IDatasource };
+export type { ColDef, CustomCellRendererProps, GetRowIdParams, IDatasource, Sort, SortChangedEvent, };
