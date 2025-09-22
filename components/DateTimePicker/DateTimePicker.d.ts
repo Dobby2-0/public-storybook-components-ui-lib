@@ -11,6 +11,8 @@ interface DateTimePickerProps extends Omit<DatePickerProps, "icon">, VariantProp
     icon?: ReactNode;
     /**  */
     defaultDate?: Date;
+    /** allow and handle clearing the date */
+    onClear?: () => void;
 }
 /**
  * The Date Time Picker component lets users select a date and or time.
