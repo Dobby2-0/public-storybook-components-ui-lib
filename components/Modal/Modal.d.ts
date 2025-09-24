@@ -2,7 +2,7 @@ import { VariantProps } from 'class-variance-authority';
 import { ComponentProps, ReactNode } from '../../../node_modules/react';
 import { DialogProps as AriaDialogProps, Modal as AriaModal, ModalOverlayProps as AriaModalOverlayProps } from 'react-aria-components';
 declare const sheetVariants: (props?: ({
-    side?: "left" | "right" | "bottom" | "top" | null | undefined;
+    side?: "bottom" | "top" | "left" | "right" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
 /** Modal overlay element, can be used with ModalContent */
 declare const ModalOverlay: ({ className, isDismissable, ...props }: AriaModalOverlayProps) => import("react/jsx-runtime").JSX.Element;
