@@ -32,7 +32,7 @@ export { FileList, fileToAttachment, type Attachment, } from './components/FileL
 export { Form, useFormField, useFormRef } from './components/Form/Form';
 export { List } from './components/List/List';
 export { ListBox } from './components/ListBox/ListBox';
-export { ListFilters, type FilterDefinition, } from './components/ListFilters/ListFilters';
+export { ListFilters, type FilterDefinition, type FilterValue, } from './components/ListFilters/ListFilters';
 export { Loader } from './components/Loader/Loader';
 export { Menu, type MenuItem } from './components/Menu/Menu';
 export { Modal, ModalContent, ModalOverlay } from './components/Modal/Modal';

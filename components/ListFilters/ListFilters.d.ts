@@ -9,6 +9,7 @@ type ComboBoxFilterProps = ComponentProps<typeof ComboBox> & {
     /** Type of filter */
     filterType: "combobox";
 };
+type FilterValue = string | string[] | boolean | undefined;
 type FilterDefinition = Pick<SelectFilterProps | ComboBoxFilterProps, "filterType" | "items" | "placeholder" | "labelResolver" | "className"> & {
     /** Unique name of the filter, also used as label/placeholder */
     name: string;
@@ -19,9 +20,9 @@ interface FilterBarProps {
     /** Definition of all filters. */
     filters: FilterDefinition[];
     /** Initial values of te filters, uses the filter `name` to link to the component. */
-    filterValues?: Record<string, unknown>;
+    filterValues?: Record<string, FilterValue>;
     /** Callback function called whan a filter changes value, returns the value of all "touched" filters. */
-    onFilterChange?: (filters: Record<string, string | string[] | boolean | undefined>) => void;
+    onFilterChange?: (filters: Record<string, FilterValue>) => void;
     /** The CSS className for the element. */
     className?: string;
 }
@@ -32,4 +33,4 @@ interface FilterBarProps {
  */
 declare const ListFilters: ({ filters, filterValues, onFilterChange, className, forceMobile, }: FilterBarProps) => import("react/jsx-runtime").JSX.Element;
 export { ListFilters };
-export type { FilterDefinition };
+export type { FilterDefinition, FilterValue };
