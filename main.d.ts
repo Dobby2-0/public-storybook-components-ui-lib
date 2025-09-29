@@ -6,6 +6,7 @@ export * from './utils/file-tree';
 export * from './utils/number-order';
 export * from './utils/rte-utils';
 export * from './utils/table';
+export * from './utils/vat-validation';
 export type * from './types/file-tree';
 export { Accordion, AccordionContent, AccordionHeader, AccordionItem, AccordionTrigger, } from './components/Accordion/Accordion';
 export { Alert } from './components/Alert/Alert';
