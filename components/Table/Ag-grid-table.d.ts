@@ -1,4 +1,4 @@
-import { ColDef, GetRowIdParams, IDatasource, SortChangedEvent } from 'ag-grid-community';
+import { ColDef, GetRowIdParams, IDatasource, RowClickedEvent, SortChangedEvent } from 'ag-grid-community';
 import { AgGridReactProps, CustomCellRendererProps } from 'ag-grid-react';
 interface ClassNameObject {
     base?: string;
@@ -8,6 +8,11 @@ interface Sort {
     column: string;
     direction?: "ASC" | "DESC";
     value?: Record<string, Sort["direction"]>;
+}
+interface RowMenuItem {
+    id: string;
+    label: string;
+    onAction: (rowId: string) => void;
 }
 export interface AgGridTableProps<RowData extends {
     id: string;
@@ -33,14 +38,10 @@ export interface AgGridTableProps<RowData extends {
     /** Optional: disable column options */
     disableColumnOptions?: boolean;
     /** Optional: menu items for options dropdown */
-    menuItems?: {
-        id: string;
-        label: string;
-        onAction: (rowId: string) => void;
-    }[];
+    menuItems?: RowMenuItem[];
 }
 declare const AgGridTable: <RowData extends {
     id: string;
-}>({ className, rowData, columnDefs, showRowCount, totalCount, rowModelType, cacheBlockSize, maxConcurrentDatasourceRequests, themeType, onDetailsClick, onRowSelectionChange, enableRowSelection, addRowButton, disableColumnOptions, menuItems, id, ...agGridProps }: AgGridTableProps<RowData>) => import("react/jsx-runtime").JSX.Element;
+}>({ className, rowData, columnDefs, showRowCount, totalCount, rowModelType, cacheBlockSize, maxConcurrentDatasourceRequests, themeType, onDetailsClick, onRowSelectionChange, enableRowSelection, addRowButton, disableColumnOptions, menuItems, id, onRowClicked, ...agGridProps }: AgGridTableProps<RowData>) => import("react/jsx-runtime").JSX.Element;
 export { AgGridTable };
-export type { ColDef, CustomCellRendererProps, GetRowIdParams, IDatasource, Sort, SortChangedEvent, };
+export type { ColDef, CustomCellRendererProps, GetRowIdParams, IDatasource, RowClickedEvent, RowMenuItem, Sort, SortChangedEvent, };

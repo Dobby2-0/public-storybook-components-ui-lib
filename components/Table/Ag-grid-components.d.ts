@@ -1,3 +1,4 @@
+import { RowMenuItem } from './Ag-grid-table.tsx';
 import { Column, GridApi } from 'ag-grid-community';
 import { Dispatch, SetStateAction } from '../../../node_modules/react';
 declare const TableOptionsHeader: () => import("react/jsx-runtime").JSX.Element;
@@ -7,6 +8,14 @@ declare const ChevronCellRenderer: (onDetailsClick?: (id: string) => void) => {
             id?: string;
         };
     }): import("react/jsx-runtime").JSX.Element;
+    displayName: string;
+};
+declare const MenuCellRenderer: (menuItems: RowMenuItem[]) => {
+    (props: {
+        data?: {
+            id?: string;
+        };
+    }): import("react/jsx-runtime").JSX.Element | null;
     displayName: string;
 };
 declare const CheckboxCellRenderer: (selectedIds: Record<string, boolean>, setSelectedIds: Dispatch<SetStateAction<Record<string, boolean>>>, onRowSelectionChange?: (selectedIds: string[]) => void, allSelected?: boolean, setAllSelected?: Dispatch<SetStateAction<boolean>>, getVisibleRowIds?: () => string[]) => {
@@ -26,4 +35,4 @@ declare const GridApiContext: import('../../../node_modules/react').Context<{
     columns?: Column[];
     saveColumnState?: (api: GridApi) => void;
 }>;
-export { CheckboxCellRenderer, ChevronCellRenderer, GridApiContext, SelectionHeaderCheckbox, TableOptionsHeader, };
+export { CheckboxCellRenderer, ChevronCellRenderer, GridApiContext, MenuCellRenderer, SelectionHeaderCheckbox, TableOptionsHeader, };

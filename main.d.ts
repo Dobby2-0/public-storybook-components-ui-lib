@@ -46,7 +46,7 @@ export { RichTextEditor } from './components/RichTextEditor/RichTextEditor';
 export { Select } from './components/Select/Select.tsx';
 export { SelectBase } from './components/Select/SelectBase.tsx';
 export { Switch } from './components/Switch/Switch';
-export { AgGridTable, type AgGridTableProps, type ColDef, type CustomCellRendererProps, type GetRowIdParams, type IDatasource, type Sort, type SortChangedEvent, } from './components/Table/Ag-grid-table';
+export { AgGridTable, type AgGridTableProps, type ColDef, type CustomCellRendererProps, type GetRowIdParams, type IDatasource, type RowClickedEvent, type RowMenuItem, type Sort, type SortChangedEvent, } from './components/Table/Ag-grid-table';
 export { Table, type ColumnDefinition, type SortDescriptor, type TableProps, } from './components/Table/Table';
 export { Tabs, type TabItem } from './components/Tabs/Tabs';
 export { TextField } from './components/TextField/TextField';
