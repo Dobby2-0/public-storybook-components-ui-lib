@@ -18,9 +18,11 @@ interface RichTextEditorProps {
     resizable?: boolean;
     /** Enables paper like page view */
     pageView?: boolean;
+    /** Makes the editor read-only */
+    readonly?: boolean;
 }
 /**
  * RichTextEditor component based on `@tiptap/react`.
  */
-declare const RichTextEditor: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, }: RichTextEditorProps) => import("react/jsx-runtime").JSX.Element;
+declare const RichTextEditor: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, }: RichTextEditorProps) => import("react/jsx-runtime").JSX.Element;
 export { RichTextEditor };
