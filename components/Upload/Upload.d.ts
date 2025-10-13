@@ -18,6 +18,7 @@ interface FileInputProps extends CommonUploadProps, Pick<FileTriggerProps, "acce
     customTrigger?: (isLoading: boolean) => ReactNode;
 }
 interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">, CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes">, Pick<FileListProps, "actionButtons" | "contrastMode"> {
+    allowsMultiple?: boolean;
     /**
      * current value (controlled)
      *
@@ -61,7 +62,7 @@ interface FileInputUploadProps extends CommonUploadProps, Pick<FileInputProps, "
     /** optionally render DropZone instead of FileInput */
     isDropZone?: false;
 }
-interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes" | "onFileAddError" | "contrastMode"> {
+interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes" | "onFileAddError" | "contrastMode" | "allowsMultiple"> {
     /** optionally render DropZone instead of FileInput */
     isDropZone: true;
 }
