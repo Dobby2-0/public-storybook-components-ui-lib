@@ -1,5 +1,5 @@
 export * from './hooks';
-export { buildAddressString, capitalize, captureEvent, cn, downloadFile, formatNumber, localizeCurrency, showFullName, } from './utils';
+export { buildAddressString, capitalize, captureEvent, cn, downloadFile, formatNumber, getQueryPageSize, localizeCurrency, showFullName, } from './utils';
 export * from './utils/capacities';
 export * from './utils/date';
 export * from './utils/file-tree';

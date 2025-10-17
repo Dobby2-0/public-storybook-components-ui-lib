@@ -24,3 +24,8 @@ export declare const showFullName: (firstName?: string | null, lastName?: string
  * Formats a number according to the specified locale and options.
  */
 export declare const formatNumber: (value?: number, language?: string, options?: Intl.NumberFormatOptions) => string | undefined;
+/**
+ * Calculates the optimal query page size based on available height and row height.
+ * Adds a 30% buffer to the visible rows. The page size will not exceed maxPageSize.
+ */
+export declare const getQueryPageSize: (availableHeight?: number, rowHeight?: number, maxPageSize?: number) => number;
