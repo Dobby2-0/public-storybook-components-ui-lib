@@ -25,12 +25,16 @@ export interface AgGridTableProps<RowData extends {
     totalCount?: number;
     /** Theme type : dobby or classic */
     themeType?: "dobby" | "classic";
-    /** enable row selection */
-    enableRowSelection?: boolean;
     /** optional id for localstorage key */
     id?: string;
     /** Optional: onDetailsClick callback */
     onDetailsClick?: (id: string) => void;
+    /** Type of row selection allowed, undefined equals no row selection */
+    selectionMode?: "single" | "multiple";
+    /** Enable selecting all rows at once, only works when using `selectionMode="multiple"` */
+    enableSelectAll?: boolean;
+    /** Selected row ids used for row selection (controlled) */
+    selectedRowIds?: string[] | "all";
     /** Optional: onRowSelectionChange callback */
     onRowSelectionChange?: (selectedIds: string[] | "all") => void;
     /** Optional: add a button at the end of the row, indicating navigation is possible */
@@ -42,6 +46,6 @@ export interface AgGridTableProps<RowData extends {
 }
 declare const AgGridTable: <RowData extends {
     id: string;
-}>({ className, rowData, columnDefs, showRowCount, totalCount, rowModelType, cacheBlockSize, maxConcurrentDatasourceRequests, themeType, onDetailsClick, onRowSelectionChange, enableRowSelection, addRowButton, disableColumnOptions, menuItems, id, onRowClicked, ...agGridProps }: AgGridTableProps<RowData>) => import("react/jsx-runtime").JSX.Element;
+}>({ className, rowData, columnDefs, showRowCount, totalCount, rowModelType, cacheBlockSize, maxConcurrentDatasourceRequests, themeType, onDetailsClick, selectionMode, enableSelectAll, selectedRowIds, onRowSelectionChange, addRowButton, disableColumnOptions, menuItems, id, onRowClicked, ...agGridProps }: AgGridTableProps<RowData>) => import("react/jsx-runtime").JSX.Element;
 export { AgGridTable };
 export type { ColDef, CustomCellRendererProps, GetRowIdParams, IDatasource, RowClickedEvent, RowMenuItem, Sort, SortChangedEvent, };

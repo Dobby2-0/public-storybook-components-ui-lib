@@ -18,7 +18,7 @@ declare const MenuCellRenderer: (menuItems: RowMenuItem[]) => {
     }): import("react/jsx-runtime").JSX.Element | null;
     displayName: string;
 };
-declare const CheckboxCellRenderer: (selectedIds: Record<string, boolean>, setSelectedIds: Dispatch<SetStateAction<Record<string, boolean>>>, onRowSelectionChange?: (selectedIds: string[]) => void, allSelected?: boolean, setAllSelected?: Dispatch<SetStateAction<boolean>>, getVisibleRowIds?: () => string[]) => {
+declare const CheckboxCellRenderer: (selectedIds: Record<string, boolean>, setSelectedIds: Dispatch<SetStateAction<Record<string, boolean>>>, onRowSelectionChange?: (selectedIds: string[]) => void, allSelected?: boolean, setAllSelected?: Dispatch<SetStateAction<boolean>>, getVisibleRowIds?: () => string[], singleSelection?: boolean) => {
     (props: {
         data: {
             id: string;
