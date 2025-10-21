@@ -1,5 +1,6 @@
 import { ColDef, GetRowIdParams, IDatasource, RowClickedEvent, SortChangedEvent } from 'ag-grid-community';
-import { AgGridReactProps, CustomCellRendererProps } from 'ag-grid-react';
+import { AgGridReact, AgGridReactProps, CustomCellRendererProps } from 'ag-grid-react';
+import { ReactElement, Ref } from '../../../node_modules/react';
 interface ClassNameObject {
     base?: string;
     grid?: string;
@@ -46,6 +47,8 @@ export interface AgGridTableProps<RowData extends {
 }
 declare const AgGridTable: <RowData extends {
     id: string;
-}>({ className, rowData, columnDefs, showRowCount, totalCount, rowModelType, cacheBlockSize, maxConcurrentDatasourceRequests, themeType, onDetailsClick, selectionMode, enableSelectAll, selectedRowIds, onRowSelectionChange, addRowButton, disableColumnOptions, menuItems, id, onRowClicked, ...agGridProps }: AgGridTableProps<RowData>) => import("react/jsx-runtime").JSX.Element;
+}>(props: AgGridTableProps<RowData> & {
+    ref?: Ref<AgGridReact<RowData>>;
+}) => ReactElement | null;
 export { AgGridTable };
-export type { ColDef, CustomCellRendererProps, GetRowIdParams, IDatasource, RowClickedEvent, RowMenuItem, Sort, SortChangedEvent, };
+export type { AgGridReact, ColDef, CustomCellRendererProps, GetRowIdParams, IDatasource, RowClickedEvent, RowMenuItem, Sort, SortChangedEvent, };
