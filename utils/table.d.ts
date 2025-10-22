@@ -1,4 +1,4 @@
-import { Sort } from '../components/Table/Ag-grid-table.tsx';
+import { Sort } from '../components/Table/Ag-Grid/Ag-grid-table.tsx';
 import { IDatasource } from 'ag-grid-community';
 import { RefObject } from '../../node_modules/react';
 export interface PageInfo {

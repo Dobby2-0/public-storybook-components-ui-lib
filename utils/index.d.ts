@@ -29,3 +29,4 @@ export declare const formatNumber: (value?: number, language?: string, options?:
  * Adds a 30% buffer to the visible rows. The page size will not exceed maxPageSize.
  */
 export declare const getQueryPageSize: (availableHeight?: number, rowHeight?: number, maxPageSize?: number) => number;
+export declare const moveArrayItem: <T>(arr: T[], oldIndex: number, newIndex: number) => T[];

@@ -1,4 +1,4 @@
-import { InternalColumnDefinition } from './Table.tsx';
+import { InternalColumnDefinition } from './React-Aria/Table.tsx';
 interface TableOptionsProps {
     columns: InternalColumnDefinition[];
     onSelectionChange?: (keys: string[]) => void;
