@@ -19,5 +19,5 @@ interface DateTimePickerProps extends Omit<DatePickerProps, "icon">, VariantProp
  *
  * Based on `react-datepicker`
  */
-declare const DateTimePicker: ({ className, dateFormat, defaultDate, description, icon, label, onChange, selected, variant, ...props }: DateTimePickerProps) => import("react/jsx-runtime").JSX.Element;
+declare const DateTimePicker: ({ className, dateFormat, defaultDate, description, icon, label, onChange, selected, variant, showTimeInput, ...props }: DateTimePickerProps) => import("react/jsx-runtime").JSX.Element;
 export { DateTimePicker };
