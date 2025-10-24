@@ -1,4 +1,4 @@
-declare const CheckboxCellRenderer: (selectedIds: Record<string, boolean>, allSelected: boolean, handleRowSelect: (id: string, selected: boolean) => void, singleSelection?: boolean) => {
+declare const CheckboxCellRenderer: (selectedIds: Record<string, boolean>, allSelected: boolean, handleRowSelect: (id: string, selected: boolean) => void) => {
     (props: {
         data: {
             id: string;

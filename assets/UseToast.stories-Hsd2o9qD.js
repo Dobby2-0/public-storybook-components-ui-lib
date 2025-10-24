@@ -1,0 +1,7 @@
+import{r as m,T as c,k as d,j as s}from"./iframe-VgWWmY4g.js";import{B as u}from"./Button-DE2GORPD.js";import"./preload-helper-Dp1pzeXC.js";import"./utils-CclEAEFa.js";import"./ButtonBase-WC6mspT-.js";import"./Loader-Bj7ijPZi.js";import"./Tooltip-CvXbAa1e.js";import"./index-DlCfgz2w.js";import"./Button-CrsherQ4.js";import"./FocusScope-BCX2Icu9.js";import"./Hidden-B13IvjIG.js";import"./usePress-DR6--iwZ.js";import"./index-9UqWgFBl.js";import"./index-RQhmWt5V.js";import"./RSPContexts-DfqDc_1E.js";import"./Separator-DdeGjH4W.js";import"./Text-D9mQM21Q.js";import"./VisuallyHidden-BoqiNbLN.js";const l=()=>{const t=m.useContext(c);if(!t)throw new Error("useToast must be used within a ToastProvider");return t.toast},R={component:d,title:"Hooks/useToast",tags:["!autodocs","!dev"]},x=({id:t,duration:n})=>{const i=l(),p="Toast Title "+t;return s.jsx(u,{onPress:()=>i({title:p,children:"This is a test toast notification!",onClose:()=>console.warn("Toast closed"),duration:n}),children:s.jsxs("p",{children:["Toast ",t]})})},o={render:()=>s.jsx("div",{className:"h-[200px] w-[500px]",children:s.jsx(x,{id:"1",duration:5e3})})};var r,e,a;o.parameters={...o.parameters,docs:{...(r=o.parameters)==null?void 0:r.docs,source:{originalSource:`{
+  render: () => {
+    return <div className="h-[200px] w-[500px]">
+        <ToastButton id="1" duration={5000} />
+      </div>;
+  }
+}`,...(a=(e=o.parameters)==null?void 0:e.docs)==null?void 0:a.source}}};const S=["Default"];export{o as Default,S as __namedExportsOrder,R as default};
