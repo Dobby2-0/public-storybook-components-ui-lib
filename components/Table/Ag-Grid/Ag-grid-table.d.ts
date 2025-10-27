@@ -37,6 +37,8 @@ export interface AgGridTableProps<RowData extends {
     selectedRowIds?: string[] | "all";
     /** Optional: onRowSelectionChange callback */
     onRowSelectionChange?: (selectedIds: string[] | "all") => void;
+    /** Enable selecting row on row click */
+    selectOnRowClick?: boolean;
     /** Optional: add a button at the end of the row, indicating navigation is possible */
     addRowButton?: boolean;
     /** Optional: disable column options */

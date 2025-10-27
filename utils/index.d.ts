@@ -30,3 +30,14 @@ export declare const formatNumber: (value?: number, language?: string, options?:
  */
 export declare const getQueryPageSize: (availableHeight?: number, rowHeight?: number, maxPageSize?: number) => number;
 export declare const moveArrayItem: <T>(arr: T[], oldIndex: number, newIndex: number) => T[];
+/**
+ * Function to get the item in the current locale from a list of localized items
+ *
+ * Will return the first item that matches the language or falls back to
+ * "nl", "fr", or "en" (in that order) if no specific language is found.
+ */
+export declare const getLocalizedItem: <T extends {
+    language?: string;
+} | {
+    languageCode?: string;
+}>(items?: T[], language?: string) => T | undefined;

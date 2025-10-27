@@ -1,4 +1,4 @@
-import { MenuItem } from '../Menu/Menu.tsx';
+import { TagDataProps } from './TagSelector.tsx';
 import { Editor } from '@tiptap/react';
 interface EditorToolbarOptions {
     bold?: boolean;
@@ -10,7 +10,7 @@ interface EditorToolbarOptions {
     orderedList?: boolean;
     table?: boolean;
     undoRedo?: boolean;
-    tagMenu?: MenuItem[];
+    tagSelector?: TagDataProps;
 }
 interface EditorToolbarProps {
     editor: Editor;
