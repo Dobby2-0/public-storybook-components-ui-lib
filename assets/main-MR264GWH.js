@@ -1,3 +1,0 @@
-import{j as n}from"./iframe-xNs60RAO.js";import{useMDXComponents as e}from"./index-DQYnEGKH.js";import{M as s}from"./blocks-BjrLpSYG.js";import"./preload-helper-Dp1pzeXC.js";import"./index-DvkX0WGL.js";import"./index-BQkmhLdL.js";function r(t){const o={h1:"h1",p:"p",...e(),...t.components};return n.jsxs(n.Fragment,{children:[n.jsx(s,{title:"Components library"}),`
-`,n.jsx(o.h1,{id:"components-library",children:"Components library"}),`
-`,n.jsx(o.p,{children:"This library will contain the shared components used by all Dobby micro-frontends."})]})}function d(t={}){const{wrapper:o}={...e(),...t.components};return o?n.jsx(o,{...t,children:n.jsx(r,{...t})}):r(t)}export{d as default};
