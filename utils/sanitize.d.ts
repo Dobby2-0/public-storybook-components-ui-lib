@@ -1,10 +1,7 @@
-/**
- * Sanitize HTML string and return safe HTML string.
- * Use when you intend to inject sanitized HTML into the DOM.
- */
-export declare function sanitizeHtml(html: string): string;
+import { default as sanitizeHtml } from 'sanitize-html';
 /**
  * Sanitize HTML string and return plain text only.
  * Use when you want to strip tags and prevent XSS.
  */
-export declare function sanitizeHtmlToPlainText(html: string): string;
+declare const sanitizeHtmlToPlainText: (html: string) => string;
+export { sanitizeHtml, sanitizeHtmlToPlainText };

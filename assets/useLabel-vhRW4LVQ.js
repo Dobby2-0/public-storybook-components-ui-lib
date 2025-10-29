@@ -1,1 +1,0 @@
-import{c as r}from"./utils-D6j8o2cJ.js";import{a as f}from"./Text-DnMX30Ln.js";function m(i){let{id:e,label:t,"aria-labelledby":l,"aria-label":d,labelElementType:o="label"}=i;e=r(e);let a=r(),b={};t&&(l=l?`${a} ${l}`:a,b={id:a,htmlFor:o==="label"?e:void 0});let $=f({id:e,"aria-label":d,"aria-labelledby":l});return{labelProps:b,fieldProps:$}}export{m as $};

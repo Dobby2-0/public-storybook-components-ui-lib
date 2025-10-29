@@ -23,6 +23,6 @@ interface TooltipProps extends Omit<AriaTooltipProps, "children" | "style">, Pro
  *
  * Based on `react-aria-components`
  */
-declare const Tooltip: ({ children, content, overlayArrow, asPopoverOnTouchScreen, customTrigger, disabled, ...props }: TooltipProps) => string | number | bigint | boolean | import("react/jsx-runtime").JSX.Element | Iterable<ReactNode> | Promise<string | number | bigint | boolean | import('../../../node_modules/react').ReactPortal | import('../../../node_modules/react').ReactElement<unknown, string | import('../../../node_modules/react').JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined;
+declare const Tooltip: ({ children, content, overlayArrow, asPopoverOnTouchScreen, customTrigger, disabled, className, ...props }: TooltipProps) => string | number | bigint | boolean | import("react/jsx-runtime").JSX.Element | Iterable<ReactNode> | Promise<string | number | bigint | boolean | import('../../../node_modules/react').ReactPortal | import('../../../node_modules/react').ReactElement<unknown, string | import('../../../node_modules/react').JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined;
 export { Tooltip };
 export type { TooltipProps };
