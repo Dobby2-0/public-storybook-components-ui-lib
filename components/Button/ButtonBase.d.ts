@@ -17,7 +17,9 @@ interface ButtonBaseProps extends Omit<AriaButtonProps, "children" | "onPress">,
     tooltip?: TooltipProps["content"];
     /** Customization options for the tooltip */
     tooltipProps?: Omit<TooltipProps, "content">;
+    /** Whether to prevent the default action on click */
+    preventDefault?: boolean;
 }
-declare const ButtonBase: ({ className, variant, isLoading, replaceContentWhileLoading, children, tooltip, tooltipProps, ...props }: ButtonBaseProps) => import("react/jsx-runtime").JSX.Element;
+declare const ButtonBase: ({ className, variant, isLoading, replaceContentWhileLoading, children, tooltip, tooltipProps, preventDefault, ...props }: ButtonBaseProps) => import("react/jsx-runtime").JSX.Element;
 export { ButtonBase };
 export type { ButtonBaseProps };
