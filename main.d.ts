@@ -43,7 +43,7 @@ export { PDFViewer } from './components/PDFViewer/PDFViewer';
 export { Pill } from './components/Pill/Pill';
 export { Popover, PopoverContent, PopoverContext, type ContextValue, type PopoverProps, } from './components/Popover/Popover';
 export { RadioGroup } from './components/RadioGroup/RadioGroup';
-export { RichTextEditor, type LocalizedTag, type Tag, } from './components/RichTextEditor/RichTextEditor';
+export { RichTextEditor, type Tag, } from './components/RichTextEditor/RichTextEditor';
 export { Select } from './components/Select/Select.tsx';
 export { SelectBase } from './components/Select/SelectBase.tsx';
 export { Switch } from './components/Switch/Switch';

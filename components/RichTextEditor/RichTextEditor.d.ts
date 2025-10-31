@@ -1,5 +1,5 @@
 import { EditorToolbarOptions } from './EditorToolbar.tsx';
-export type { LocalizedTag, Tag, } from './TagSelector.tsx';
+export type { Tag } from './TagSelector.tsx';
 interface RichTextEditorProps {
     /** The value of the editor */
     value?: string;

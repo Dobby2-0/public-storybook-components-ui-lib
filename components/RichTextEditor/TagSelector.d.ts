@@ -1,14 +1,10 @@
 import { IDatasource, Sort } from '../Table/Ag-Grid/Ag-grid-table.tsx';
 import { Editor } from '@tiptap/react';
-export interface LocalizedTag {
-    languageCode?: string;
-    name?: string;
-    description?: string;
-}
 export interface Tag {
     id: string;
     code?: string;
-    localizedTags?: LocalizedTag[];
+    localizedName?: string;
+    localizedDescription?: string;
 }
 interface TagDataProps {
     tags?: Tag[];
