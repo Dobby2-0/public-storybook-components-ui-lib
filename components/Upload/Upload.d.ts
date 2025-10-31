@@ -25,6 +25,10 @@ interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">,
      * A utility function `fileToAttachment` is provided by this library to convert a `File` or an array of `File` to the required format.
      */
     files?: Attachment[];
+    /**
+     * initial files (uncontrolled)
+     */
+    initialFiles?: Attachment[];
     /** callback to handle file selection */
     onFileSelectionChange?: (files: Attachment[]) => void;
     /** Callback that is triggered when the `onFileAdd` callback rejects with an error */
@@ -51,18 +55,22 @@ interface CommonUploadProps {
      * The parameter is a File object instead of an Attachment.\
      * If this callback returns an Attachment, it will be added to the list of files. Otherwise, the default Attachment transformation will be applied.
      */
-    onFileAdd?: (file: File) => FileAddResult | Promise<FileAddResult>;
+    onFileAdd?: (file: File, attachmentId?: string) => FileAddResult | Promise<FileAddResult>;
     /**
      * Callback that is triggered when a file is rejected due to file type or size constraints.\
      * The RejectReason enum is exported through this component: `Upload.RejectReason`.
      */
     onFileReject?: (file: File, reason: RejectReason) => void;
+    /** Should files with unaccepted file types or files over the size limit be shown with an error state?
+     *  By default these files are simply not added to the file list.
+     */
+    displayDisallowedFiles?: boolean;
 }
 interface FileInputUploadProps extends CommonUploadProps, Pick<FileInputProps, "file" | "onFileSelectionChange" | "acceptedFileTypes" | "hiddenInput" | "customTrigger"> {
     /** optionally render DropZone instead of FileInput */
     isDropZone?: false;
 }
-interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes" | "onFileAddError" | "contrastMode" | "allowsMultiple"> {
+interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "initialFiles" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes" | "onFileAddError" | "contrastMode" | "allowsMultiple"> {
     /** optionally render DropZone instead of FileInput */
     isDropZone: true;
 }

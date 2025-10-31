@@ -14,6 +14,8 @@ interface Attachment {
     type?: string;
     /** A promise that resolves when the file is done loading */
     loading?: Promise<Attachment | void>;
+    /** An optional error message */
+    error?: string;
 }
 interface DefaultActionHandlers {
     view: (url: Attachment["url"]) => void;
@@ -60,6 +62,6 @@ interface FileListProps {
  */
 declare const FileList: ({ files, actionButtons, onFilesChange, onFileLoadingError, className, contrastMode, }: FileListProps) => import("react/jsx-runtime").JSX.Element;
 type FileToAttachmentResult<T> = T extends File ? Attachment : Attachment[];
-declare const fileToAttachment: <T extends File | File[]>(file: T) => FileToAttachmentResult<T>;
+declare const fileToAttachment: <T extends File | File[]>(file: T, id?: string) => FileToAttachmentResult<T>;
 export { FileList, fileToAttachment };
 export type { Attachment, FileListProps };
