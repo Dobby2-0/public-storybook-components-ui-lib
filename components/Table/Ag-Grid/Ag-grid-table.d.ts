@@ -45,6 +45,8 @@ export interface AgGridTableProps<RowData extends {
     disableColumnOptions?: boolean;
     /** Optional: menu items for options dropdown */
     menuItems?: RowMenuItem[];
+    /** Optional: Disable row selection based on a condition */
+    disableRowSelectionCondition?: (row: RowData) => boolean;
 }
 declare const AgGridTable: <RowData extends {
     id: string;

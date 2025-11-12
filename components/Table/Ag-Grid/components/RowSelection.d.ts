@@ -1,8 +1,8 @@
-declare const CheckboxCellRenderer: (selectedIds: Record<string, boolean>, allSelected: boolean, handleRowSelect: (id: string, selected: boolean) => void) => {
+declare const CheckboxCellRenderer: <T extends {
+    id: string;
+}>(selectedIds: Record<string, boolean>, allSelected: boolean, handleRowSelect: (id: string, selected: boolean) => void, disableRowSelectionCondition?: (row: T) => boolean) => {
     (props: {
-        data: {
-            id: string;
-        };
+        data: T;
     }): import("react/jsx-runtime").JSX.Element;
     displayName: string;
 };
