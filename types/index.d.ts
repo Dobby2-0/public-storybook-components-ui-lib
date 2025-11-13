@@ -2,6 +2,13 @@ import { AlertProps } from '../components/Alert/Alert';
 import { ToastProps } from '@radix-ui/react-toast';
 import { default as i18next } from 'i18next';
 import { ReactNode } from '../../node_modules/react';
+declare global {
+    interface Window {
+        ReactNativeWebView?: {
+            postMessage?: (message: string) => void;
+        };
+    }
+}
 /**
  * Removes `null` as a possible value from all properties of an object.
  */
