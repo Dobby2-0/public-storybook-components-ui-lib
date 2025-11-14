@@ -70,6 +70,17 @@ export interface CollectionItem {
     id: string;
     label: ReactNode;
 }
+/** Universal File type, used in multiple API's */
+export interface DobbyFile {
+    id: string;
+    name?: string;
+    path?: string;
+    size?: number;
+    key?: string;
+    fileType?: string;
+    contentType?: string;
+    isUploaded?: boolean;
+}
 /** Universal Address type, used in multiple API's */
 export interface Address {
     street?: string;

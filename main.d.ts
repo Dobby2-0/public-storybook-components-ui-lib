@@ -8,6 +8,7 @@ export * from './utils/rte-utils';
 export * from './utils/sanitize';
 export * from './utils/table';
 export * from './utils/vat-validation';
+export type { Address, DobbyFile } from './types';
 export type * from './types/file-tree';
 export { Accordion, AccordionContent, AccordionHeader, AccordionItem, AccordionTrigger, } from './components/Accordion/Accordion';
 export { Alert } from './components/Alert/Alert';
@@ -28,6 +29,7 @@ export { DobbyContextProvider, PortalProvider, } from './components/DobbyContext
 export { ErrorBoundary } from './components/Error/ErrorBoundary.tsx';
 export { ErrorPage } from './components/Error/ErrorPage.tsx';
 export { RouterErrorElement } from './components/Error/RouterErrorElement.tsx';
+export { FileButton } from './components/FileButton/FileButton';
 export { FileIcon } from './components/FileIcon/FileIcon';
 export { FileList, fileToAttachment, type Attachment, } from './components/FileList/FileList';
 export { Form, useFormField, useFormRef } from './components/Form/Form';
