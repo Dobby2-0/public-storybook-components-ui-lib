@@ -12,6 +12,7 @@ export interface TreeItem {
     className?: string;
     children?: TreeItem[] | ReactNode;
     onClick?: (item: TreeItem, selected: TreeItemState["selected"]) => void;
+    loading?: boolean;
 }
 export interface TreeItemState {
     /** IDs of ALL parent items */
