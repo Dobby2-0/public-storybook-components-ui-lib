@@ -23,5 +23,5 @@ export interface CreateDatasourceOptions {
     dataPropertyName: string;
 }
 export declare const useDatasource: (options: CreateDatasourceOptions) => IDatasource;
-/** Gets the sort direction of a column and translates from API to AgGrid format */
+/** Recursively gets the sort direction of a column and translates from API to AgGrid format */
 export declare const getSortDirection: (sort: Sort | Sort[] | undefined, column: string) => "asc" | "desc" | undefined;

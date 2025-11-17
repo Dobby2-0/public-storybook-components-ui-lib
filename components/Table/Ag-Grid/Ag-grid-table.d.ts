@@ -4,10 +4,12 @@ interface ClassNameObject {
     base?: string;
     grid?: string;
 }
+type SortDirection = "ASC" | "DESC";
+type SortValue = Record<string, SortDirection | Record<string, SortDirection>>;
 interface Sort {
     column: string;
-    direction?: "ASC" | "DESC";
-    value?: Record<string, Sort["direction"]>;
+    direction?: SortDirection;
+    value?: SortValue;
 }
 interface RowMenuItem {
     id: string;
@@ -56,4 +58,4 @@ declare const AgGridTable: <RowData extends {
 export type { ColDef, GetRowIdParams, IDatasource, RowClickedEvent, SortChangedEvent, } from 'ag-grid-community';
 export type { AgGridReact, CustomCellRendererProps } from 'ag-grid-react';
 export { AgGridTable };
-export type { RowMenuItem, Sort };
+export type { RowMenuItem, Sort, SortDirection, SortValue };
