@@ -4,6 +4,8 @@ interface BulkActionsProps<T extends object> {
     actions: ListBoxProps<T>["items"];
     /** Array of items on which the action should be performed */
     count?: number;
+    /** The ID of the action that should be selected by default when the component mounts */
+    defaultActionId?: BulkAction["id"];
 }
 interface BulkAction extends CollectionItem {
     /** Function to be called when the action is selected */
@@ -18,5 +20,5 @@ interface BulkAction extends CollectionItem {
  *
  * Should be used in conjunction with table row selection and Popover component
  */
-declare const BulkActions: ({ actions, count }: BulkActionsProps<BulkAction>) => import("react/jsx-runtime").JSX.Element;
+declare const BulkActions: ({ actions, count, defaultActionId, }: BulkActionsProps<BulkAction>) => import("react/jsx-runtime").JSX.Element;
 export { BulkActions };
