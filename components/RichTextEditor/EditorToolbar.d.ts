@@ -11,12 +11,15 @@ interface EditorToolbarOptions {
     table?: boolean;
     undoRedo?: boolean;
     tagSelector?: TagDataProps;
+    fullscreen?: boolean;
 }
 interface EditorToolbarProps {
     editor: Editor;
     options?: EditorToolbarOptions;
     disabled?: boolean;
+    fullscreen?: boolean;
+    onToggleFullscreen?: () => void;
 }
-declare const EditorToolbar: ({ editor, options, disabled }: EditorToolbarProps) => import("react/jsx-runtime").JSX.Element;
+declare const EditorToolbar: ({ editor, options, disabled, fullscreen, onToggleFullscreen, }: EditorToolbarProps) => import("react/jsx-runtime").JSX.Element;
 export { EditorToolbar };
 export type { EditorToolbarOptions };

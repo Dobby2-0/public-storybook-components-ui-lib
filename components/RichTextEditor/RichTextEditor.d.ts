@@ -1,29 +1,5 @@
-import { EditorToolbarOptions } from './EditorToolbar.tsx';
+import { RichTextEditorBaseProps } from './RichTextEditorBase.tsx';
+type RichTextEditorProps = Omit<RichTextEditorBaseProps, "fullscreen" | "onToggleFullscreen">;
+declare const RichTextEditor: ({ value, onChange, ...props }: RichTextEditorProps) => import("react/jsx-runtime").JSX.Element;
 export type { Tag } from './TagSelector.tsx';
-interface RichTextEditorProps {
-    /** The value of the editor */
-    value?: string;
-    /** Handler called when the value changes */
-    onChange?: (value: string) => void;
-    /** The className of the editor */
-    className?: string;
-    /** Whether the editor and toolbar should be disabled */
-    disabled?: boolean;
-    /** configuration object for setting the available toolbar options */
-    toolbarOptions?: EditorToolbarOptions;
-    /**
-     * Wether the content container should be resizable
-     *
-     * @Default true
-     */
-    resizable?: boolean;
-    /** Enables paper like page view */
-    pageView?: boolean;
-    /** Makes the editor read-only */
-    readonly?: boolean;
-}
-/**
- * RichTextEditor component based on `@tiptap/react`.
- */
-declare const RichTextEditor: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, }: RichTextEditorProps) => import("react/jsx-runtime").JSX.Element;
 export { RichTextEditor };
