@@ -1,45 +1,23 @@
-import { Attachment, FileListProps } from '../FileList/FileList.tsx';
-import { ReactNode } from '../../../node_modules/react';
-import { DropZoneProps as AriaDropZoneProps, FileTriggerProps } from 'react-aria-components';
+import { Attachment } from '../FileList/FileList.tsx';
+import { DropZoneProps } from './DropZone.tsx';
+import { FileInputProps } from './FileInput.tsx';
 declare enum RejectReason {
     FILE_TYPE = "fileType",
     FILE_SIZE = "fileSize"
 }
-interface FileInputProps extends CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes"> {
-    /**
-     * current value (controlled)
-     *
-     * A utility function `fileToAttachment` is provided by this library to convert a `File` or an array of `File` to the required format.
-     */
-    file?: Attachment;
-    /** callback to handle file selection */
-    onFileSelectionChange?: (file: Attachment) => void;
-    hiddenInput?: boolean;
-    customTrigger?: (isLoading: boolean) => ReactNode;
-}
-interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">, CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes">, Pick<FileListProps, "actionButtons" | "contrastMode" | "errorAsTooltip"> {
-    allowsMultiple?: boolean;
-    /**
-     * current value (controlled)
-     *
-     * A utility function `fileToAttachment` is provided by this library to convert a `File` or an array of `File` to the required format.
-     */
-    files?: Attachment[];
-    /**
-     * initial files (uncontrolled)
-     */
-    initialFiles?: Attachment[];
-    /** callback to handle file selection */
-    onFileSelectionChange?: (files: Attachment[]) => void;
-    /** Callback that is triggered when the `onFileAdd` callback rejects with an error */
-    onFileAddError?: (file: Attachment, error?: string) => ReactNode | void;
-}
-type FileAddResult = Omit<Attachment, "loading"> | void;
-interface ClassNameObject {
+export declare const validateFile: (file: File, acceptedFileTypes?: readonly string[], fileSizeLimit?: number, t?: (key: string, defaultValue: string) => string) => {
+    reason: RejectReason;
+    error: string | undefined;
+} | {
+    reason: null;
+    error?: undefined;
+};
+export interface ClassNameObject {
     base?: string;
     fileList?: string;
 }
-interface CommonUploadProps {
+type FileAddResult = Omit<Attachment, "loading"> | void;
+export interface CommonUploadProps {
     /** error message to be displayed */
     errorMessage?: string;
     /** Label for the file input/dropzone */

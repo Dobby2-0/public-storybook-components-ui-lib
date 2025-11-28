@@ -7,6 +7,7 @@ declare global {
         ReactNativeWebView?: {
             postMessage?: (message: string) => void;
         };
+        __cameraPermissionStatus?: string;
     }
 }
 /**

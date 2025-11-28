@@ -41,3 +41,14 @@ export declare const getLocalizedItem: <T extends {
 } | {
     languageCode?: string;
 }>(items?: T[], language?: string) => T | undefined;
+/**
+ * Requests the native mobile app to open the device settings.
+ * This is used when a permission is denied and the user needs to enable it manually.
+ * This function is a no-op when not running in a React Native WebView.
+ */
+export declare const openNativeSettings: () => void;
+/**
+ * Checks if camera permission is denied in the native mobile app.
+ * Returns true if running in a WebView and permission is denied, false otherwise.
+ */
+export declare const isCameraPermissionDenied: () => boolean;
