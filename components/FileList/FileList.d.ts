@@ -1,17 +1,8 @@
+import { DobbyFile } from '../../types';
 import { ReactElement, ReactNode } from '../../../node_modules/react';
-interface Attachment {
-    /** Unique internal identifier */
-    id: string;
-    /** Unique key */
-    key?: string;
-    /** Name of the attachment (including extension) */
-    name: string;
-    /** Attachment size in bytes */
-    size: number;
+interface Attachment extends DobbyFile {
     /** Attachment location URL */
-    url: string;
-    /** Attachment MIME type */
-    type?: string;
+    url?: string;
     /** A promise that resolves when the file is done loading */
     loading?: Promise<Attachment | void>;
     /** An optional error message */
@@ -19,7 +10,7 @@ interface Attachment {
 }
 interface DefaultActionHandlers {
     view: (url: Attachment["url"]) => void;
-    download: (url: Attachment["url"], fileName: Attachment["name"]) => void;
+    download: (url: Attachment["url"], fileName: Attachment["name"], contentType: Attachment["contentType"]) => void;
     delete: (fileId: Attachment["id"]) => void;
 }
 type ActionButtonFunction<T = undefined> = T extends undefined ? (file: Attachment) => void | Promise<void> : (file: Attachment, original: T) => void | Promise<void>;
