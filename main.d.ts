@@ -42,6 +42,7 @@ export { Modal, ModalContent, ModalOverlay } from './components/Modal/Modal';
 export { NumberField } from './components/NumberField/NumberField';
 export { Pagination } from './components/Pagination/Pagination';
 export { PDFViewer } from './components/PDFViewer/PDFViewer';
+export { PDFViewerModal } from './components/PDFViewer/PDFViewerModal';
 export { Pill } from './components/Pill/Pill';
 export { Popover, PopoverContent, PopoverContext, type ContextValue, type PopoverProps, } from './components/Popover/Popover';
 export { RadioGroup } from './components/RadioGroup/RadioGroup';
