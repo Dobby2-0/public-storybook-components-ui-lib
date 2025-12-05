@@ -33,6 +33,7 @@ export { FileButton } from './components/FileButton/FileButton';
 export { FileIcon } from './components/FileIcon/FileIcon';
 export { FileList, fileToAttachment, type Attachment, } from './components/FileList/FileList';
 export { Form, useFormField, useFormRef } from './components/Form/Form';
+export { ImageCarousel, ImageCarouselModal, } from './components/ImageCarousel/ImageCarousel';
 export { List } from './components/List/List';
 export { ListBox } from './components/ListBox/ListBox';
 export { ListFilters, type FilterDefinition, type FilterValue, } from './components/ListFilters/ListFilters';
