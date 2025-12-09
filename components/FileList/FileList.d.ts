@@ -3,6 +3,8 @@ import { ReactElement, ReactNode } from '../../../node_modules/react';
 interface Attachment extends DobbyFile {
     /** Attachment location URL */
     url?: string;
+    /** MIME type */
+    type?: string;
     /** A promise that resolves when the file is done loading */
     loading?: Promise<Attachment | void>;
     /** An optional error message */

@@ -78,7 +78,9 @@ export interface DobbyFile {
     path?: string;
     size?: number;
     key?: string;
+    /** Which type of object is the file connected to */
     fileType?: string;
+    /** MIME type */
     contentType?: string;
     isUploaded?: boolean;
 }
