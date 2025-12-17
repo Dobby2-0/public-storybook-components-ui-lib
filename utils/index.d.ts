@@ -1,6 +1,7 @@
 import { Address, FieldResolver, FieldResolverWithProps } from '../types';
 import { SeverityLevel } from '@sentry/react';
 import { ClassValue } from 'clsx';
+import { ReactNode } from '../../node_modules/react';
 /**
  * React classnames utility that combines Tailwind's twMerge with clsx.
  */
@@ -52,3 +53,5 @@ export declare const openNativeSettings: () => void;
  * Returns true if running in a WebView and permission is denied, false otherwise.
  */
 export declare const isCameraPermissionDenied: () => boolean;
+/** Maps over all children, flattening any fragments, and returns the results as an array. */
+export declare const flatMapChildren: <R>(children: ReactNode, fn: (x: ReactNode) => R) => R[];

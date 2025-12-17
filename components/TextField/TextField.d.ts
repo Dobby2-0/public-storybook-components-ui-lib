@@ -23,11 +23,11 @@ interface TextFieldProps extends AriaTextFieldProps {
  *
  * @example
  * <TextField
+ *   textArea
+ *   isRequired
  *   label="Your Message"
- *   textArea={true}
  *   description="Please enter your message."
  *   errorMessage="This field is required."
- *   isRequired
  * />
  */
 declare const TextField: import('../../../node_modules/react').ForwardRefExoticComponent<TextFieldProps & import('../../../node_modules/react').RefAttributes<HTMLDivElement>>;

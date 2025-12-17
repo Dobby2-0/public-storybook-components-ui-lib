@@ -1,6 +1,6 @@
 import { ComboBox } from '../ComboBox/ComboBox.tsx';
 import { Select } from '../Select/Select.tsx';
-import { ComponentProps } from '../../../node_modules/react';
+import { ComponentProps, HTMLAttributes, ReactNode } from '../../../node_modules/react';
 type SelectFilterProps = ComponentProps<typeof Select> & {
     /** Type of filter */
     filterType: "single-select" | "multi-select";
@@ -18,19 +18,25 @@ interface FilterBarProps {
     /** Forces the filter bar to be displayed in mobile mode. */
     forceMobile?: boolean;
     /** Definition of all filters. */
-    filters: FilterDefinition[];
+    filters?: FilterDefinition[];
     /** Initial values of te filters, uses the filter `name` to link to the component. */
     filterValues?: Record<string, FilterValue>;
+    /** Number of currently active filters. (shown on mobile mode). */
+    activeFilters?: number;
     /** Callback function called whan a filter changes value, returns the value of all "touched" filters. */
     onFilterChange?: (filters: Record<string, FilterValue>) => void;
     /** The CSS className for the element. */
     className?: string;
+    /** Child elements to be rendered inside the component. */
+    children?: ReactNode;
+    /** Additional props to be passed to each child filter component. */
+    childProps?: Partial<HTMLAttributes<HTMLElement>>;
 }
 /**
- * Component used for presenting various filters above a table
+ * Component used for presenting various filters for a list of data.
  *
- * Support Singl-/MultiSelect & Combobox filters
+ * Support Single-/MultiSelect & Combobox filters or any custom filter component as children.
  */
-declare const ListFilters: ({ filters, filterValues, onFilterChange, className, forceMobile, }: FilterBarProps) => import("react/jsx-runtime").JSX.Element;
+declare const ListFilters: ({ filters, filterValues, activeFilters: activeFiltersProp, onFilterChange, className, forceMobile, children, childProps, }: FilterBarProps) => import("react/jsx-runtime").JSX.Element;
 export { ListFilters };
 export type { FilterDefinition, FilterValue };
