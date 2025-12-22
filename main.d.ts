@@ -3,6 +3,7 @@ export { buildAddressString, capitalize, captureEvent, cn, downloadFile, formatN
 export * from './utils/capacities';
 export * from './utils/date';
 export * from './utils/file-tree';
+export * from './utils/format-iban';
 export * from './utils/number-order';
 export * from './utils/rte-utils';
 export * from './utils/sanitize';
