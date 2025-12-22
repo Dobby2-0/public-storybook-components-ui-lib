@@ -45,6 +45,7 @@ export { NumberField } from './components/NumberField/NumberField';
 export { Pagination } from './components/Pagination/Pagination';
 export { PDFViewer } from './components/PDFViewer/PDFViewer';
 export { PDFViewerModal } from './components/PDFViewer/PDFViewerModal';
+export { PhoneNumberField, isPossiblePhoneNumber, } from './components/PhoneNumberField/PhoneNumberField';
 export { Pill } from './components/Pill/Pill';
 export { Popover, PopoverContent, PopoverContext, type ContextValue, type PopoverProps, } from './components/Popover/Popover';
 export { RadioGroup } from './components/RadioGroup/RadioGroup';

@@ -1,6 +1,7 @@
 import { ComboBoxCommonProps, ComboBoxListBoxProps } from './ComboBoxListBox.tsx';
 import { ListBoxProps } from '../ListBox/ListBox.tsx';
 import { Key } from 'react-aria-components';
+export declare const getDefaultSingleComboBoxValue: (selectedKey?: Key | null, defaultSelectedKey?: Key) => Set<Key> | undefined;
 interface SingleComboBoxProps<T extends object> extends ComboBoxCommonProps, Omit<ComboBoxListBoxProps, "className"> {
     /** The currently selected keys in the collection (controlled). */
     selectedKey?: Key;
