@@ -21,6 +21,8 @@ interface FilterBarProps {
     filters?: FilterDefinition[];
     /** Initial values of te filters, uses the filter `name` to link to the component. */
     filterValues?: Record<string, FilterValue>;
+    /** Width of each filter component. */
+    filterWidth?: number;
     /** Number of currently active filters. (shown on mobile mode). */
     activeFilters?: number;
     /** Callback function called whan a filter changes value, returns the value of all "touched" filters. */
@@ -37,6 +39,6 @@ interface FilterBarProps {
  *
  * Support Single-/MultiSelect & Combobox filters or any custom filter component as children.
  */
-declare const ListFilters: ({ filters, filterValues, activeFilters: activeFiltersProp, onFilterChange, className, forceMobile, children, childProps, }: FilterBarProps) => import("react/jsx-runtime").JSX.Element;
+declare const ListFilters: ({ filters, filterValues, filterWidth, activeFilters: activeFiltersProp, onFilterChange, className, forceMobile, children, childProps, }: FilterBarProps) => import("react/jsx-runtime").JSX.Element;
 export { ListFilters };
 export type { FilterDefinition, FilterValue };

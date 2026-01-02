@@ -32,3 +32,4 @@ interface TextFieldProps extends AriaTextFieldProps {
  */
 declare const TextField: import('../../../node_modules/react').ForwardRefExoticComponent<TextFieldProps & import('../../../node_modules/react').RefAttributes<HTMLDivElement>>;
 export { TextField };
+export type { TextFieldProps };
