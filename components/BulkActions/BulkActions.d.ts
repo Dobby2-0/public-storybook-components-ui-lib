@@ -21,17 +21,18 @@ interface BulkActionsPropsWithActions<T extends object> extends CommonBulkAction
 }
 type BulkActionsPropsWithChildren = PropsWithChildren & CommonBulkActionsProps;
 type BulkActionsProps<T extends object> = BulkActionsPropsWithActions<T> | BulkActionsPropsWithChildren;
-/**
- * Component to provide the user with the ability to perform an action on multiple items at once
- *
- * Usage:
- * - Provide the `actions` prop to use the built-in select-and-confirm UI for bulk actions.
- * - Or, omit `actions` and provide custom `children` to render your own controls inside the bulk actions layout.
- *
- * Should be used in conjunction with table row selection and Popover component
- */
-declare const BulkActions: {
-    (props: BulkActionsProps<BulkAction>): import("react/jsx-runtime").JSX.Element;
+interface ButtonClassNameObject {
+    button?: string;
+    tooltip?: string;
+}
+interface BulkActionsConfirmationButtonProps {
+    disabled?: boolean;
+    tooltipContent?: string;
+    onConfirm: () => Promise<void> | void;
+    className?: string | ButtonClassNameObject;
+}
+declare const BulkActionsWithComponents: ((props: BulkActionsProps<BulkAction>) => import("react/jsx-runtime").JSX.Element) & {
+    ConfirmationButton: ({ disabled, tooltipContent, onConfirm: handleConfirmation, className, }: BulkActionsConfirmationButtonProps) => import("react/jsx-runtime").JSX.Element;
     selectClassNames: string;
 };
-export { BulkActions };
+export { BulkActionsWithComponents as BulkActions };
