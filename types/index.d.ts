@@ -86,9 +86,11 @@ export interface DobbyFile {
 }
 /** Universal Address type, used in multiple API's */
 export interface Address {
+    name?: string;
     street?: string;
     number?: string;
     box?: string;
+    remark?: string;
     postalcode?: string;
     city?: string;
     country?: string;
