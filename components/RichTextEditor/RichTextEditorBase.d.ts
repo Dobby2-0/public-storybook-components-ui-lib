@@ -1,4 +1,5 @@
 import { EditorToolbarOptions } from './EditorToolbar.tsx';
+import { SpellcheckLanguage } from '../../hooks/use-nspell';
 interface RichTextEditorBaseProps {
     /** The value of the editor */
     value?: string;
@@ -24,10 +25,12 @@ interface RichTextEditorBaseProps {
     fullscreen?: boolean;
     /** Handler called when toggling fullscreen mode */
     onToggleFullscreen?: () => void;
+    /** Language to use for spellchecking. Falls back to the current i18n language if not provided*/
+    spellcheckLanguage?: SpellcheckLanguage;
+    /** Whether to enable spellchecking */
+    spellcheckEnabled?: boolean;
 }
-/**
- * RichTextEditor component based on `@tiptap/react`.
- */
-declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
+/** * RichTextEditor component based on @tiptap/react. */
+declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export default RichTextEditorBase;
 export type { RichTextEditorBaseProps };

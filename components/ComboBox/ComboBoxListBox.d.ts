@@ -18,6 +18,8 @@ interface ComboBoxCommonProps extends VariantProps<typeof dropdownInputVariants>
     loading?: boolean;
     isDisabled?: boolean;
     disallowEmptySelection?: boolean;
+    /** The storage key for localStorage keying. Should be unique within the MFE. If not provided, localStorage is not used. */
+    storageKey?: string;
 }
 interface ComboBoxListBoxProps {
     className?: string;

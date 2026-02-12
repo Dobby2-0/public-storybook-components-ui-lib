@@ -11,5 +11,5 @@ interface MultiComboBoxProps<T extends object> extends ComboBoxCommonProps, Omit
     /** Callback triggered when the open state of the popover changes. */
     onOpenChange?: (isOpen: boolean) => void;
 }
-declare const MultiComboBox: <T extends object>({ label, placeholder, className, items, selectedKeys, defaultSelectedKeys, onSelectionChange, onOpenChange, idResolver, ...props }: MultiComboBoxProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const MultiComboBox: <T extends object>({ label, placeholder, className, items, selectedKeys, defaultSelectedKeys, onSelectionChange, onOpenChange, idResolver, storageKey, ...props }: MultiComboBoxProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { MultiComboBox, type MultiComboBoxProps };

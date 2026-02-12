@@ -11,5 +11,5 @@ interface SingleSelectProps<T extends object> extends SelectCommonProps<T> {
  *
  * Based on `React-aria-components`
  */
-declare const SingleSelect: <T extends object>({ placeholder, className, items, disallowEmptySelection, selectedKey, defaultSelectedKey, onSelectionChange, idResolver, keepSelectionClear, ...props }: SingleSelectProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const SingleSelect: <T extends object>({ placeholder, className, items, disallowEmptySelection, selectedKey, defaultSelectedKey, onSelectionChange, idResolver, keepSelectionClear, storageKey, ...props }: SingleSelectProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { SingleSelect, type SingleSelectProps };

@@ -2,7 +2,7 @@ import { dropdownInputVariants } from '../../styles/variants.ts';
 import { VariantProps } from 'class-variance-authority';
 import { ReactNode, RefObject } from '../../../node_modules/react';
 import { DatePickerProps } from 'react-datepicker';
-interface DateTimePickerProps extends Omit<DatePickerProps, "icon">, VariantProps<typeof dropdownInputVariants> {
+export interface DateTimePickerProps extends Omit<DatePickerProps, "icon">, VariantProps<typeof dropdownInputVariants> {
     /**  */
     label?: string;
     /**  */

@@ -1,3 +1,14 @@
+export declare const CapacitiesTypeEnum: {
+    readonly employee: "employee";
+    readonly owner: "owner";
+    readonly renter: "renter";
+    readonly externalproxy: "externalproxy";
+};
+export type CapacitiesType = keyof typeof CapacitiesTypeEnum;
+/**
+ * Get the active capacity type (employee, owner, renter, externalproxy, etc.)
+ */
+export declare const getActiveCapacityType: () => CapacitiesType | undefined;
 /**
  * Get employee IDs from a string of capacities
  */

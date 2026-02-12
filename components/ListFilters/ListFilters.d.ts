@@ -10,7 +10,7 @@ type ComboBoxFilterProps = ComponentProps<typeof ComboBox> & {
     filterType: "combobox";
 };
 type FilterValue = string | string[] | boolean | undefined;
-type FilterDefinition = Pick<SelectFilterProps | ComboBoxFilterProps, "filterType" | "items" | "placeholder" | "labelResolver" | "className"> & {
+type FilterDefinition = Pick<SelectFilterProps | ComboBoxFilterProps, "filterType" | "items" | "placeholder" | "labelResolver" | "className" | "storageKey"> & {
     /** Unique name of the filter, also used as label/placeholder */
     name: string;
 };
@@ -29,7 +29,16 @@ interface FilterBarProps {
     onFilterChange?: (filters: Record<string, FilterValue>) => void;
     /** The CSS className for the element. */
     className?: string;
-    /** Child elements to be rendered inside the component. */
+    /** Enables showing the reset button */
+    enableResetButton?: boolean;
+    /** Function called when the reset button is clicked, should handle resetting filters to default values. If not provided, the component will clear persisted filter state and refresh window. */
+    onResetFilters?: () => Promise<void> | void;
+    /**
+     * Child elements to be rendered inside the component.
+     *
+     * @remarks
+     * **Note:** Custom children currently does not fuly support reset functionality.
+     */
     children?: ReactNode;
     /** Additional props to be passed to each child filter component. */
     childProps?: Partial<HTMLAttributes<HTMLElement>>;
@@ -39,6 +48,6 @@ interface FilterBarProps {
  *
  * Support Single-/MultiSelect & Combobox filters or any custom filter component as children.
  */
-declare const ListFilters: ({ filters, filterValues, filterWidth, activeFilters: activeFiltersProp, onFilterChange, className, forceMobile, children, childProps, }: FilterBarProps) => import("react/jsx-runtime").JSX.Element;
+declare const ListFilters: ({ filters, filterValues, filterWidth, activeFilters: activeFiltersProp, onFilterChange, className, forceMobile, enableResetButton, onResetFilters, children, childProps, }: FilterBarProps) => import("react/jsx-runtime").JSX.Element;
 export { ListFilters };
 export type { FilterDefinition, FilterValue };

@@ -17,6 +17,8 @@ interface SelectCommonProps<T extends object> extends Omit<AriaSelectProps<T>, "
     disallowEmptySelection?: boolean;
     loading?: boolean;
     ref?: Ref<HTMLButtonElement>;
+    /** The storage key for localStorage keying. Should be unique within the MFE. If not provided, localStorage is not used. */
+    storageKey?: string;
 }
 interface SelectTriggerProps extends AriaButtonProps {
     loading?: boolean;
