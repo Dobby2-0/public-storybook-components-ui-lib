@@ -1,0 +1,40 @@
+import{r as p,j as c}from"./iframe-BpFVLOfy.js";import{B as D}from"./Button-BUYxwJJf.js";import{C as K}from"./Checkbox-DxP3M-u8.js";import{u as U,a as V,L as C,M as k}from"./ListFilters-CTw_FZir.js";import{S as _}from"./Select-UgxugMl6.js";import{S as M}from"./Switch-B7YvXrsz.js";import{T as B}from"./TextField-BkV5ayR7.js";import{l as G,s as J,r as I,b as W,c as z}from"./filter-persistence-BWNtMiTO.js";import"./index-CmI5jeNL.js";import{t as Y}from"./DeleteForever-BAXr8DJF.js";import"./preload-helper-Dp1pzeXC.js";import"./utils-CD-49kjx.js";import"./ButtonBase-CURKgOs4.js";import"./Loader-ClVzWJEc.js";import"./Tooltip-CBOLfhLO.js";import"./index-t2cyNmbH.js";import"./Button-DilksvR7.js";import"./FocusScope-DqHE47eE.js";import"./Text-xYsyjKIG.js";import"./usePress-DdWpwWve.js";import"./RSPContexts-BYEedYfM.js";import"./Separator-GBcK2eor.js";import"./index-xSmDOPsl.js";import"./VisuallyHidden-42luShXM.js";import"./Check-DFAgOga4.js";import"./CheckIndeterminateSmall-CchSe1QP.js";import"./Form-C7mMO57V.js";import"./useToggleState-bVFOZVne.js";import"./useFormReset-HsepBMAI.js";import"./ComboBox-de9_kVfe.js";import"./SingleComboBox-C0da2UX5.js";import"./ListBox-ByoWIHnU.js";import"./ListBox-CmrdpSOI.js";import"./DragAndDrop-WIL6PKSY.js";import"./useLabel-CyuIsgI6.js";import"./Pill-BeVljGVh.js";import"./Input-DPrBOPgr.js";import"./IconButton-DhYKlVMV.js";import"./Modal-Dy7wmDz5.js";import"./use-is-mobile-DyuKZ0tn.js";import"./sha256-DnX9CJec.js";import"./Replay-BnrYehaq.js";import"./Label-DNfrVbYC.js";import"./index-stOC9Ljn.js";import"./Label-gmZMiyak.js";import"./ErrorMessage-qScF5XIJ.js";import"./Group-CXbxXz99.js";import"./FieldError-B7ODN9Kk.js";import"./useTextField-DDKCmkFF.js";import"./variants-83REr8-v.js";import"./KeyboardArrowDown-BriR5AZv.js";import"./index-B6g7O1-7.js";/**
+ * React Router DOM v6.30.3
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */function v(e){return e===void 0&&(e=""),new URLSearchParams(typeof e=="string"||Array.isArray(e)||e instanceof URLSearchParams?e:Object.keys(e).reduce((i,o)=>{let n=e[o];return i.concat(Array.isArray(n)?n.map(l=>[o,l]):[[o,n]])},[]))}function q(e,i){let o=v(e);return i&&i.forEach((n,l)=>{o.has(l)||i.getAll(l).forEach(f=>{o.append(l,f)})}),o}const Q="6";try{window.__reactRouterVersion=Q}catch{}var P;(function(e){e.UseScrollRestoration="useScrollRestoration",e.UseSubmit="useSubmit",e.UseSubmitFetcher="useSubmitFetcher",e.UseFetcher="useFetcher",e.useViewTransitionState="useViewTransitionState"})(P||(P={}));var F;(function(e){e.UseFetcher="useFetcher",e.UseFetchers="useFetchers",e.UseScrollRestoration="useScrollRestoration"})(F||(F={}));function X(e){let i=p.useRef(v(e)),o=p.useRef(!1),n=U(),l=p.useMemo(()=>q(n.search,o.current?null:i.current),[n.search]),f=V(),S=p.useCallback((u,t)=>{const r=v(typeof u=="function"?u(l):u);o.current=!0,f("?"+r,t)},[f,l]);return[l,S]}const b=e=>({"single-select":"single-select","multi-select":"multi-select",combobox:"single-combobox"})[e],Z=({filters:e,defaultValues:i})=>{const[o,n]=X(),l=p.useMemo(()=>{const t={...i};for(const r of e){const s=o.get(r.name);if(s!==null)r.filterType==="multi-select"?t[r.name]=s===""?[]:s.split(","):t[r.name]=s||void 0;else if(r.storageKey){const a=G(b(r.filterType),r.storageKey);if(a!=null&&a.size){const m=Array.from(a);t[r.name]=r.filterType==="multi-select"?m:m[0]}}}return t},[o]);p.useEffect(()=>{for(const t of e){if(!t.storageKey)continue;const r=l[t.name];if(r!==void 0&&r!==!1){const s=Array.isArray(r)?r:[r];J(b(t.filterType),t.storageKey,s)}}},[l,e]),p.useEffect(()=>{const t=new URLSearchParams(o);let r=!1;for(const[s,a]of Object.entries(l)){const m=o.get(s),d=a!==void 0&&a!==!1?Array.isArray(a)?a.join(","):String(a):null;d!==m&&(r=!0,d?t.set(s,d):t.delete(s))}r&&n(t,{replace:!0})},[]);const f=p.useCallback(t=>{const r=new URLSearchParams(o);for(const[s,a]of Object.entries(t))if(a!==void 0&&a!==!1&&!(Array.isArray(a)&&a.length===0))r.set(s,Array.isArray(a)?a.join(","):String(a));else if(a!==void 0&&Array.isArray(a)&&a.length===0)r.set(s,"");else{r.delete(s);const m=e.find(d=>d.name===s);m!=null&&m.storageKey&&I(b(m.filterType),m.storageKey)}n(r,{replace:!0})},[e,o,n]),S=p.useCallback(()=>{W();const t=new URLSearchParams(o);for(const r of e)t.delete(r.name);for(const[r,s]of Object.entries(i))s!==void 0&&s!==!1&&t.set(r,Array.isArray(s)?s.join(","):String(s));n(t,{replace:!0})},[o,n,e,i]),u=p.useMemo(()=>{for(const t of Object.keys(i)){const r=l[t],s=i[t];if(Array.isArray(r)&&Array.isArray(s)){if(r.length!==s.length||!r.every(a=>s.includes(a)))return!0}else if(r!==s)return!0}for(const t of Object.keys(l))if(!(t in i)&&l[t]!==void 0)return!0;return!1},[l,i]);return{filterValues:l,onFilterChange:f,resetFilters:S,hasNonDefaultFilters:u}},Ze={component:C},O=[{filterType:"single-select",name:"createdAt",placeholder:"Created at",items:[{id:"day",label:"Last 24 hours"},{id:"week",label:"Last 7 days"},{id:"month",label:"Last 30 days"},{id:"halfYear",label:"Last 6 months"},{id:"year",label:"Last year"}],labelResolver:e=>e.label,storageKey:"createdAt"},{filterType:"multi-select",name:"status",placeholder:"Status",items:[{id:"PENDING",label:"Pending approval"},{id:"APPROVED",label:"Approved"},{id:"TO_BE_SOLVED",label:"To be solved"},{id:"SOLVED",label:"Solved"},{id:"REJECTED",label:"Rejected"}],labelResolver:e=>e.label,storageKey:"status"},{filterType:"combobox",name:"responsible",placeholder:"Responsible user",items:[{id:"1",label:"John Doe"},{id:"2",label:"Jane Doe"},{id:"3",label:"Jeff"}],labelResolver:e=>e.label,storageKey:"responsible"}],h={args:{className:"w-[80vw]",filterValues:{status:["PENDING","APPROVED"]},filters:O.map(e=>({...e,storageKey:void 0}))}},y={args:{className:"w-[70vw]",children:c.jsxs(c.Fragment,{children:[c.jsx(_,{items:[],placeholder:"Select an item"}),c.jsx(B,{placeholder:"Search..."}),c.jsx(K,{className:"min-h-8 pl-2",children:"Check filter"}),c.jsx(M,{className:"min-h-8 pl-2",children:"Toggle filter"})]})}},$=({...e})=>{const{filterValues:i,onFilterChange:o,resetFilters:n,hasNonDefaultFilters:l}=Z({filters:e.filters??[],defaultValues:{status:["PENDING","APPROVED"]}});return c.jsxs("div",{className:"flex flex-col items-start gap-4",children:[c.jsx(C,{...e,filterValues:i,onFilterChange:o,enableResetButton:l,onResetFilters:n}),c.jsx(D,{variant:"delete",prefix:c.jsx(Y,{}),onPress:()=>z(),children:"Clear all persisted filters"})]})},g={args:{className:"w-[80vw]",filters:O},render:e=>c.jsx($,{...e}),decorators:[e=>c.jsx(k,{children:c.jsx(e,{})})]};var R,A,w;h.parameters={...h.parameters,docs:{...(R=h.parameters)==null?void 0:R.docs,source:{originalSource:`{
+  args: {
+    className: "w-[80vw]",
+    filterValues: {
+      status: ["PENDING", "APPROVED"]
+    },
+    filters: filters.map(x => ({
+      ...x,
+      storageKey: undefined
+    }))
+  }
+}`,...(w=(A=h.parameters)==null?void 0:A.docs)==null?void 0:w.source}}};var x,j,E;y.parameters={...y.parameters,docs:{...(x=y.parameters)==null?void 0:x.docs,source:{originalSource:`{
+  args: {
+    className: "w-[70vw]",
+    children: <>
+        <Select items={[]} placeholder="Select an item" />
+        <TextField placeholder="Search..." />
+        <Checkbox className="min-h-8 pl-2">Check filter</Checkbox>
+        <Switch className="min-h-8 pl-2">Toggle filter</Switch>
+      </>
+  }
+}`,...(E=(j=y.parameters)==null?void 0:j.docs)==null?void 0:E.source}}};var N,T,L;g.parameters={...g.parameters,docs:{...(N=g.parameters)==null?void 0:N.docs,source:{originalSource:`{
+  args: {
+    className: "w-[80vw]",
+    filters: filters
+  },
+  render: args => <PersistedStorageDemo {...args} />,
+  decorators: [Story => <MemoryRouter>
+        <Story />
+      </MemoryRouter>]
+}`,...(L=(T=g.parameters)==null?void 0:T.docs)==null?void 0:L.source}}};const $e=["Default","CustomFilters","FiltersWithLocalStorageKey"];export{y as CustomFilters,h as Default,g as FiltersWithLocalStorageKey,$e as __namedExportsOrder,Ze as default};

@@ -7,6 +7,7 @@ export declare const FILTER_TYPE_PREFIXES: {
 };
 export declare const loadFilterState: (filterType: keyof typeof FILTER_TYPE_PREFIXES, key: string | undefined, defaultSelectedKeys?: Set<Key>) => Set<Key> | undefined;
 export declare const saveFilterState: (filterType: keyof typeof FILTER_TYPE_PREFIXES, key: string | undefined, value: Set<Key> | Key[]) => void;
+export declare const removeFilterState: (filterType: keyof typeof FILTER_TYPE_PREFIXES, key: string | undefined) => void;
 /**
  * Remove all filter keys from localStorage and optionally reload the page.
  */
