@@ -1,6 +1,6 @@
 import { CollectionItem } from '../../types';
 import { ComponentPropsWithoutRef, ReactNode } from '../../../node_modules/react';
-import { TabsProps as AriaTabsProps } from 'react-aria-components';
+import { TabsProps as AriaTabsProps, Key } from 'react-aria-components';
 import { Pill } from '../Pill/Pill';
 interface TabItem extends CollectionItem {
     content: ReactNode;
@@ -11,7 +11,7 @@ interface ClassNameObject {
     base?: string;
     content?: string;
 }
-interface TabsProps extends Omit<AriaTabsProps, "children" | "className"> {
+interface TabsProps extends Omit<AriaTabsProps, "children" | "className" | "onSelectionChange"> {
     /** Array of items to be rendered as tabs */
     items: TabItem[];
     /** Content to be added before the tablist */
@@ -20,6 +20,8 @@ interface TabsProps extends Omit<AriaTabsProps, "children" | "className"> {
     suffix?: ReactNode;
     /** Styling for the tablist and optionally its content */
     className?: string | ClassNameObject;
+    /** Handler that is called when the selection changes. */
+    onSelectionChange?: (key: Key) => Promise<void> | void;
 }
 /**
  * Tabs component for displaying a set of tabs that can switch between different content panels.
