@@ -1,7 +1,7 @@
+import { SpellcheckWorkerClient } from '../../../hooks/use-nspell';
 import { Extension } from '@tiptap/core';
-import { default as NSpell } from 'nspell';
 export interface SpellcheckExtensionOptions {
-    spell: NSpell | null;
+    client: SpellcheckWorkerClient | null;
     enabled: boolean;
 }
 export interface MisspelledWord {
