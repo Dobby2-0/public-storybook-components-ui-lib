@@ -12,6 +12,7 @@ interface EditorToolbarOptions {
     undoRedo?: boolean;
     tagSelector?: TagDataProps;
     fullscreen?: boolean;
+    image?: boolean;
 }
 interface EditorToolbarProps {
     editor: Editor;
