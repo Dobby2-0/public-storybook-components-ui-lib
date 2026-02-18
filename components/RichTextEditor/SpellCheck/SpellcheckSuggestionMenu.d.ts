@@ -1,2 +1,1 @@
-import { default as React } from '../../../../node_modules/react';
-export declare const SpellcheckSuggestionMenu: React.FC;
+export declare const SpellcheckSuggestionMenu: () => import("react/jsx-runtime").JSX.Element | undefined;
