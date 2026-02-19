@@ -3,4 +3,4 @@ export interface RichTextViewerProps {
     className?: string;
 }
 declare const RichTextViewer: ({ value, className }: RichTextViewerProps) => import("react/jsx-runtime").JSX.Element;
-export default RichTextViewer;
+export { RichTextViewer };

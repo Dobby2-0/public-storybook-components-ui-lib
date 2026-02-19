@@ -1,1 +1,0 @@
-import{r as s,j as t,c as d}from"./iframe-DrFH8XRg.js";const r=s.forwardRef(({className:e,...a},i)=>t.jsx("div",{ref:i,className:d("h-px bg-neutral-150 dark:bg-neutral-100",e),...a}));r.displayName="Divider";try{r.displayName="Divider",r.__docgenInfo={description:"",displayName:"Divider",props:{}}}catch{}export{r as D};
