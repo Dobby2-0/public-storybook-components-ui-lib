@@ -6,6 +6,7 @@ interface TabItem extends CollectionItem {
     content: ReactNode;
     badge?: ReactNode;
     badgeProps?: ComponentPropsWithoutRef<typeof Pill>;
+    disabled?: boolean;
 }
 interface ClassNameObject {
     base?: string;
