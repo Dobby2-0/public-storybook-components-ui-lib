@@ -1,4 +1,4 @@
-import { PollState } from '../../types/oparations';
+import { PollState } from '../../types/operations';
 type PollOperationState = {
     pollState: PollState.IDLE;
 } | {
@@ -20,21 +20,9 @@ interface StartPollingOptions {
     timeoutMessage?: string;
 }
 /**
- * Hook to poll the status of a backend operation by traceId.
- *
- * - Tracks poll state: IDLE, LOADING, SUCCESS, ERROR.
- * - Polls until the operation completes, fails, or times out.
- * - Shows friendly toast messages automatically on errors or timeouts.
- * - Returns a Promise from `startPolling<TPayload>` with the parsed payload once completed.
- *
- * Usage:
- * const { operationState, startPolling } = usePollOperation();
- * const result = await startPolling<MyPayloadType>(traceId, {
- *   errorMessage: "Custom error for this operation",
- *   timeoutMessage: "Custom timeout message",
- * });
+ * @deprecated Use `resolveOperation` from `useOperation` instead.
  */
-export declare function usePollOperation(options?: PollTimingOptions): {
+export declare const usePollOperation: (options?: PollTimingOptions) => {
     readonly operationState: PollOperationState;
     readonly startPolling: <TPayload = unknown>(traceId: string, pollOptions?: StartPollingOptions) => Promise<TPayload | undefined>;
     readonly stopPolling: () => void;

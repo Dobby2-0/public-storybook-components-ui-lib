@@ -5,7 +5,7 @@ import { Ref } from '../../../node_modules/react';
 interface SingleSelectBaseProps<T extends object> extends SingleSelectProps<T> {
     selectionMode?: "single";
 }
-interface MultiSelectBaseProps<T extends object> extends MultiSelectProps<T> {
+interface MultiSelectBaseProps<T extends object> extends Omit<MultiSelectProps<T>, "selectionMode"> {
     selectionMode: "multiple";
 }
 type SelectProps<T extends object> = SingleSelectBaseProps<T> | (MultiSelectBaseProps<T> & {
