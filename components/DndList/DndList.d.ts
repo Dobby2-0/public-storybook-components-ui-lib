@@ -11,7 +11,7 @@ interface DndListProps<T extends ItemWithId> {
     /** Handler called when order change, gets dragged item and dropped position index */
     onDragEnd?: (item: T, newIndex: number) => void;
     /** Child function that handles rendering for each item */
-    children: (item: T) => ReactNode;
+    children: (item: T, index: number) => ReactNode;
     /** The CSS className for the element */
     className?: string;
     /** Wheter re-ordering should be disabled */
