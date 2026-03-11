@@ -1,4 +1,3 @@
-import { arrayMove } from '@dnd-kit/sortable';
 import { ReactNode } from '../../../node_modules/react';
 type ItemWithId = Record<never, unknown> & {
     id: string | number;
@@ -25,4 +24,4 @@ declare const DndList: (<T extends ItemWithId>({ items, onChange, onDragEnd, chi
     }) => import("react/jsx-runtime").JSX.Element;
     DragHandle: () => import("react/jsx-runtime").JSX.Element;
 };
-export { arrayMove, DndList };
+export { DndList };
