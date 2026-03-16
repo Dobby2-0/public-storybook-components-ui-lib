@@ -1,17 +1,16 @@
 import { Attachment } from '../FileList/FileList.tsx';
 import { DropZoneProps } from './DropZone.tsx';
 import { FileInputProps } from './FileInput.tsx';
+import { TFunction } from 'i18next';
 declare enum RejectReason {
     FILE_TYPE = "fileType",
-    FILE_SIZE = "fileSize"
+    FILE_SIZE = "fileSize",
+    FILE_DIMENSIONS = "fileDimensions"
 }
-export declare const validateFile: (file: File, acceptedFileTypes?: readonly string[], fileSizeLimit?: number, t?: (key: string, defaultValue: string) => string) => {
-    reason: RejectReason;
-    error: string | undefined;
-} | {
-    reason: null;
-    error?: undefined;
-};
+export declare const validateFile: (file: File, acceptedFileTypes?: readonly string[], fileSizeLimit?: number, fileWidthLimit?: number, fileHeightLimit?: number, t?: TFunction) => Promise<{
+    reason: RejectReason | null;
+    error?: string;
+}>;
 export interface ClassNameObject {
     base?: string;
     fileList?: string;
@@ -35,14 +34,18 @@ export interface CommonUploadProps {
      */
     onFileAdd?: (file: File, attachmentId?: string) => FileAddResult | Promise<FileAddResult>;
     /**
-     * Callback that is triggered when a file is rejected due to file type or size constraints.\
+     * Callback that is triggered when a file is rejected due to file type, size, or dimension constraints.\
      * The RejectReason enum is exported through this component: `Upload.RejectReason`.
      */
     onFileReject?: (file: File, reason: RejectReason) => void;
-    /** Should files with unaccepted file types or files over the size limit be shown with an error state?
+    /** Should files with unaccepted file types, files over the size limit, or files exceeding dimension limits be shown with an error state?
      *  By default these files are simply not added to the file list.
      */
     displayDisallowedFiles?: boolean;
+    /** Maximum image width in pixels (only applies to image files) */
+    fileWidthLimit?: number;
+    /** Maximum image height in pixels (only applies to image files) */
+    fileHeightLimit?: number;
 }
 interface FileInputUploadProps extends CommonUploadProps, Pick<FileInputProps, "file" | "onFileSelectionChange" | "acceptedFileTypes" | "hiddenInput" | "customTrigger"> {
     /** optionally render DropZone instead of FileInput */

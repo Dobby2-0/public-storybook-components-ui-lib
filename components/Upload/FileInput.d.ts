@@ -14,6 +14,6 @@ interface FileInputProps extends CommonUploadProps, Pick<FileTriggerProps, "acce
     hiddenInput?: boolean;
     customTrigger?: (isLoading: boolean) => ReactNode;
 }
-declare const FileInput: ({ file, description, label, className, fileSizeLimit, acceptedFileTypes, onFileAdd, onFileSelectionChange, onFileReject, hiddenInput, customTrigger, displayDisallowedFiles, }: FileInputProps) => import("react/jsx-runtime").JSX.Element;
+declare const FileInput: ({ file, description, label, className, fileSizeLimit, fileWidthLimit, fileHeightLimit, acceptedFileTypes, onFileAdd, onFileSelectionChange, onFileReject, hiddenInput, customTrigger, displayDisallowedFiles, }: FileInputProps) => import("react/jsx-runtime").JSX.Element;
 export { FileInput };
 export type { FileInputProps };
