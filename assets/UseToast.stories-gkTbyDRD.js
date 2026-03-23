@@ -1,0 +1,7 @@
+import{T as p,j as o}from"./iframe-CQI2BgJE.js";import{u as c}from"./use-toast-nz95zHCh.js";import{B as d}from"./Button-D6B8G2pr.js";import"./preload-helper-Dp1pzeXC.js";import"./utils-C3X5B0IN.js";import"./ButtonBase-D7O8JQ9S.js";import"./Loader-GseMPIOx.js";import"./Tooltip-CmUNBg59.js";import"./index-D_Z4pr1f.js";import"./Button-Ezszb-LY.js";import"./FocusScope-BuasiKxf.js";import"./Text-BXLV_GVU.js";import"./usePress-CGC0cKJT.js";import"./index-CcV-hXq_.js";import"./index-1dpUV8yo.js";import"./RSPContexts-DwQOiG50.js";import"./Separator-Nme1GeN9.js";import"./index-IJ0JUEQ3.js";import"./VisuallyHidden-BgQPvfXY.js";const R={component:p,title:"Hooks/useToast",tags:["!autodocs","!dev"]},u=({id:r,duration:i})=>{const n=c(),m="Toast Title "+r;return o.jsx(d,{onPress:()=>n({title:m,children:"This is a test toast notification!",onClose:()=>console.warn("Toast closed"),duration:i}),children:o.jsxs("p",{children:["Toast ",r]})})},t={render:()=>o.jsx("div",{className:"h-[200px] w-[500px]",children:o.jsx(u,{id:"1",duration:5e3})})};var s,e,a;t.parameters={...t.parameters,docs:{...(s=t.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  render: () => {
+    return <div className="h-[200px] w-[500px]">
+        <ToastButton id="1" duration={5000} />
+      </div>;
+  }
+}`,...(a=(e=t.parameters)==null?void 0:e.docs)==null?void 0:a.source}}};const S=["Default"];export{t as Default,S as __namedExportsOrder,R as default};
