@@ -13,6 +13,8 @@ interface ClassNameObject {
     content?: string;
 }
 interface TabsProps extends Omit<AriaTabsProps, "children" | "className" | "onSelectionChange"> {
+    /** Forces the filter bar to be displayed in mobile mode. */
+    forceMobile?: boolean;
     /** Array of items to be rendered as tabs */
     items: TabItem[];
     /** Content to be added before the tablist */
