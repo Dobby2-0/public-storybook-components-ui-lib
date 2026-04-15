@@ -7,4 +7,5 @@ declare const TheadNode: Node<any, any>;
 declare const ParagraphNode: Node<ParagraphOptions, any>;
 declare const BrNode: Node<any, any>;
 declare const NbspNode: Node<any, any>;
-export { BrNode, DivNode, NbspNode, ParagraphNode, SectionNode, TagNode, TheadNode, };
+declare const tableExtensions: (Node<import('@tiptap/extension-table').TableOptions, any> | Node<import('@tiptap/extension-table').TableHeaderOptions, any>)[];
+export { BrNode, DivNode, NbspNode, ParagraphNode, SectionNode, tableExtensions, TagNode, TheadNode, };
