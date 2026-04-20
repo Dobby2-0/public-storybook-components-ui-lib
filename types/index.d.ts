@@ -108,6 +108,7 @@ export type FieldResolverWithProps<T, U, V> = keyof T | ResolverFunctionWithProp
 export type ToasterProps = ToastProps & AlertProps & {
     duration?: number;
     description?: string;
+    action?: ReactNode;
 };
 /**
  * Represents a Toast notification.
@@ -123,7 +124,6 @@ export type ToasterProps = ToastProps & AlertProps & {
 export type Toast = ToasterProps & {
     id: string;
     dismiss: () => void;
-    action?: ReactNode;
     timeout?: NodeJS.Timeout;
 };
 export {};
