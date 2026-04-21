@@ -1,5 +1,5 @@
+import { EmptyStateContent } from '../../../EmptyState/EmptyState';
 import { AgGridReactProps } from 'ag-grid-react';
-import { ReactNode } from '../../../../../node_modules/react';
 export interface ClassNameObject {
     base?: string;
     grid?: string;
@@ -15,12 +15,6 @@ export interface RowMenuItem {
     id: string;
     label: string;
     onAction: (rowId: string) => void;
-}
-export interface EmptyStateContent {
-    icon?: ReactNode;
-    title?: string;
-    description?: string;
-    action?: ReactNode;
 }
 export interface AgGridTableProps<RowData extends {
     id: string;
