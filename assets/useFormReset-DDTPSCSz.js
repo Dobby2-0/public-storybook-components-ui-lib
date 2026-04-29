@@ -1,0 +1,1 @@
+import{g as i}from"./utils-Bq8izQar.js";import{r as n}from"./iframe-Bgm5THKt.js";function f(r,a,o){let d=i(()=>{o&&o(a)});n.useEffect(()=>{var t;let e=r==null||(t=r.current)===null||t===void 0?void 0:t.form;return e==null||e.addEventListener("reset",d),()=>{e==null||e.removeEventListener("reset",d)}},[r])}export{f as $};

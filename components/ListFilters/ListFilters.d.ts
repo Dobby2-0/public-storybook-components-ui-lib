@@ -10,9 +10,13 @@ type ComboBoxFilterProps = ComponentProps<typeof ComboBox> & {
     filterType: "combobox";
 };
 type FilterValue = string | string[] | boolean | undefined;
-type FilterDefinition = Pick<SelectFilterProps | ComboBoxFilterProps, "filterType" | "items" | "placeholder" | "labelResolver" | "className" | "storageKey"> & {
+type FilterDefinition = Pick<SelectFilterProps | ComboBoxFilterProps, "filterType" | "items" | "placeholder" | "labelResolver" | "className" | "storageKey" | "hasNextPage" | "loading" | "onLoadMore" | "idResolver" | "disallowEmptySelection"> & {
     /** Unique name of the filter, also used as label/placeholder */
     name: string;
+    /** Disables local filtering of combobox */
+    disableLocalFiltering?: boolean;
+    /** Callback function called when input changes */
+    onInputChange?: (value: string) => void;
 };
 interface FilterBarProps {
     /** Forces the filter bar to be displayed in mobile mode. */
@@ -25,7 +29,7 @@ interface FilterBarProps {
     filterWidth?: number;
     /** Number of currently active filters. (shown on mobile mode). */
     activeFilters?: number;
-    /** Callback function called whan a filter changes value, returns the value of all "touched" filters. */
+    /** Callback function called when a filter changes value, returns the value of all "touched" filters. */
     onFilterChange?: (filters: Record<string, FilterValue>) => void;
     /** The CSS className for the element. */
     className?: string;
