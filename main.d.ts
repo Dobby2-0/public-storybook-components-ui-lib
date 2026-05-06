@@ -16,7 +16,7 @@ export * from './utils/vat-validation';
 export { Accordion, AccordionContent, AccordionHeader, AccordionItem, AccordionTrigger, } from './components/Accordion/Accordion';
 export { Alert } from './components/Alert/Alert';
 export { Breadcrumbs, type BreadcrumbItem, } from './components/Breadcrumbs/Breadcrumbs';
-export { BulkActions } from './components/BulkActions/BulkActions';
+export { BulkActions, BulkActionsPopover, } from './components/BulkActions/BulkActions';
 export { Button } from './components/Button/Button';
 export { IconButton } from './components/Button/IconButton';
 export { Canvas, type CanvasRef } from './components/Canvas/Canvas';

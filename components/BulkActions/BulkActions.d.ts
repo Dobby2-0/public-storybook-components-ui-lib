@@ -5,7 +5,7 @@ interface CommonBulkActionsProps {
     /** Amount of selected items that will be affected by the action */
     count?: number;
 }
-interface BulkAction extends CollectionItem {
+export interface BulkAction extends CollectionItem {
     /** Function to be called when the action is selected */
     action?: () => Promise<void> | void;
     /** Whether the action should be disabled */
@@ -31,8 +31,15 @@ interface BulkActionsConfirmationButtonProps {
     onConfirm: () => Promise<void> | void;
     className?: string | ButtonClassNameObject;
 }
+type BulkActionsPopoverProps = (BulkActionsPropsWithActions<BulkAction> | BulkActionsPropsWithChildren) & {
+    isOpen: boolean;
+    className?: string;
+    /** Optional: provide custom container to position the popover. Defaults to DobbyContext's getContainer */
+    getContainer?: () => Element | null | undefined;
+};
+declare const BulkActionsPopover: ({ isOpen, className, getContainer, ...bulkActionsProps }: BulkActionsPopoverProps) => import('../../../node_modules/react').ReactPortal | null;
 declare const BulkActionsWithComponents: ((props: BulkActionsProps<BulkAction>) => import("react/jsx-runtime").JSX.Element) & {
     ConfirmationButton: ({ disabled, tooltipContent, onConfirm: handleConfirmation, className, }: BulkActionsConfirmationButtonProps) => import("react/jsx-runtime").JSX.Element;
     selectClassNames: string;
 };
-export { BulkActionsWithComponents as BulkActions };
+export { BulkActionsWithComponents as BulkActions, BulkActionsPopover };
