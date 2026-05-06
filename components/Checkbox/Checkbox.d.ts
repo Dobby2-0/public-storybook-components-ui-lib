@@ -1,5 +1,5 @@
 import { CheckboxProps as AriaCheckboxProps } from 'react-aria-components';
-declare const CheckboxGroup: (props: import('react-aria-components').CheckboxGroupProps & React.RefAttributes<HTMLDivElement>) => React.ReactElement | null;
+declare const CheckboxGroup: (props: import('react-aria-components').CheckboxGroupProps & React.RefAttributes<HTMLDivElement>) => React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | null;
 /**
  * Toggleable checkbox component that supports an indeterminate state
  *

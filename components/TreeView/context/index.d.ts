@@ -14,7 +14,7 @@ export declare const TreeViewContext: import('../../../../node_modules/react').C
     hideTriggerIcon: boolean | undefined;
     enableBranchSelection: boolean;
     onlyToggleOnTriggerIcon: boolean;
-    leafRenderer: ((props: import('../../../../node_modules/react').HTMLAttributes<HTMLElement> & import('react-aria').PressEvents, item?: TreeItem) => import('../../../../node_modules/react').ReactNode) | undefined;
+    leafRenderer: ((props: import('../../../../node_modules/react').HTMLAttributes<HTMLElement> & import('@react-types/shared').PressEvents, item?: TreeItem) => import('../../../../node_modules/react').ReactNode) | undefined;
     enableTooltip: boolean;
     tooltipProps: Omit<import('../../Tooltip/Tooltip').TooltipProps, "content"> | undefined;
 } | null>;
@@ -38,7 +38,7 @@ export declare const useTreeViewManager: ({ items, selectionMode, selectedItem, 
         hideTriggerIcon: boolean | undefined;
         enableBranchSelection: boolean;
         onlyToggleOnTriggerIcon: boolean;
-        leafRenderer: ((props: import('../../../../node_modules/react').HTMLAttributes<HTMLElement> & import('react-aria').PressEvents, item?: TreeItem) => import('../../../../node_modules/react').ReactNode) | undefined;
+        leafRenderer: ((props: import('../../../../node_modules/react').HTMLAttributes<HTMLElement> & import('@react-types/shared').PressEvents, item?: TreeItem) => import('../../../../node_modules/react').ReactNode) | undefined;
         enableTooltip: boolean;
         tooltipProps: Omit<import('../../Tooltip/Tooltip').TooltipProps, "content"> | undefined;
     };

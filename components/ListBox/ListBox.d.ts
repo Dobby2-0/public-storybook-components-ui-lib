@@ -1,7 +1,7 @@
 import { FieldResolver, FieldResolverWithProps, ResolverFunctionWithProps } from '../../types';
 import { ComponentProps, ReactNode, Ref } from '../../../node_modules/react';
 import { Collection as AriaCollection, Header as AriaHeader, ListBoxItemProps as AriaListBoxItemProps, ListBoxProps as AriaListBoxProps } from 'react-aria-components';
-interface ListBoxItemProps extends AriaListBoxItemProps<never> {
+interface ListBoxItemProps<T extends object> extends AriaListBoxItemProps<T> {
     ref?: Ref<HTMLDivElement>;
 }
 interface ListBoxPropsInternal<T extends object> {
@@ -36,11 +36,8 @@ type ListBoxProps<T extends object> = ListBoxWithItemLabelProps<T> | ListBoxWith
 declare const ListBoxWithComponents: (<T extends object>({ items, loading, onLoadMore, hasNextPage, idResolver, ...props }: Omit<AriaListBoxProps<T>, "children"> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element) & {
     ListBoxCollection: typeof AriaCollection;
     ListBoxHeader: ({ className, ...props }: ComponentProps<typeof AriaHeader>) => import("react/jsx-runtime").JSX.Element;
-    ListBoxSection: <T extends object>(props: import('react-aria-components').ListBoxSectionProps<T> & React.RefAttributes<HTMLElement>) => React.ReactElement | null;
-    ListBoxItem: {
-        ({ className, children, ref, ...props }: ListBoxItemProps): import("react/jsx-runtime").JSX.Element;
-        displayName: string;
-    };
+    ListBoxSection: <T extends object>(props: import('react-aria-components').ListBoxSectionProps<T> & React.RefAttributes<HTMLElement>) => React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | null;
+    ListBoxItem: <T extends object>({ className, children, ref, ...props }: ListBoxItemProps<T>) => import("react/jsx-runtime").JSX.Element;
 };
 export { ListBoxWithComponents as ListBox };
 export type { ListBoxProps };

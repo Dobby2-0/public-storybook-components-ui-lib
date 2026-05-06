@@ -11,7 +11,6 @@ interface TagDataProps {
     datasource?: IDatasource;
     totalCount?: number;
     pageSize?: number;
-    loading?: boolean;
     error?: Error;
     sort?: Sort;
     onSortChange?: (sort: Sort) => void;

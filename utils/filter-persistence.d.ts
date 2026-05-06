@@ -1,4 +1,4 @@
-import { Key } from 'react-aria-components';
+import { Key } from '@react-types/shared';
 export declare const FILTER_TYPE_PREFIXES: {
     readonly "multi-select": "multi-select";
     readonly "single-select": "single-select";

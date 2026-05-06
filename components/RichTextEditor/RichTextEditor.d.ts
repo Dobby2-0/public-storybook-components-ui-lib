@@ -16,6 +16,7 @@ declare const RichTextEditor: import('../../../node_modules/react').ForwardRefEx
     /** Timestamp of the last server-side save. A localStorage draft is only used when its timestamp is strictly newer than this value. */
     lastModifiedAt?: Date | string;
 } & import('../../../node_modules/react').RefAttributes<RichTextEditorHandle>>;
+export type { TagDataProps } from './TagSelector';
 export type { Tag } from './TagSelector.tsx';
 export { RichTextEditor };
 export type { RichTextEditorHandle, RichTextEditorLocalStorageKey };

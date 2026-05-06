@@ -1,6 +1,6 @@
 import { PropsWithChildren, ReactNode } from '../../../node_modules/react';
 import { TooltipProps as AriaTooltipProps } from 'react-aria-components';
-interface TooltipProps extends Omit<AriaTooltipProps, "children" | "style">, PropsWithChildren {
+interface TooltipProps extends Omit<AriaTooltipProps, "children" | "style" | "render">, PropsWithChildren {
     /** Content to be displayed in the tooltip element */
     content: ReactNode;
     /** Should an arrow be added to the tooltip pointing towards the trigger */

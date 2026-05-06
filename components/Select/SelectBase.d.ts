@@ -1,5 +1,6 @@
 import { ListBox } from '../ListBox/ListBox.tsx';
 import { dropdownInputVariants } from '../../styles/variants.ts';
+import { Key } from '@react-types/shared';
 import { VariantProps } from 'class-variance-authority';
 import { ComponentPropsWithoutRef, CSSProperties, PropsWithChildren, ReactNode, Ref } from '../../../node_modules/react';
 import { SelectProps as AriaSelectProps, ValidationResult as AriaValidationResult } from 'react-aria-components';
@@ -8,7 +9,7 @@ interface ClassNameObject {
     popover?: string;
     listbox?: string;
 }
-interface SelectCommonProps<T extends object> extends Omit<AriaSelectProps<T>, "children" | "className" | "style" | "onSelectionChange">, VariantProps<typeof dropdownInputVariants> {
+interface SelectCommonProps<T extends object, M extends "single" | "multiple" = "single"> extends Omit<AriaSelectProps<T, M>, "children" | "className" | "style" | "onSelectionChange">, VariantProps<typeof dropdownInputVariants> {
     label?: string;
     description?: string;
     errorMessage?: string | ((validation: AriaValidationResult) => string);
@@ -37,5 +38,7 @@ interface SelectBaseProps<T extends object> extends Pick<SelectCommonProps<T>, "
     ref?: Ref<HTMLButtonElement>;
 }
 declare const SelectBase: <T extends object>({ label, description, className, variant, popoverContent, children, popoverOpen, onPopoverOpenChange, loading, ref, ...props }: SelectBaseProps<T>) => import("react/jsx-runtime").JSX.Element;
-export { SelectBase, SelectListBox, SelectValue };
+declare const getDefaultValueSingle: (value?: Key | null, defaultValue?: Key | null) => Set<Key>;
+declare const getDefaultValueMultiple: (value?: Set<Key> | readonly Key[] | null, defaultValue?: Set<Key> | readonly Key[] | null) => Set<Key>;
+export { getDefaultValueMultiple, getDefaultValueSingle, SelectBase, SelectListBox, SelectValue, };
 export type { SelectCommonProps };
