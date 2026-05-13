@@ -3,7 +3,8 @@ interface PDFViewerProps extends Pick<PDFToolbarProps, "enableDownload" | "custo
     url: string;
     fileName?: string;
     className?: string;
+    onDownloadRequested?: () => void;
 }
-declare const PDFViewer: ({ url, fileName, className, ...props }: PDFViewerProps) => import("react/jsx-runtime").JSX.Element;
+declare const PDFViewer: ({ url, fileName, className, onDownloadRequested, ...props }: PDFViewerProps) => import("react/jsx-runtime").JSX.Element;
 export { PDFViewer };
 export type { PDFViewerProps };

@@ -37,6 +37,7 @@ export { RouterErrorElement } from './components/Error/RouterErrorElement.tsx';
 export { FileButton } from './components/FileButton/FileButton';
 export { FileIcon } from './components/FileIcon/FileIcon';
 export { FileList, fileToAttachment, type Attachment, } from './components/FileList/FileList';
+export { FilePreviewModal, type FilePreviewModalProps, } from './components/FilePreviewModal/FilePreviewModal';
 export { Form, useFormField, useFormRef } from './components/Form/Form';
 export { ImageCarousel, ImageCarouselModal, } from './components/ImageCarousel/ImageCarousel';
 export { List } from './components/List/List';

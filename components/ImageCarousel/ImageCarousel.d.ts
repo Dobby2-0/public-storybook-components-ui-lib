@@ -1,11 +1,8 @@
-import { DobbyFile } from '../../types';
+import { Attachment } from '../FileList/FileList.tsx';
 import { Settings as SliderSettings } from 'react-slick';
-interface Image extends DobbyFile {
-    url: string;
-}
 interface ImageCarouselProps extends SliderSettings {
     /** Array of images to display in the carousel. */
-    images: Image[];
+    images: Attachment[];
     /** Additional class name for the carousel container. */
     className?: string;
 }
@@ -18,7 +15,7 @@ interface ClassNameObject {
 interface CarouselModalProps extends Omit<ImageCarouselProps, "images" | "className"> {
     isOpen: boolean;
     onOpenChange: (isOpen: boolean) => void;
-    images?: Image[];
+    images?: Attachment[];
     title?: string;
     className?: string | ClassNameObject;
 }
