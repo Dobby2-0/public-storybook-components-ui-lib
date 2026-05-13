@@ -19,5 +19,6 @@ interface UseFileDownloadOptions {
 /** Hook for downloading files with status polling and timeout. */
 declare const useFileDownload: ({ checkFileStatus, loadFile, timeoutMs, }: UseFileDownloadOptions) => {
     readonly handleLoadFile: (file: DobbyFile) => Promise<void>;
+    readonly cancelPolling: () => void;
 };
 export { useFileDownload };
