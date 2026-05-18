@@ -16,9 +16,13 @@ interface UseFileDownloadOptions {
     /** Timeout in milliseconds for the polling operation, defaults to 30s */
     timeoutMs?: number;
 }
-/** Hook for downloading files with status polling and timeout. */
+/**
+ * Provides file download with upload-status polling and timeout.
+ * Polling is canceled automatically on unmount.
+ */
 declare const useFileDownload: ({ checkFileStatus, loadFile, timeoutMs, }: UseFileDownloadOptions) => {
     readonly handleLoadFile: (file: DobbyFile) => Promise<void>;
     readonly cancelPolling: () => void;
+    readonly pollUntilUploaded: (id: string, fileType?: string) => Promise<boolean>;
 };
 export { useFileDownload };
