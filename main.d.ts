@@ -1,7 +1,7 @@
 export * from './hooks';
 export type { Address, DobbyFile } from './types';
 export type * from './types/file-tree';
-export { OperationStatus, PollState } from './types/operations';
+export { OperationStatus } from './types/operations';
 export { buildAddressString, capitalize, captureEvent, cn, downloadFile, formatNumber, getLocalizedItem, getQueryPageSize, localizeCurrency, showFullName, } from './utils';
 export * from './utils/banking.ts';
 export * from './utils/capacities';

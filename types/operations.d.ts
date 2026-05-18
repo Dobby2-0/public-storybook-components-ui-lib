@@ -1,12 +1,3 @@
-/**
- * @deprecated Use `resolveOperation` from `useOperation` instead.
- */
-export declare enum PollState {
-    IDLE = "IDLE",
-    LOADING = "LOADING",
-    ERROR = "ERROR",
-    SUCCESS = "SUCCESS"
-}
 export declare enum OperationStatus {
     RUNNING = "RUNNING",
     COMPLETED = "COMPLETED",
