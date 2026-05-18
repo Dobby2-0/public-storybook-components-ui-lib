@@ -2,6 +2,7 @@ export { useOperation } from './operations/use-operation';
 export { usePollOperation } from './operations/use-poll-operation';
 export { useDatasource, usePaginatedDatasource } from './use-datasource';
 export { useDobbyContext } from './use-dobby-context';
+export { useExternalizedPathParams, useExternalizedSearchParams, } from './use-externalized-params.ts';
 export { useFileDownload } from './use-file-download';
 export { useIsMobile } from './use-is-mobile';
 export { useIsTouchDevice } from './use-is-touch-device';
