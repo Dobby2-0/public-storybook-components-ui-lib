@@ -1,7 +1,7 @@
 import { TooltipProps } from '../Tooltip/Tooltip.tsx';
 import { ExcludeNull } from '../../types';
 import { VariantProps } from 'class-variance-authority';
-import { PropsWithChildren } from '../../../node_modules/react';
+import { PropsWithChildren, RefObject } from '../../../node_modules/react';
 import { ButtonProps as AriaButtonProps, PressEvent } from 'react-aria-components';
 declare const buttonBaseVariants: (props?: ({
     variant?: "primary" | "secondary" | "delete" | "ghost" | "basic" | null | undefined;
@@ -19,7 +19,9 @@ interface ButtonBaseProps extends Omit<AriaButtonProps, "children" | "onPress">,
     tooltipProps?: Omit<TooltipProps, "content">;
     /** Whether to prevent the default action on click */
     preventDefault?: boolean;
+    /** Allows getting a ref to the component instance. Once the component unmounts, React will set ref.current to null (or call the ref with null if you passed a callback ref). */
+    ref?: RefObject<HTMLButtonElement | null>;
 }
-declare const ButtonBase: ({ className, variant, isLoading, replaceContentWhileLoading, children, tooltip, tooltipProps, preventDefault, ...props }: ButtonBaseProps) => import("react/jsx-runtime").JSX.Element;
+declare const ButtonBase: ({ className, variant, isLoading, replaceContentWhileLoading, children, tooltip, tooltipProps, preventDefault, ref, ...props }: ButtonBaseProps) => import("react/jsx-runtime").JSX.Element;
 export { ButtonBase };
 export type { ButtonBaseProps };
