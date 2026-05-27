@@ -26,3 +26,4 @@ declare const useFileDownload: ({ checkFileStatus, loadFile, timeoutMs, }: UseFi
     readonly pollUntilUploaded: (id: string, fileType?: string) => Promise<boolean>;
 };
 export { useFileDownload };
+export type { FileLoader, FileStatusChecker, UseFileDownloadOptions };
