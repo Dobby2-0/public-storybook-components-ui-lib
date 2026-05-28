@@ -29,6 +29,8 @@ export declare const usePaginatedData: <TKey extends string, TNode>({ query, que
     readonly items: TNode[];
     /** Whether a query is currently in flight. */
     readonly loading: boolean;
+    /** Whether this query is fetching more data */
+    readonly isFetchingMoreData: boolean;
     /** Ref tracking the current page cursor info. */
     readonly pageInfoRef: import('../../node_modules/react').RefObject<PageInfo | undefined>;
     /** Re-executes the query with the given variables. */

@@ -32,6 +32,7 @@ export declare const usePaginatedDatasource: <TKey extends string, TNode>(option
     readonly hasNoResults: boolean;
     readonly items: TNode[];
     readonly loading: boolean;
+    readonly isFetchingMoreData: boolean;
     readonly pageInfoRef: RefObject<PageInfo | undefined>;
     readonly refetch: (variables?: Partial<OperationVariables> | undefined) => Promise<ApolloQueryResult<PaginatedResult<TKey, TNode>>>;
     readonly totalCount: number;
