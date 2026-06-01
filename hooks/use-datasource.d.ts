@@ -4,19 +4,6 @@ import { PageInfo } from '../utils/table.ts';
 import { ApolloQueryResult, FetchMoreQueryOptions, OperationVariables } from '@apollo/client';
 import { IDatasource } from 'ag-grid-community';
 import { RefObject } from '../../node_modules/react';
-interface CreateDatasourceOptions<TKey extends string, TNode> {
-    refetch: (variables: OperationVariables) => Promise<ApolloQueryResult<PaginatedResult<TKey, TNode>>>;
-    fetchMore: (options: FetchMoreQueryOptions<OperationVariables, PaginatedResult<TKey, TNode>>) => Promise<ApolloQueryResult<PaginatedResult<TKey, TNode>>>;
-    queryVariables: OperationVariables;
-    pageInfoRef: RefObject<PageInfo | undefined>;
-    dataPropertyName: TKey;
-}
-/**
- * A custom hook to create an Ag-Grid datasource for paginated data.
- *
- * @deprecated Use usePaginatedDatasource instead.
- */
-export declare const useDatasource: <TKey extends string, TNode>(options: CreateDatasourceOptions<TKey, TNode>) => IDatasource;
 /** A custom hook to combine paginated data fetching with an Ag-Grid datasource. */
 export declare const usePaginatedDatasource: <TKey extends string, TNode>(options: Parameters<typeof usePaginatedData<TKey, TNode>>[0]) => {
     readonly datasource: IDatasource;
@@ -37,4 +24,3 @@ export declare const usePaginatedDatasource: <TKey extends string, TNode>(option
     readonly refetch: (variables?: Partial<OperationVariables> | undefined) => Promise<ApolloQueryResult<PaginatedResult<TKey, TNode>>>;
     readonly totalCount: number;
 };
-export {};
