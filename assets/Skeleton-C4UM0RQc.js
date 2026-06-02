@@ -1,1 +1,0 @@
-import{j as a,c as s}from"./iframe-BW_3WW6f.js";const o=({className:e,...t})=>a.jsx("div",{"data-slot":"skeleton",className:s("bg-accent animate-pulse rounded-md",e),...t});try{o.displayName="Skeleton",o.__docgenInfo={description:"Use to show a placeholder while content is loading.",displayName:"Skeleton",props:{}}}catch{}export{o as S};
