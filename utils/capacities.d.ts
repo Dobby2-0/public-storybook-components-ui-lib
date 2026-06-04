@@ -1,8 +1,10 @@
 export declare const CapacitiesTypeEnum: {
+    readonly admin: "admin";
     readonly employee: "employee";
     readonly owner: "owner";
     readonly renter: "renter";
     readonly externalproxy: "externalproxy";
+    readonly externalaccountauditor: "externalaccountauditor";
 };
 export type CapacitiesType = keyof typeof CapacitiesTypeEnum;
 /**
@@ -30,10 +32,6 @@ export declare const getOwnerIdsFromOwnerCapacities: (capacities: string) => str
  */
 export declare const getBuildingIdsFromOwnerCapacities: (capacities: string) => string[];
 /**
- * Get lot IDs from a string of capacities
- */
-export declare const getLotIdsFromOwnerCapacities: (capacities: string) => string[];
-/**
  * Get the owner capacity for a specific owner ID from a string of capacities.
  */
 export declare const getOwnerCapacityByOwnerId: (capacities: string, ownerId: string) => string | undefined;
@@ -47,7 +45,3 @@ export declare const getOwnerCapacityByBuildingId: (capacities: string, building
  * Get the owner capacity for a specific owner and building ID from a string of capacities.
  */
 export declare const getOwnerCapacityByOwnerIdAndBuildingId: (capacities: string, ownerId: string, buildingId: string) => string | undefined;
-/**
- * Get the owner capacity for a specific lot ID from a string of capacities.
- */
-export declare const getOwnerCapacityByLotId: (capacities: string, lotId: string) => string | undefined;
