@@ -1,13 +1,14 @@
 import { DobbyContextValue } from '../../types';
 import { UNSAFE_PortalProvider as PortalProvider } from '@react-aria/overlays';
-import { PropsWithChildren } from '../../../node_modules/react';
+import { PropsWithChildren, ReactNode } from '../../../node_modules/react';
 interface DobbyContextProviderProps extends Partial<Omit<DobbyContextValue, "i18nextInstance">>, Required<Pick<DobbyContextValue, "i18nextInstance">> {
+    suspenseFallback?: ReactNode;
 }
 /**
  * Wrapper component that provides a unified context to its children
  */
 declare const DobbyContextProvider: {
-    ({ getContainer, navigate, i18nextInstance, maxVisibleToasts, children, }: PropsWithChildren<DobbyContextProviderProps>): import("react/jsx-runtime").JSX.Element;
+    ({ getContainer, navigate, i18nextInstance, maxVisibleToasts, suspenseFallback, children, }: PropsWithChildren<DobbyContextProviderProps>): import("react/jsx-runtime").JSX.Element;
     displayName: string;
 };
 export { DobbyContextProvider, PortalProvider };
