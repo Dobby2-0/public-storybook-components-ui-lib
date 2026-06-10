@@ -62,7 +62,7 @@ export { SelectBase } from './components/Select/SelectBase.tsx';
 export { Skeleton } from './components/Skeleton/Skeleton';
 export { SwipeableActionBlock } from './components/SwipeableActionBlock/SwipeableActionBlock.tsx';
 export { Switch } from './components/Switch/Switch';
-export { AgGridTable, type AgGridReact, type AgGridTableProps, type ColDef, type CustomCellRendererProps, type GetRowIdParams, type IDatasource, type RowClickedEvent, type RowMenuItem, type Sort, type SortChangedEvent, } from './components/Table/Ag-Grid/Ag-grid-table.tsx';
+export { AgGridTable, type AgGridReact, type AgGridTableProps, type ColDef, type CustomCellRendererProps, type GetRowIdParams, type IDatasource, type RowClickedEvent, type RowMenuItem, type Sort, type SortChangedEvent, type ValueGetterParams, } from './components/Table/Ag-Grid/Ag-grid-table.tsx';
 export { Table, type ColumnDefinition, type SortDescriptor, type TableProps, } from './components/Table/React-Aria/Table.tsx';
 export { Tabs, type TabItem } from './components/Tabs/Tabs';
 export { TextField } from './components/TextField/TextField';
