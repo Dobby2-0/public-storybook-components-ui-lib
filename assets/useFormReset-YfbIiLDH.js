@@ -1,1 +1,0 @@
-import{i as s}from"./useHover-BqMw7-dA.js";import{r as f}from"./iframe-BlVgBvDK.js";function $(t,n,r){let a=s(e=>{r&&!e.defaultPrevented&&r(n)});f.useEffect(()=>{var d;let e=(d=t==null?void 0:t.current)==null?void 0:d.form;return e==null||e.addEventListener("reset",a),()=>{e==null||e.removeEventListener("reset",a)}},[t])}export{$};
