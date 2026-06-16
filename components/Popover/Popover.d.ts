@@ -1,16 +1,15 @@
-import { PropsWithChildren, ReactNode, Ref } from '../../../node_modules/react';
+import { PropsWithChildren, ReactNode } from '../../../node_modules/react';
 import { PopoverProps as AriaPopoverProps, ContextValue, PopoverContext } from 'react-aria-components';
 interface PopoverContentProps extends Omit<PopoverProps, "content" | "children">, PropsWithChildren {
     /** Should the popover make use of the popoverDialog component */
     enableDialog?: boolean;
-    ref?: Ref<PopoverContentRef>;
 }
 interface PopoverContentRef {
     open: () => void;
     close: () => void;
 }
 declare const PopoverContent: {
-    ({ className, offset, enableDialog, overlayArrow, children, isOpen, onOpenChange, ref, ...props }: PopoverContentProps): import("react/jsx-runtime").JSX.Element;
+    ({ className, offset, enableDialog, overlayArrow, children, isOpen, onOpenChange, ...props }: PopoverContentProps): import("react/jsx-runtime").JSX.Element;
     displayName: string;
 };
 interface PopoverProps extends Omit<AriaPopoverProps, "containerPadding" | "children">, PropsWithChildren {
