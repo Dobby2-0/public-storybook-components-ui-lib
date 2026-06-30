@@ -16,6 +16,8 @@ interface ClassNameObject {
 interface TabsProps extends Omit<AriaTabsProps, "children" | "className" | "onSelectionChange"> {
     /** Forces the filter bar to be displayed in mobile mode. */
     forceMobile?: boolean;
+    /** When this value is filled in, the tabs will be constrained to a max width and truncated - never happens on mobile */
+    maxWidth?: string;
     /** Array of items to be rendered as tabs */
     items: TabItem[];
     /** Content to be added before the tablist */
@@ -45,6 +47,6 @@ interface TabsProps extends Omit<AriaTabsProps, "children" | "className" | "onSe
  * ]
  * <Tabs items={items} />
  */
-declare const Tabs: ({ forceMobile, items, className, selectedKey, defaultSelectedKey, onSelectionChange, prefix, suffix, ...props }: TabsProps) => import("react/jsx-runtime").JSX.Element;
+declare const Tabs: ({ forceMobile, maxWidth, items, className, selectedKey, defaultSelectedKey, onSelectionChange, prefix, suffix, ...props }: TabsProps) => import("react/jsx-runtime").JSX.Element;
 export { Tabs };
 export type { TabItem };
