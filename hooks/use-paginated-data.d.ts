@@ -38,4 +38,5 @@ export declare const usePaginatedData: <TKey extends string, TNode>({ query, que
     /** Total number of items matching the query. */
     readonly totalCount: number;
 };
+export type PaginatedData<TKey extends string, TNode> = ReturnType<typeof usePaginatedData<TKey, TNode>>;
 export {};
