@@ -13,8 +13,6 @@ export declare const buildAddressString: (address?: Address) => string;
 export declare const resolveField: <T, U>(item: T, fieldResolver?: FieldResolver<T, U>) => string | U;
 export declare const resolveFieldWithProps: <T, U, V>(item: T, extraCallbackProps: V, fieldResolver?: FieldResolverWithProps<T, U, V>) => string | U;
 export declare const captureEvent: (message: string, level: SeverityLevel) => string | undefined;
-/** Initiates a native browser download */
-export declare const downloadFile: (url: string, name?: string, mimeType?: string) => Promise<void>;
 /**
  * Concatenates the first and last name to a single string and omits any falsy values.
  *

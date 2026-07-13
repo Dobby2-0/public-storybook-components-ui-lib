@@ -1,4 +1,4 @@
-import { UseFileDownloadOptions } from '../../hooks/use-file-download.ts';
+import { UseFileDownloadOptions } from '../../hooks';
 import { DobbyFile } from '../../types';
 interface ClassNameObject {
     wrapper?: string;
