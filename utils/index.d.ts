@@ -55,3 +55,5 @@ export declare const openNativeSettings: () => void;
 export declare const isCameraPermissionDenied: () => boolean;
 /** Maps over all children, flattening any fragments, and returns the results as an array. */
 export declare const flatMapChildren: <R>(children: ReactNode, fn: (x: ReactNode) => R) => R[];
+/** Merges DOM props from multiple sources, composing event handlers instead of overwriting them */
+export declare const mergeDOMProps: (...propsList: (object | null | undefined)[]) => Record<string, unknown>;
