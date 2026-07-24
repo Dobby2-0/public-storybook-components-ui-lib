@@ -1,3 +1,4 @@
+import { MenuItem } from '../../Menu/Menu';
 import { TooltipProps } from '../../Tooltip/Tooltip.tsx';
 import { PressEvents } from '@react-types/shared/src/events';
 import { HTMLAttributes, ReactNode } from '../../../../node_modules/react';
@@ -13,6 +14,7 @@ export interface TreeItem {
     children?: TreeItem[] | ReactNode;
     onClick?: (item: TreeItem, selected: TreeItemState["selected"]) => void;
     loading?: boolean;
+    menuActions?: MenuItem[];
 }
 export interface TreeItemState {
     /** IDs of ALL parent items */
