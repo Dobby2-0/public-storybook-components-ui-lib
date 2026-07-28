@@ -1,12 +1,9 @@
 import { ICellRendererParams, IHeaderParams } from 'ag-grid-community';
+interface CheckboxCellRendererParams<T> {
+    disableRowSelectionCondition?: (row: T) => boolean;
+}
 declare const CheckboxCellRenderer: <T extends {
     id: string;
-}>(selectedIds: Record<string, boolean>, allSelected: boolean, handleRowSelect: (id: string, selected: boolean) => void, disableRowSelectionCondition?: (row: T) => boolean) => {
-    (params: ICellRendererParams<T>): import("react/jsx-runtime").JSX.Element;
-    displayName: string;
-};
-declare const SelectionHeaderCheckbox: (selectedIds: Record<string, boolean>, allSelected: boolean, handleSelectAll: () => void, totalCount?: number) => {
-    (params: IHeaderParams): import("react/jsx-runtime").JSX.Element;
-    displayName: string;
-};
+}>(params: ICellRendererParams<T> & CheckboxCellRendererParams<T>) => import("react/jsx-runtime").JSX.Element;
+declare const SelectionHeaderCheckbox: (params: IHeaderParams) => import("react/jsx-runtime").JSX.Element;
 export { CheckboxCellRenderer, SelectionHeaderCheckbox };

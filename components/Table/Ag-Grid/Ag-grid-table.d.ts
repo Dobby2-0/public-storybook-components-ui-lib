@@ -6,7 +6,7 @@ declare const AgGridTable: <RowData extends {
 }>(props: AgGridTableProps<RowData> & {
     ref?: Ref<AgGridReact<RowData>>;
 }) => ReactElement | null;
-export type { AgGridTableProps, RowMenuItem, Sort, SortDirection, SortValue, } from './types';
+export type { AgGridTableProps, AnyRowSelectionValue, RowMenuItem, RowSelectionValue, Sort, SortDirection, SortValue, } from './types';
 export type { ColDef, GetRowIdParams, IDatasource, RowClickedEvent, SortChangedEvent, ValueGetterParams, } from 'ag-grid-community';
 export type { AgGridReact, CustomCellRendererProps } from 'ag-grid-react';
 export { AgGridTable };
