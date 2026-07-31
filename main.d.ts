@@ -56,7 +56,7 @@ export { PDFViewerModal } from './components/PDFViewer/PDFViewerModal';
 export { PhoneNumberField, isPossiblePhoneNumber, } from './components/PhoneNumberField/PhoneNumberField';
 export { Pill } from './components/Pill/Pill';
 export { Popover, PopoverContent, PopoverContext, type ContextValue, type PopoverProps, } from './components/Popover/Popover';
-export { RadioGroup } from './components/RadioGroup/RadioGroup';
+export { RadioGroup, type RadioItem } from './components/RadioGroup/RadioGroup';
 export { RichTextEditor, type Tag, type TagDataProps, } from './components/RichTextEditor/RichTextEditor';
 export { RichTextViewer } from './components/RichTextViewer/RichTextViewer';
 export { Select } from './components/Select/Select.tsx';

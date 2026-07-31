@@ -23,4 +23,4 @@ interface RadioGroupProps extends Omit<AriaRadioGroupProps, "className"> {
  */
 declare const RadioGroup: ({ items, value, defaultValue, onChange, className, ...props }: RadioGroupProps) => import("react/jsx-runtime").JSX.Element;
 export { RadioGroup };
-export type { RadioGroupProps };
+export type { RadioGroupProps, RadioItem };
