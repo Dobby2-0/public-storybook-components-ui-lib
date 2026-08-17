@@ -4,6 +4,7 @@ interface RowCountFooterProps {
     loading?: boolean;
     totalCount?: number;
     rowDataLength?: number;
+    className?: string;
 }
-declare const RowCountFooter: ({ show, rowsLoaded, loading, totalCount, rowDataLength, }: RowCountFooterProps) => import("react/jsx-runtime").JSX.Element | null;
+declare const RowCountFooter: ({ show, rowsLoaded, loading, totalCount, rowDataLength, className, }: RowCountFooterProps) => import("react/jsx-runtime").JSX.Element | null;
 export { RowCountFooter };

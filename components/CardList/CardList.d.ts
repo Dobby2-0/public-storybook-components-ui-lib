@@ -8,7 +8,7 @@ export interface CardListProps<T> {
     error?: unknown;
     /** Whether more pages can be loaded. */
     hasNextPage?: boolean;
-    /** Callback fired when the sentinel enters the prefetch area. */
+    /** Callback fired when the trigger element enters the prefetch area. */
     handleLoadMore?: () => void | Promise<unknown>;
     /** Per-item render function. */
     renderItem: (item: T, index: number) => ReactNode;
@@ -44,7 +44,7 @@ export interface CardListProps<T> {
     footer?: ReactNode;
     /**
      * IntersectionObserver rootMargin used to trigger `handleLoadMore`
-     * before the sentinel is actually visible. A number is converted to
+     * before the trigger element is actually visible. A number is converted to
      * `"${n}px 0px"`. Defaults to `"200px"`.
      */
     prefetchMargin?: string | number;
@@ -52,6 +52,12 @@ export interface CardListProps<T> {
     className?: string;
     /** Class applied to each item wrapper. */
     itemClassName?: string;
+    /** Optional: renders a Pagination control below the list instead of infinite-scroll behavior */
+    pagination?: {
+        currentPage: number;
+        totalPages: number;
+        onCurrentPageChange: (page: number) => void | Promise<void>;
+    };
 }
-declare const CardList: <T>({ items, loading, error, hasNextPage, handleLoadMore, renderItem, keyExtractor, renderLoadingItem, loadingItemCount, loadingState, errorState, emptyState, loadMoreIndicator, hideLoadMoreIndicator, header, footer, prefetchMargin, className, itemClassName, }: CardListProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const CardList: <T>({ items, loading, error, hasNextPage, handleLoadMore, renderItem, keyExtractor, renderLoadingItem, loadingItemCount, loadingState, errorState, emptyState, loadMoreIndicator, hideLoadMoreIndicator, header, footer, prefetchMargin, className, itemClassName, pagination, }: CardListProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { CardList };

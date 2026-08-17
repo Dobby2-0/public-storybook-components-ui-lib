@@ -20,7 +20,7 @@ interface UseBoundaryPlacementOptions {
  * so `useOverlayPosition` can stay on its own (correct) `document.body` default for everything else.
  */
 declare const useBoundaryPlacement: ({ isOpen, triggerRef, overlayRef, boundaryElement, placement, containerPadding, shouldFlip, }: UseBoundaryPlacementOptions) => {
-    placement: "left" | "right" | "top" | "bottom" | "end" | "start" | "bottom left" | "bottom right" | "bottom start" | "bottom end" | "top left" | "top right" | "top start" | "top end" | "left top" | "left bottom" | "start top" | "start bottom" | "right top" | "right bottom" | "end top" | "end bottom";
+    placement: "end" | "start" | "left" | "right" | "bottom" | "top" | "bottom left" | "bottom right" | "bottom start" | "bottom end" | "top left" | "top right" | "top start" | "top end" | "left top" | "left bottom" | "start top" | "start bottom" | "right top" | "right bottom" | "end top" | "end bottom";
     correction: Correction;
 };
 export { useBoundaryPlacement };

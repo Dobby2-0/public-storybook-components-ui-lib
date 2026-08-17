@@ -25,7 +25,7 @@ export interface RowMenuItem {
 }
 export interface BaseAgGridTableProps<RowData extends {
     id: string;
-}> extends Omit<Partial<AgGridReactProps<RowData>>, "className"> {
+}> extends Omit<Partial<AgGridReactProps<RowData>>, "className" | "pagination"> {
     /** The CSS className for the element. */
     className?: string | ClassNameObject;
     /** Optional: Show row count below the table */
@@ -52,6 +52,11 @@ export interface BaseAgGridTableProps<RowData extends {
     loading?: boolean;
     /** Optional: customize the empty-state overlay */
     emptyState?: EmptyStateContent;
+    /** Optional: renders our own Pagination + page-size Select instead of AgGrid's built-in panel */
+    pagination?: {
+        pageSizeOptions?: number[];
+        onPageSizeChange: (size: number) => void;
+    };
 }
 interface SingleSelectionProps {
     selectionMode: "single";
