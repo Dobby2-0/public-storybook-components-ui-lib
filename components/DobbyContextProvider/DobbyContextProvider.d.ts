@@ -1,7 +1,7 @@
 import { DobbyContextValue } from '../../types';
 import { UNSAFE_PortalProvider as PortalProvider } from '@react-aria/overlays';
 import { PropsWithChildren, ReactNode } from '../../../node_modules/react';
-interface DobbyContextProviderProps extends Partial<Omit<DobbyContextValue, "i18nextInstance">>, Required<Pick<DobbyContextValue, "i18nextInstance">> {
+interface DobbyContextProviderProps extends Partial<DobbyContextValue> {
     suspenseFallback?: ReactNode;
 }
 /**
