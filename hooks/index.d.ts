@@ -9,6 +9,7 @@ export { useDobbyContext } from './use-dobby-context';
 export { useExternalizedPathParams, useExternalizedSearchParams, } from './use-externalized-params.ts';
 export * from './use-file-delete';
 export * from './use-file-download';
+export * from './use-file-preview';
 export * from './use-file-upload';
 export { useIsMobile } from './use-is-mobile';
 export { useIsTouchDevice } from './use-is-touch-device';
