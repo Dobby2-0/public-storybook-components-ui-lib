@@ -1,4 +1,5 @@
 export { usePaginatedDatasource, type PaginatedDatasource, } from './data-fetching/use-datasource.ts';
+export { useLoadMoreQuery, type LoadMoreQuery, } from './data-fetching/use-load-more-query.ts';
 export { usePagedDatasource, type PagedDatasource, } from './data-fetching/use-paged-datasource.ts';
 export { usePagedList, type PagedList } from './data-fetching/use-paged-list.ts';
 export type { PagedQueryConfig } from './data-fetching/use-paged-query.ts';
