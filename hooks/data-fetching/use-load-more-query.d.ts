@@ -19,6 +19,14 @@ interface UseLoadMoreQueryConfig<TKey extends string, TNode> {
      * been appended via `loadMore`.
      */
     pageSizeParam?: string;
+    /**
+     * Backend-enforced maximum for the page-size variable. `reload` re-fetches
+     * the accumulated window as multiple ≤`maxPageSize` requests (via cursor
+     * pagination) instead of asking for the whole window at once, which some
+     * backends reject outright above a fixed page-size limit. Defaults to 50;
+     * override if your backend's actual limit differs.
+     */
+    maxPageSize?: number;
     options?: LoadMoreQueryOptions;
 }
 /**
@@ -33,7 +41,7 @@ interface UseLoadMoreQueryConfig<TKey extends string, TNode> {
  * out everything loaded via "Load more", visually collapsing the list back
  * to page 1. `reload` below is the safe replacement for that use case.
  */
-export declare const useLoadMoreQuery: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, errorMessage, pageSizeParam, options, }: UseLoadMoreQueryConfig<TKey, TNode>) => {
+export declare const useLoadMoreQuery: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, errorMessage, pageSizeParam, maxPageSize, options, }: UseLoadMoreQueryConfig<TKey, TNode>) => {
     /** The flattened array of nodes accumulated across all loaded pages. */
     readonly items: TNode[];
     /** Total number of items matching the query, per the server. */
