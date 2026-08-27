@@ -1,17 +1,12 @@
-import { PagedQueryConfig } from './use-paged-query.ts';
+import { PagedQueryConfig, PagedResultBase } from './use-paged-query.ts';
 import { IDatasource } from 'ag-grid-community';
+interface PagedDatasourceResult extends PagedResultBase {
+    datasource: IDatasource;
+}
 /**
  * Builds an AgGrid datasource that pages through a GraphQL cursor-paginated
  * query, one page at a time.
  */
-declare const usePagedDatasource: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, options, defaultPageSize, }: PagedQueryConfig<TKey, TNode>) => {
-    readonly datasource: IDatasource;
-    readonly totalCount: number;
-    readonly loading: boolean;
-    readonly error: unknown;
-    readonly hasNoResults: boolean;
-    readonly pageSize: number;
-    readonly setPageSize: import('../../../node_modules/react').Dispatch<import('../../../node_modules/react').SetStateAction<number>>;
-};
+declare const usePagedDatasource: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, options, defaultPageSize, errorMessage, }: PagedQueryConfig<TKey, TNode>) => PagedDatasourceResult;
 export { usePagedDatasource };
-export type PagedDatasource<TKey extends string, TNode> = ReturnType<typeof usePagedDatasource<TKey, TNode>>;
+export type PagedDatasource = PagedDatasourceResult;
