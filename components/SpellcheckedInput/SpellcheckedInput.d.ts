@@ -1,3 +1,4 @@
+import { SpellcheckLanguage } from '../../hooks/use-nspell';
 interface SpellcheckedInputProps {
     /** The type of the input */
     type?: "text" | "textarea";
@@ -9,6 +10,8 @@ interface SpellcheckedInputProps {
     disabled?: boolean;
     /** Maximum number of characters allowed */
     maxLength?: number;
+    /** Language to spellcheck for */
+    spellCheckLanguage?: SpellcheckLanguage;
     /** Handler called when the value changes */
     onChange?: (value: string) => void;
     /** Handler called when the input loses focus */
@@ -16,5 +19,5 @@ interface SpellcheckedInputProps {
     /** The className of the editor */
     className?: string;
 }
-declare const SpellcheckedInput: ({ type, value, placeholder, disabled, maxLength, onChange, onBlur, className, }: SpellcheckedInputProps) => import("react/jsx-runtime").JSX.Element | undefined;
+declare const SpellcheckedInput: ({ type, value, placeholder, disabled, maxLength, spellCheckLanguage, onChange, onBlur, className, }: SpellcheckedInputProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export { SpellcheckedInput };
