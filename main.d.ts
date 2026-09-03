@@ -73,3 +73,4 @@ export { Toolbar } from './components/Toolbar/Toolbar';
 export { Tooltip } from './components/Tooltip/Tooltip';
 export { TreeView, type TreeItem, type TreeViewSelection, } from './components/TreeView/TreeView.tsx';
 export { Upload } from './components/Upload/Upload';
+export { type SpellcheckLanguage } from './hooks/use-nspell';
