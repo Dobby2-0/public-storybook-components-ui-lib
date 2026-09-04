@@ -20,12 +20,19 @@ interface PagedQueryResult<TNode> {
     totalCount: number;
 }
 export interface PagedResultBase {
+    /** Total items matching the query, across all pages. */
     totalCount: number;
+    /** True while the current page is being fetched. */
     loading: boolean;
+    /** Error from the most recent fetch, if any. */
     error: unknown;
+    /** True once loading has finished and totalCount is zero. */
     hasNoResults: boolean;
+    /** Current page size. */
     pageSize: number;
+    /** Changes the page size; jumps back to page 1, same as `refetch`. */
     setPageSize: Dispatch<SetStateAction<number>>;
+    /** Clears cursor bookkeeping, evicts the cached field and resets to page 1 */
     refetch: () => void | Promise<void>;
 }
 /**
