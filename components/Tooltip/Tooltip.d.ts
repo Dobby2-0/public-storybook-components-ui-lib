@@ -48,6 +48,6 @@ interface TooltipProps extends PropsWithChildren {
 /**
  * A tooltip displays a description of an element on hover or focus.
  */
-declare const Tooltip: ({ children, content, overlayArrow, asPopoverOnTouchScreen, customTrigger, disabled, placement, offset, crossOffset, shouldFlip, containerPadding, arrowBoundaryOffset, className, }: TooltipProps) => string | number | bigint | boolean | Iterable<ReactNode> | Promise<string | number | bigint | boolean | import('../../../node_modules/react').ReactPortal | import('../../../node_modules/react').ReactElement<unknown, string | import('../../../node_modules/react').JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | import("react/jsx-runtime").JSX.Element | null | undefined;
+declare const Tooltip: ({ children, content, overlayArrow, asPopoverOnTouchScreen, customTrigger, disabled, placement, offset, crossOffset, shouldFlip, containerPadding, arrowBoundaryOffset, className, }: TooltipProps) => string | number | bigint | boolean | import("react/jsx-runtime").JSX.Element | Iterable<ReactNode> | Promise<string | number | bigint | boolean | import('../../../node_modules/react').ReactPortal | import('../../../node_modules/react').ReactElement<unknown, string | import('../../../node_modules/react').JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined;
 export { Tooltip };
 export type { TooltipProps };

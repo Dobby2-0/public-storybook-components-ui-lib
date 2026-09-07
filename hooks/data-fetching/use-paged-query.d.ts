@@ -1,6 +1,8 @@
+import { Sort } from '../../components/Table/Ag-Grid/types';
 import { PaginatedResult } from '../../types/paginated-data.ts';
 import { PageInfo } from '../../utils/table.ts';
 import { OperationVariables, QueryOptions, TypedDocumentNode } from '@apollo/client';
+import { SortModelItem } from 'ag-grid-community';
 import { Dispatch, SetStateAction } from '../../../node_modules/react';
 interface PagedQueryOptions<TData> extends Pick<QueryOptions<OperationVariables, TData>, "fetchPolicy" | "context" | "errorPolicy"> {
     /** Skip fetching entirely */
@@ -13,6 +15,8 @@ interface PagedQueryConfig<TKey extends string, TNode> {
     options?: PagedQueryOptions<PaginatedResult<TKey, TNode>>;
     defaultPageSize?: number;
     errorMessage?: string;
+    /** Derives the current Sort[] from Ag-Grid's own sort model */
+    getSort?: (sortModel: SortModelItem[]) => Sort[];
 }
 interface PagedQueryResult<TNode> {
     items: TNode[];
@@ -43,6 +47,7 @@ declare const usePagedQuery: <TKey extends string, TNode>({ query, queryVariable
     readonly resolvePage: (targetIndex: number, pageSize: number) => Promise<PagedQueryResult<TNode>>;
     readonly resetCache: () => void;
     readonly invalidateCache: () => void;
+    readonly setOverrideVariables: (variables: OperationVariables) => void;
 };
 export { usePagedQuery };
 export type { PagedQueryConfig, PagedQueryOptions };

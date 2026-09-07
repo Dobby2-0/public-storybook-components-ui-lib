@@ -9,6 +9,6 @@ interface PagedDatasourceResult extends PagedResultBase {
  * Builds an AgGrid datasource that pages through a GraphQL cursor-paginated
  * query, one page at a time.
  */
-declare const usePagedDatasource: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, options, defaultPageSize, errorMessage, }: PagedQueryConfig<TKey, TNode>) => PagedDatasourceResult;
+declare const usePagedDatasource: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, options, defaultPageSize, errorMessage, getSort, }: PagedQueryConfig<TKey, TNode>) => PagedDatasourceResult;
 export { usePagedDatasource };
 export type PagedDatasource = PagedDatasourceResult;

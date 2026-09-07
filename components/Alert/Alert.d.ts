@@ -2,7 +2,7 @@ import { ExcludeNull } from '../../types';
 import { VariantProps } from 'class-variance-authority';
 import { HTMLAttributes } from '../../../node_modules/react';
 declare const alertVariants: (props?: ({
-    variant?: "error" | "warning" | "information" | "confirmation" | null | undefined;
+    variant?: "information" | "confirmation" | "warning" | "error" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
 interface AlertProps extends HTMLAttributes<HTMLDivElement>, ExcludeNull<VariantProps<typeof alertVariants>> {
     /**
