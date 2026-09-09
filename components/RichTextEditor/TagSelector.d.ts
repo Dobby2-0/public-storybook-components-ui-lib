@@ -1,4 +1,4 @@
-import { IDatasource, Sort } from '../Table/Ag-Grid/Ag-grid-table.tsx';
+import { IDatasource } from '../Table/Ag-Grid/Ag-grid-table.tsx';
 import { Editor } from '@tiptap/react';
 export interface Tag {
     id: string;
@@ -12,8 +12,6 @@ interface TagDataProps {
     totalCount?: number;
     pageSize?: number;
     error?: Error;
-    sort?: Sort;
-    onSortChange?: (sort: Sort) => void;
     onSearchChange?: (searchText: string) => void;
 }
 interface TagSelectorProps {
