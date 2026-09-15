@@ -8,7 +8,12 @@ interface UsePaginatedDataOptions<TKey extends string, TNode> {
     errorMessage?: string;
     options?: QueryHookOptions<PaginatedResult<TKey, TNode>>;
 }
-/** A custom hook to fetch and manage paginated data using Apollo Client. */
+/**
+ * @deprecated Exposes Apollo's raw `refetch`/`fetchMore`, letting callers
+ * bypass the state that keeps `items` consistent.
+ *
+ * Use `useLoadMoreQuery` instead.
+ */
 export declare const usePaginatedData: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, errorMessage, options, }: UsePaginatedDataOptions<TKey, TNode>) => {
     /** Whether the query encountered an error. */
     readonly error: import('@apollo/client').ApolloError | undefined;

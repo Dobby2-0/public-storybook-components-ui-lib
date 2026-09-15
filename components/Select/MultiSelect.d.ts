@@ -20,5 +20,5 @@ interface MultiSelectProps<T extends object> extends SelectCommonProps<T, "multi
  *
  * Based on `React-aria-components`
  */
-declare const MultiSelect: <T extends object>({ label, placeholder, className, items, disallowEmptySelection, value, defaultValue, selectedKeys, defaultSelectedKeys, onSelectionChange, idResolver, storageKey, ...props }: MultiSelectProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const MultiSelect: <T extends object>({ label, placeholder, className, items, disallowEmptySelection, value, defaultValue, selectedKeys, defaultSelectedKeys, onSelectionChange, idResolver, storageKey, listLoading, ...props }: MultiSelectProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { MultiSelect, type MultiSelectProps };

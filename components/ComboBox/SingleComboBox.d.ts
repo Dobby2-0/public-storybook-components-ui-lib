@@ -1,4 +1,5 @@
-import { ComboBoxCommonProps, ComboBoxListBoxProps } from './ComboBoxListBox.tsx';
+import { ComboBoxCommonProps } from './ComboBox.tsx';
+import { ComboBoxListBoxProps } from './ComboBoxListBox.tsx';
 import { ListBoxProps } from '../ListBox/ListBox.tsx';
 import { Key } from '@react-types/shared';
 interface SingleComboBoxProps<T extends object> extends ComboBoxCommonProps, Omit<ComboBoxListBoxProps, "className"> {
@@ -23,5 +24,5 @@ interface SingleComboBoxProps<T extends object> extends ComboBoxCommonProps, Omi
     /** Allows the combobox to be used like a menu */
     keepSelectionClear?: boolean;
 }
-declare const SingleComboBox: <T extends object>({ placeholder, className, items, value, defaultValue, selectedKey, defaultSelectedKey, onSelectionChange, onOpenChange, idResolver, keepSelectionClear, storageKey, ...props }: SingleComboBoxProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const SingleComboBox: <T extends object>({ placeholder, className, items, value, defaultValue, selectedKey, defaultSelectedKey, onSelectionChange, onOpenChange, idResolver, keepSelectionClear, storageKey, listLoading, ...props }: SingleComboBoxProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { SingleComboBox, type SingleComboBoxProps };

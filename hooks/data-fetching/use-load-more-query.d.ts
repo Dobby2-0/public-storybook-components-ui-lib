@@ -17,6 +17,8 @@ interface UseLoadMoreQueryConfig<TKey extends string, TNode> {
      * it to know the initial page size, so it can re-request that many items
      * (see `reload` below) instead of collapsing back to it after pages have
      * been appended via `loadMore`.
+     *
+     * @default "first"
      */
     pageSizeParam?: string;
     /**
@@ -25,23 +27,25 @@ interface UseLoadMoreQueryConfig<TKey extends string, TNode> {
      * pagination) instead of asking for the whole window at once, which some
      * backends reject outright above a fixed page-size limit. Defaults to 50;
      * override if your backend's actual limit differs.
+     *
+     * @default 50
      */
     maxPageSize?: number;
+    /** Eagerly drains every page instead of waiting for `loadMore` calls. */
+    loadAll?: boolean;
     options?: LoadMoreQueryOptions;
 }
 /**
  * Fetches and accumulates a GraphQL cursor-paginated connection for
  * "Load more"-style lists (as opposed to jump-to-page pagination).
  *
- * Unlike `usePaginatedData`, this hook never hands out Apollo's raw
- * `refetch`/`fetchMore` — those let callers bypass the state that keeps
- * `items` consistent, which is exactly what caused a real bug: calling the
- * raw `refetch` after a mutation (e.g. marking a comment read, deleting a
- * recipient) re-ran the query with the original small page size and wiped
- * out everything loaded via "Load more", visually collapsing the list back
- * to page 1. `reload` below is the safe replacement for that use case.
+ * @remarks Never hands out Apollo's raw `refetch`/`fetchMore` — exposing those lets a
+ * caller bypass the state that keeps `items` consistent, which caused a real
+ * bug: calling raw `refetch` after a mutation (e.g. marking a comment read)
+ * re-ran the query with the original small page size and collapsed the list
+ * back to page 1. `reload` below is the safe replacement for that use case.
  */
-export declare const useLoadMoreQuery: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, errorMessage, pageSizeParam, maxPageSize, options, }: UseLoadMoreQueryConfig<TKey, TNode>) => {
+export declare const useLoadMoreQuery: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, errorMessage, pageSizeParam, maxPageSize, loadAll, options, }: UseLoadMoreQueryConfig<TKey, TNode>) => {
     /** The flattened array of nodes accumulated across all loaded pages. */
     readonly items: TNode[];
     /** Total number of items matching the query, per the server. */
@@ -62,6 +66,11 @@ export declare const useLoadMoreQuery: <TKey extends string, TNode>({ query, que
     readonly loadMore: () => Promise<boolean>;
     /** Re-fetches the currently loaded window in place, without collapsing it. */
     readonly reload: () => Promise<void>;
+    /** Spreadable onto ComboBox/Select/ListBox. */
+    readonly listBoxProps: {
+        readonly hasNextPage: boolean;
+        readonly onLoadMore: () => Promise<boolean>;
+    };
 };
 export type LoadMoreQuery<TKey extends string, TNode> = ReturnType<typeof useLoadMoreQuery<TKey, TNode>>;
 export {};

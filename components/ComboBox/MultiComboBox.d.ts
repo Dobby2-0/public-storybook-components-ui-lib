@@ -1,4 +1,5 @@
-import { ComboBoxCommonProps, ComboBoxListBoxProps } from './ComboBoxListBox.tsx';
+import { ComboBoxCommonProps } from './ComboBox.tsx';
+import { ComboBoxListBoxProps } from './ComboBoxListBox.tsx';
 import { ListBoxProps } from '../ListBox/ListBox.tsx';
 import { Key } from '@react-types/shared';
 interface MultiComboBoxProps<T extends object> extends ComboBoxCommonProps, Omit<ComboBoxListBoxProps, "className"> {
@@ -21,5 +22,5 @@ interface MultiComboBoxProps<T extends object> extends ComboBoxCommonProps, Omit
     /** Callback triggered when the open state of the popover changes. */
     onOpenChange?: (isOpen: boolean) => void;
 }
-declare const MultiComboBox: <T extends object>({ label, placeholder, className, items, value, defaultValue, selectedKeys, defaultSelectedKeys, onSelectionChange, onOpenChange, idResolver, storageKey, ...props }: MultiComboBoxProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const MultiComboBox: <T extends object>({ label, placeholder, className, items, value, defaultValue, selectedKeys, defaultSelectedKeys, onSelectionChange, onOpenChange, idResolver, storageKey, listLoading, ...props }: MultiComboBoxProps<T> & ListBoxProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { MultiComboBox, type MultiComboBoxProps };

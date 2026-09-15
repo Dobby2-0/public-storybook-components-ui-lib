@@ -16,7 +16,10 @@ interface SelectCommonProps<T extends object, M extends "single" | "multiple" = 
     className?: string | ClassNameObject;
     style?: CSSProperties;
     disallowEmptySelection?: boolean;
+    /** show loading indicator on the trigger element */
     loading?: boolean;
+    /** show loading indicator at the bottom of the data list */
+    listLoading?: boolean;
     ref?: Ref<HTMLButtonElement>;
     /** The storage key for localStorage keying. Should be unique within the MFE. If not provided, localStorage is not used. */
     storageKey?: string;
