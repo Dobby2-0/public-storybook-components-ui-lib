@@ -18,6 +18,8 @@ interface SpellcheckedInputProps {
     onBlur?: () => void;
     /** The className of the editor */
     className?: string;
+    /** Whether the input should be focused automatically when it mounts */
+    autoFocus?: boolean;
 }
-declare const SpellcheckedInput: ({ type, value, placeholder, disabled, maxLength, spellCheckLanguage, onChange, onBlur, className, }: SpellcheckedInputProps) => import("react/jsx-runtime").JSX.Element | undefined;
+declare const SpellcheckedInput: ({ type, value, placeholder, disabled, maxLength, spellCheckLanguage, onChange, onBlur, className, autoFocus, }: SpellcheckedInputProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export { SpellcheckedInput };
