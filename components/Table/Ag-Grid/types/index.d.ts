@@ -34,6 +34,8 @@ export interface BaseAgGridTableProps<RowData extends {
     totalCount?: number;
     /** Theme type : dobby or classic */
     themeType?: "dobby" | "classic";
+    /** Optional: enables sorting for the dobby theme */
+    enableDobbySorting?: boolean;
     /** optional id for localstorage key */
     id?: string;
     /** Optional: onDetailsClick callback */

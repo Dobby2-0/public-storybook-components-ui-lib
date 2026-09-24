@@ -5,6 +5,7 @@ interface UseComposedColumnDefsParams<RowData extends {
 }> {
     columnDefs?: ColDef<RowData>[] | null;
     isDobby: boolean;
+    enableDobbySorting?: boolean;
     selectionMode: AgGridTableProps<RowData>["selectionMode"];
     enableSelectAll?: boolean;
     disableRowSelectionCondition?: (row: RowData) => boolean;
@@ -19,5 +20,5 @@ interface UseComposedColumnDefsParams<RowData extends {
  */
 declare const useComposedColumnDefs: <RowData extends {
     id: string;
-}>({ columnDefs, isDobby, selectionMode, enableSelectAll, disableRowSelectionCondition, addRowButton, disableColumnOptions, menuItems, onDetailsClick, }: UseComposedColumnDefsParams<RowData>) => ColDef<RowData>[];
+}>({ columnDefs, isDobby, enableDobbySorting, selectionMode, enableSelectAll, disableRowSelectionCondition, addRowButton, disableColumnOptions, menuItems, onDetailsClick, }: UseComposedColumnDefsParams<RowData>) => ColDef<RowData>[];
 export { useComposedColumnDefs };

@@ -9,5 +9,5 @@ declare const buildOptionsColumn: <T extends {
     id: string;
 }>(addRowButton: boolean, disableColumnOptions: boolean, menuItems: RowMenuItem[] | undefined, isDobby: boolean, onDetailsClick: ((id: string) => void) | undefined) => ColDef<T>[];
 /** Helper to disable sorting resizing & dragging columns */
-declare const simplifyColumns: <T>(col: ColDef<T>) => ColDef<T>;
+declare const simplifyColumns: <T>(col: ColDef<T>, enableDobbySorting?: boolean) => ColDef<T>;
 export { buildOptionsColumn, buildSelectionColumn, simplifyColumns };
