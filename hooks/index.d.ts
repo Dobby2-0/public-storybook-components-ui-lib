@@ -1,10 +1,10 @@
-export { usePaginatedDatasource, type PaginatedDatasource, } from './data-fetching/use-datasource.ts';
 export { resolveConnectionNode, useEnsureSelectedItem, type UseEnsureSelectedItemConfig, } from './data-fetching/use-ensure-selected-item.ts';
+export { useInfiniteDatasource, usePaginatedDatasource, type InfiniteDatasource, type PaginatedDatasource, } from './data-fetching/use-infinite-datasource.ts';
+export { usePaginatedData, type PaginatedData, } from './data-fetching/use-infinite-query.ts';
 export { useLoadMoreQuery, type LoadMoreQuery, } from './data-fetching/use-load-more-query.ts';
 export { usePagedDatasource, type PagedDatasource, } from './data-fetching/use-paged-datasource.ts';
 export { usePagedList, type PagedList } from './data-fetching/use-paged-list.ts';
 export type { PagedQueryConfig } from './data-fetching/use-paged-query.ts';
-export { usePaginatedData, type PaginatedData, } from './data-fetching/use-paginated-data.ts';
 export { useOperation } from './operations/use-operation';
 export { useAutoPageSize } from './use-auto-page-size.ts';
 export { useDobbyContext } from './use-dobby-context';
