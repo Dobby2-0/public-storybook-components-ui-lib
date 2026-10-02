@@ -10,7 +10,7 @@ type ComboBoxFilterProps = ComponentProps<typeof ComboBox> & {
     filterType: "combobox";
 };
 type FilterValue = string | string[] | boolean | undefined;
-type FilterDefinition = Pick<SelectFilterProps | ComboBoxFilterProps, "filterType" | "items" | "placeholder" | "labelResolver" | "className" | "storageKey" | "hasNextPage" | "loading" | "onLoadMore" | "idResolver" | "disallowEmptySelection"> & {
+type FilterDefinition = Pick<SelectFilterProps | ComboBoxFilterProps, "filterType" | "items" | "placeholder" | "labelResolver" | "className" | "storageKey" | "hasNextPage" | "loading" | "listLoading" | "onLoadMore" | "onOpenChange" | "idResolver" | "disallowEmptySelection"> & {
     /** Unique name of the filter, also used as label/placeholder */
     name: string;
     /** Disables local filtering of combobox */

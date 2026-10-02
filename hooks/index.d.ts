@@ -1,4 +1,5 @@
 export { resolveConnectionNode, useEnsureSelectedItem, type UseEnsureSelectedItemConfig, } from './data-fetching/use-ensure-selected-item.ts';
+export { useEnsureSelectedItems, type UseEnsureSelectedItemsConfig, } from './data-fetching/use-ensure-selected-items.ts';
 export { useInfiniteDatasource, usePaginatedDatasource, type InfiniteDatasource, type PaginatedDatasource, } from './data-fetching/use-infinite-datasource.ts';
 export { usePaginatedData, type PaginatedData, } from './data-fetching/use-infinite-query.ts';
 export { useLoadMoreQuery, type LoadMoreQuery, } from './data-fetching/use-load-more-query.ts';

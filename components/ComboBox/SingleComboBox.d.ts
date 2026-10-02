@@ -19,8 +19,6 @@ interface SingleComboBoxProps<T extends object> extends ComboBoxCommonProps, Omi
     defaultSelectedKey?: Key;
     /** Handler that is called when the selection changes. */
     onSelectionChange?: (selectedItem: T | undefined) => void;
-    /** Callback triggered when the open state of the popover changes. */
-    onOpenChange?: (isOpen: boolean) => void;
     /** Allows the combobox to be used like a menu */
     keepSelectionClear?: boolean;
 }

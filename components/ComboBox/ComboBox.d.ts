@@ -25,6 +25,8 @@ interface ComboBoxCommonProps extends VariantProps<typeof dropdownInputVariants>
     disallowEmptySelection?: boolean;
     /** The storage key for localStorage keying. Should be unique within the MFE. If not provided, localStorage is not used. */
     storageKey?: string;
+    /** Callback triggered when the open state of the popover changes. */
+    onOpenChange?: (isOpen: boolean) => void;
 }
 interface SingleComboBoxBaseProps<T extends object> extends SingleComboBoxProps<T> {
     selectionMode?: "single";

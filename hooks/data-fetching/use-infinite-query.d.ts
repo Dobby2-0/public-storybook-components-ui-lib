@@ -52,7 +52,7 @@ export type InfiniteQuery<TKey extends string, TNode> = ReturnType<typeof useInf
  *
  * Use `useLoadMoreQuery` instead.
  */
-export declare const usePaginatedData: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, errorMessage, options, }: UseInfiniteQueryOptions<TKey, TNode>) => {
+export declare const usePaginatedData: <TKey extends string, TNode>(options: Parameters<typeof useInfiniteQuery<TKey, TNode>>[0]) => {
     /** Whether the query encountered an error. */
     readonly error: import('@apollo/client').ApolloError | undefined;
     /** Apollo fetchMore function for cursor-based pagination. */

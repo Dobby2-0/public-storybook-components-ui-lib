@@ -29,6 +29,7 @@ interface UseEnsureSelectedItemConfig<TKey extends string, TNode, TField extends
 }
 /** For `query`s that are paginated connections rather than a singular field. */
 declare const resolveConnectionNode: <TNode>(field: PaginatedField<TNode> | undefined) => TNode | undefined;
+declare const mergeSelectedItems: <TNode>(items: TNode[], resolved: TNode[], idResolver: FieldResolver<TNode, string>) => TNode[];
 /**
  * Ensures a specific item (typically the current selection of a paginated
  * list) is present in `items` regardless of the currently loaded page
@@ -43,5 +44,5 @@ declare const useEnsureSelectedItem: <TKey extends string, TNode, TField extends
     /** The error from the by-id lookup, if any. */
     readonly error: import('@apollo/client').ApolloError | undefined;
 };
-export { resolveConnectionNode, useEnsureSelectedItem };
+export { mergeSelectedItems, resolveConnectionNode, useEnsureSelectedItem };
 export type { UseEnsureSelectedItemConfig };

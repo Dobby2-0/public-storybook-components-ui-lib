@@ -23,6 +23,8 @@ interface SelectCommonProps<T extends object, M extends "single" | "multiple" = 
     ref?: Ref<HTMLButtonElement>;
     /** The storage key for localStorage keying. Should be unique within the MFE. If not provided, localStorage is not used. */
     storageKey?: string;
+    /** Callback triggered when the open state of the popover changes. */
+    onOpenChange?: (isOpen: boolean) => void;
 }
 interface SelectValueProps extends PropsWithChildren {
     label?: ReactNode;
