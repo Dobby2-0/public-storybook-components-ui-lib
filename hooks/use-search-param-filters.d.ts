@@ -3,10 +3,17 @@ type FilterValue = string | string[] | boolean | undefined;
 type FilterConfig = Pick<FilterDefinition, "name" | "filterType" | "storageKey">;
 interface UseFilterSearchParamsOptions {
     filters: FilterConfig[];
-    /** Must be stable for the lifetime of the component (e.g. a module-level constant). */
+    /**
+     * The default value of each filter. Treated as static unless `resetOnDefaultsChange` is set.
+     */
     defaultValues: Record<string, FilterValue>;
+    /**
+     * Reset the filters to the defaults when the content of `defaultValues` changes after mount.
+     * @default false
+     */
+    resetOnDefaultsChange?: boolean;
 }
-export declare const useSearchParamFilters: ({ filters, defaultValues, }: UseFilterSearchParamsOptions) => {
+export declare const useSearchParamFilters: ({ filters, defaultValues, resetOnDefaultsChange, }: UseFilterSearchParamsOptions) => {
     filterValues: Record<string, FilterValue>;
     onFilterChange: (newFilters: Record<string, FilterValue>) => void;
     resetFilters: () => void;
