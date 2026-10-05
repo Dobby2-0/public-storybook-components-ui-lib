@@ -29,6 +29,8 @@ export { Checkbox, CheckboxGroup } from './components/Checkbox/Checkbox';
 export { ComboBox } from './components/ComboBox/ComboBox';
 export { DateTimePicker } from './components/DateTimePicker/DateTimePicker';
 export { DetailPageHeader } from './components/DetailPageHeader/DetailPageHeader';
+export { Dialog, type DialogProps } from './components/Dialog/Dialog';
+export { useDialogClose } from './components/Dialog/DialogContext';
 export { Divider } from './components/Divider/Divider';
 export { DndList } from './components/DndList/DndList.tsx';
 export { DobbyContextProvider, PortalProvider, } from './components/DobbyContextProvider/DobbyContextProvider.tsx';
