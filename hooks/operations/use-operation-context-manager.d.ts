@@ -6,8 +6,10 @@ export interface OperationContextValue {
 export declare const OperationContext: import('../../../node_modules/react').Context<OperationContextValue | null>;
 /**
  * Operation updates arrive through the page-wide operations hub owned by
- * `menu-ui` and shared via global-state. While no live hub connection exists
- * (standalone dev, startup, reconnecting) the state is polled instead.
+ * `menu-ui` and shared via global-state. `resolveOperationSignalRState` only
+ * listens for pushed updates until `timeoutMs`; it never polls. Callers
+ * (see `useOperation`) fetch the state once before and once after waiting,
+ * so a missed or unavailable hub degrades to a timeout plus a final fetch.
  */
 export declare const useOperationContextManager: () => {
     fetchOperationState: (traceId: string) => Promise<OperationEnvelope | undefined>;
