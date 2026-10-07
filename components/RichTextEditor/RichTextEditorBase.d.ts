@@ -42,8 +42,10 @@ interface RichTextEditorBaseProps {
     disableContentDrop?: boolean;
     /** Disable adding a trailing node */
     disableTrailingNode?: boolean;
+    /** Strip inline formatting from pasted content while keeping html structure */
+    pasteWithoutFormatting?: boolean;
 }
 /** * RichTextEditor component based on @tiptap/react. */
-declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, contentStyle, disableContentPaste, disableImagePaste, disableContentDrop, disableTrailingNode, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
+declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, contentStyle, disableContentPaste, disableImagePaste, disableContentDrop, disableTrailingNode, pasteWithoutFormatting, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export default RichTextEditorBase;
 export type { RichTextEditorBaseProps };

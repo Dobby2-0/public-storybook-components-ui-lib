@@ -7,5 +7,6 @@ declare const ParagraphNode: Node<ParagraphOptions, any>;
 declare const BrNode: Node<any, any>;
 declare const NbspNode: Node<any, any>;
 declare const DisableImagePaste: Extension<any, any>;
+declare const PasteWithoutFormatting: Extension<any, any>;
 export * from './table';
-export { BrNode, DisableImagePaste, DivNode, NbspNode, ParagraphNode, SectionNode, TagNode, };
+export { BrNode, DisableImagePaste, DivNode, NbspNode, ParagraphNode, PasteWithoutFormatting, SectionNode, TagNode, };
