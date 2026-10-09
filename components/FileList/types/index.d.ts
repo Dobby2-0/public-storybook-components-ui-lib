@@ -16,8 +16,10 @@ export interface FileEntryActionsProps {
     defaultActionHandlers: DefaultActionHandlers;
     onLoadingError?: (error?: string) => void;
     onAttachmentOverride: (file: Attachment) => void;
+    /** Hides the preview button for files where this returns true */
+    isPreviewHidden?: (file: Attachment) => boolean;
 }
-export interface FileEntryProps extends Pick<FileListProps, "onFileLoadingError" | "errorAsTooltip">, Pick<FileEntryActionsProps, "defaultActionHandlers"> {
+export interface FileEntryProps extends Pick<FileListProps, "onFileLoadingError" | "errorAsTooltip" | "isPreviewHidden">, Pick<FileEntryActionsProps, "defaultActionHandlers"> {
     file: Attachment;
     actionHandlers: ActionHandlers;
     onAttachmentOverride: (file: Attachment) => void;
@@ -50,6 +52,12 @@ export interface FileListProps {
     className?: string;
     contrastMode?: boolean;
     errorAsTooltip?: boolean;
+    /**
+     * Hides the preview button for files where this returns true, e.g. files that are not persisted yet.
+     * <br/><br/>
+     * Has no effect when `actionButtons` is a render function, since the consumer renders the buttons.
+     */
+    isPreviewHidden?: (file: Attachment) => boolean;
 }
 export interface DefaultActionHandlers {
     view: (url: Attachment["url"]) => void;

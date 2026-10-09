@@ -2,7 +2,7 @@ import { Attachment, FileListProps } from '../FileList/FileList.tsx';
 import { CommonUploadProps } from './Upload.tsx';
 import { ReactNode } from '../../../node_modules/react';
 import { DropZoneProps as AriaDropZoneProps, FileTriggerProps } from 'react-aria-components';
-interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">, CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes">, Pick<FileListProps, "actionButtons" | "contrastMode" | "errorAsTooltip"> {
+interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">, CommonUploadProps, Pick<FileTriggerProps, "acceptedFileTypes">, Pick<FileListProps, "actionButtons" | "contrastMode" | "errorAsTooltip" | "isPreviewHidden"> {
     allowsMultiple?: boolean;
     /**
      * current value (controlled)
@@ -19,6 +19,6 @@ interface DropZoneProps extends Omit<AriaDropZoneProps, "onDrop" | "className">,
     /** Callback that is triggered when the `onFileAdd` callback rejects with an error */
     onFileAddError?: (file: Attachment, error?: string) => ReactNode | void;
 }
-declare const DropZone: ({ files, initialFiles, className, description, label, fileSizeLimit, fileWidthLimit, fileHeightLimit, acceptedFileTypes, actionButtons, onFileAdd, onFileSelectionChange, onFileReject, onFileAddError, allowsMultiple, contrastMode, displayDisallowedFiles, errorAsTooltip, ...props }: DropZoneProps) => import("react/jsx-runtime").JSX.Element;
+declare const DropZone: ({ files, initialFiles, className, description, label, fileSizeLimit, fileWidthLimit, fileHeightLimit, acceptedFileTypes, actionButtons, onFileAdd, onFileSelectionChange, onFileReject, onFileAddError, allowsMultiple, contrastMode, displayDisallowedFiles, errorAsTooltip, isPreviewHidden, ...props }: DropZoneProps) => import("react/jsx-runtime").JSX.Element;
 export { DropZone };
 export type { DropZoneProps };

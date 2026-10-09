@@ -51,7 +51,7 @@ interface FileInputUploadProps extends CommonUploadProps, Pick<FileInputProps, "
     /** optionally render DropZone instead of FileInput */
     isDropZone?: false;
 }
-interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "initialFiles" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes" | "onFileAddError" | "contrastMode" | "allowsMultiple" | "errorAsTooltip"> {
+interface DropZoneUploadProps extends CommonUploadProps, Pick<DropZoneProps, "files" | "initialFiles" | "onFileSelectionChange" | "actionButtons" | "acceptedFileTypes" | "onFileAddError" | "contrastMode" | "allowsMultiple" | "errorAsTooltip" | "isPreviewHidden"> {
     /** optionally render DropZone instead of FileInput */
     isDropZone: true;
 }
