@@ -35,8 +35,6 @@ export declare const getBuildingIdsFromOwnerCapacities: (capacities: string) => 
  * Get the owner capacity for a specific owner ID from a string of capacities.
  */
 export declare const getOwnerCapacityByOwnerId: (capacities: string, ownerId: string) => string | undefined;
-/** @deprecated Use `getOwnerCapacityByOwnerId` instead */
-export declare const getOwnerCapacityOwnerId: (capacities: string, ownerId: string) => string | undefined;
 /**
  * Get the owner capacity for a specific building ID from a string of capacities.
  */
