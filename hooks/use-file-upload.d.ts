@@ -9,14 +9,14 @@ type UploadUrlGetter = (item: {
     type: string;
 }) => Promise<{
     url?: string;
-    key?: string;
+    fileRef?: string;
     error?: Error;
 }>;
 interface UseFileUploadOptions<C = unknown> {
-    /** Requests a presigned upload URL + storage key for the file */
+    /** Requests a presigned upload URL and a reference to the stored file (a storage key or a file id) */
     getUploadUrl: UploadUrlGetter;
     /** Called after the file is uploaded successfully */
-    onUploaded?: (item: UploadItem, key: string, context: C) => void | Promise<void>;
+    onUploaded?: (item: UploadItem, fileRef: string, context: C) => void | Promise<void>;
     /** Called on any failure. Defaults to an error toast. */
     onError?: (error: Error, item: UploadItem) => void;
 }
