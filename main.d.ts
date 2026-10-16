@@ -70,6 +70,7 @@ export { Switch } from './components/Switch/Switch';
 export { AgGridTable, type AgGridReact, type AgGridTableProps, type AnyRowSelectionValue, type ColDef, type CustomCellRendererProps, type GetRowIdParams, type IDatasource, type RowClickedEvent, type RowMenuItem, type RowSelectionValue, type Sort, type SortChangedEvent, type SortModelItem, type ValueGetterParams, } from './components/Table/Ag-Grid/Ag-grid-table.tsx';
 export { Table, type ColumnDefinition, type SortDescriptor, type TableProps, } from './components/Table/React-Aria/Table.tsx';
 export { Tabs, type TabItem } from './components/Tabs/Tabs';
+export { TemplateEditor, type TemplateEditorProps, } from './components/TemplateEditor/TemplateEditor.tsx';
 export { TextField } from './components/TextField/TextField';
 export { Toolbar } from './components/Toolbar/Toolbar';
 export { Tooltip } from './components/Tooltip/Tooltip';

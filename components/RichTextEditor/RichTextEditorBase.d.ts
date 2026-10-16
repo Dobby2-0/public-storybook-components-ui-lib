@@ -1,5 +1,6 @@
 import { EditorToolbarOptions } from './EditorToolbar.tsx';
 import { SpellcheckLanguage } from '../../hooks/use-nspell';
+import { Editor } from '@tiptap/react';
 interface RichTextEditorBaseProps {
     /** The value of the editor */
     value?: string;
@@ -44,8 +45,16 @@ interface RichTextEditorBaseProps {
     disableTrailingNode?: boolean;
     /** Strip inline formatting from pasted content while keeping html structure */
     pasteWithoutFormatting?: boolean;
+    /** Hides the built-in toolbar, e.g. when a shared toolbar is rendered elsewhere */
+    hideToolbar?: boolean;
+    /** Removes the border, background and padding so the content blends into its surroundings */
+    blendContent?: boolean;
+    /** Called when the editor instance is created */
+    onEditorReady?: (editor: Editor) => void;
+    /** Called when the editor receives focus */
+    onEditorFocus?: (editor: Editor) => void;
 }
 /** * RichTextEditor component based on @tiptap/react. */
-declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, contentStyle, disableContentPaste, disableImagePaste, disableContentDrop, disableTrailingNode, pasteWithoutFormatting, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
+declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, contentStyle, disableContentPaste, disableImagePaste, disableContentDrop, disableTrailingNode, pasteWithoutFormatting, hideToolbar, blendContent, onEditorReady, onEditorFocus, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export default RichTextEditorBase;
 export type { RichTextEditorBaseProps };
