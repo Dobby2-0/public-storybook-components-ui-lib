@@ -8,9 +8,9 @@ type UploadUrlGetter = (item: {
     name: string;
     type: string;
 }) => Promise<{
-    url?: string;
-    fileRef?: string;
-    error?: Error;
+    url: string | undefined;
+    fileRef: string | undefined;
+    error: Error | undefined;
 }>;
 interface UseFileUploadOptions<C = unknown> {
     /** Requests a presigned upload URL and a reference to the stored file (a storage key or a file id) */
