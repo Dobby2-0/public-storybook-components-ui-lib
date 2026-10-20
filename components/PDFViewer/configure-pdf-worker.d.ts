@@ -1,2 +1,48 @@
-declare const configurePDFWorker: () => Promise<void>;
+import { DocumentProps } from 'react-pdf';
+type PDFDocumentOptions = NonNullable<DocumentProps["options"]>;
+/**
+ * Points pdf.js at its worker and returns the options every document should be loaded with.
+ *
+ * The returned object is the same reference on every call, which react-pdf needs: it reloads the
+ * document whenever the `options` prop changes identity.
+ */
+declare const configurePDFWorker: () => Promise<{
+    length?: number | null | undefined;
+    httpHeaders?: Object | null | undefined;
+    withCredentials?: boolean | null | undefined;
+    password?: string | null | undefined;
+    rangeChunkSize?: number | null | undefined;
+    worker?: import('pdfjs-dist').PDFWorker | null | undefined;
+    verbosity?: number | null | undefined;
+    docBaseUrl?: string | null | undefined;
+    cMapUrl?: string | null | undefined;
+    cMapPacked?: boolean | null | undefined;
+    CMapReaderFactory?: Object | null | undefined;
+    iccUrl?: string | null | undefined;
+    useSystemFonts?: boolean | null | undefined;
+    standardFontDataUrl?: string | null | undefined;
+    StandardFontDataFactory?: Object | null | undefined;
+    wasmUrl?: string | null | undefined;
+    WasmFactory?: Object | null | undefined;
+    useWorkerFetch?: boolean | null | undefined;
+    useWasm?: boolean | null | undefined;
+    stopAtErrors?: boolean | null | undefined;
+    maxImageSize?: number | null | undefined;
+    isEvalSupported?: boolean | null | undefined;
+    isOffscreenCanvasSupported?: boolean | null | undefined;
+    isImageDecoderSupported?: boolean | null | undefined;
+    canvasMaxAreaInBytes?: number | null | undefined;
+    disableFontFace?: boolean | null | undefined;
+    fontExtraProperties?: boolean | null | undefined;
+    enableXfa?: boolean | null | undefined;
+    ownerDocument?: HTMLDocument | null | undefined;
+    disableRange?: boolean | null | undefined;
+    disableStream?: boolean | null | undefined;
+    disableAutoFetch?: boolean | null | undefined;
+    pdfBug?: boolean | null | undefined;
+    CanvasFactory?: Object | null | undefined;
+    FilterFactory?: Object | null | undefined;
+    enableHWA?: boolean | null | undefined;
+}>;
 export { configurePDFWorker };
+export type { PDFDocumentOptions };
