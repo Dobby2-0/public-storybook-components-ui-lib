@@ -1,11 +1,5 @@
 import { DocumentProps } from 'react-pdf';
 type PDFDocumentOptions = NonNullable<DocumentProps["options"]>;
-/**
- * Points pdf.js at its worker and returns the options every document should be loaded with.
- *
- * The returned object is the same reference on every call, which react-pdf needs: it reloads the
- * document whenever the `options` prop changes identity.
- */
 declare const configurePDFWorker: () => Promise<{
     length?: number | null | undefined;
     httpHeaders?: Object | null | undefined;

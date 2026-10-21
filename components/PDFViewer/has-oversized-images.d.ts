@@ -5,6 +5,8 @@
  * OOM crash"), which crashes the preview or leaves a blank page.
  */
 declare const MAX_IMAGE_PIXELS = 80000000;
+declare const MAX_IMAGE_PIXELS_IOS: number;
+declare const getMaxImagePixels: () => number;
 /**
  * Checks the raw bytes of a PDF for embedded images that are too large to decode.
  *
@@ -13,4 +15,4 @@ declare const MAX_IMAGE_PIXELS = 80000000;
  * dictionaries are always plain text in the file and can be read without decoding the image itself.
  */
 declare const hasOversizedImages: (data: Uint8Array, maxPixels?: number) => boolean;
-export { MAX_IMAGE_PIXELS, hasOversizedImages };
+export { MAX_IMAGE_PIXELS, MAX_IMAGE_PIXELS_IOS, getMaxImagePixels, hasOversizedImages, };

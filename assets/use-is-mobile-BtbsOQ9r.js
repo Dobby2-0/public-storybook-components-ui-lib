@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-BCiCTKAo.js";import{o as t,t as n}from"./dist-DLE_H5Rv.js";var r;function i(){return(i=e((()=>{n(),r=()=>t(`(width < 40rem)`)})))()}export{r as n,i as t};

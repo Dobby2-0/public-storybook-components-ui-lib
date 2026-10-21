@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-BCiCTKAo.js";var t;function n(){return(n=e((()=>{t=`useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict`})))()}var r;function i(){return(i=e((()=>{n(),r=(e=21)=>{let n=``,r=crypto.getRandomValues(new Uint8Array(e|=0));for(;e--;)n+=t[r[e]&63];return n}})))()}export{r as n,i as t};
