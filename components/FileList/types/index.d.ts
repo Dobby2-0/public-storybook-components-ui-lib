@@ -11,6 +11,12 @@ export interface Attachment extends DobbyFile {
     loading?: Promise<Attachment | void>;
     /** An optional error message */
     error?: string;
+    /**
+     * An optional warning message, shown next to a valid file.\
+     * Unlike `error`, it does not dim the file or replace its icon. It is not shown when the file has an error.\
+     * Shown inline, or as a tooltip on a warning icon when `errorAsTooltip` is set on the list.
+     */
+    warning?: string;
 }
 export interface FileEntryActionsProps {
     file: Attachment;
