@@ -108,6 +108,7 @@ export type FieldResolverWithProps<T, U, V> = keyof T | ResolverFunctionWithProp
 export type ToasterProps = ToastProps & AlertProps & {
     duration?: number;
     description?: string;
+    /** Rendered below the description. */
     action?: ReactNode;
 };
 /**

@@ -19,3 +19,4 @@ export { useIsTouchDevice } from './use-is-touch-device';
 export { useRefState } from './use-ref-state';
 export { useSearchParamFilters } from './use-search-param-filters';
 export { useToast } from './use-toast';
+export { useToastDismiss } from './use-toast-dismiss';

@@ -1,6 +1,6 @@
 import { ExcludeNull } from '../../types';
 import { VariantProps } from 'class-variance-authority';
-import { HTMLAttributes } from '../../../node_modules/react';
+import { HTMLAttributes, ReactNode } from '../../../node_modules/react';
 declare const alertVariants: (props?: ({
     variant?: "error" | "warning" | "information" | "confirmation" | null | undefined;
 } & import('class-variance-authority/types').ClassProp) | undefined) => string;
@@ -10,10 +10,10 @@ interface AlertProps extends HTMLAttributes<HTMLDivElement>, ExcludeNull<Variant
      * Can be used to remove or hide the alert from the view.
      */
     onClose?: () => void;
-    /**
-     * optional parm to hide the icon in the alert
-     */
+    /** optional parm to hide the icon in the alert */
     hideIcon?: boolean;
+    /** Optional action rendered inline, between the content and the close button. */
+    inlineAction?: ReactNode;
 }
 /**
  * Component that displays an alert to draw attention, supports multiple variants.

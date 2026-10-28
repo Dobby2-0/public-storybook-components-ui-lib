@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-BCiCTKAo.js";import{t}from"./react-BbeNlDUO.js";import{a as n,c as r}from"./use-dobby-context-DKFI6wzF.js";var i,a;function o(){return(o=e((()=>{r(),i=t(),a=()=>{let e=(0,i.useContext)(n);if(!e)throw Error(`useToast must be used within a ToastProvider`);return e.toast}})))()}export{a as n,o as t};
