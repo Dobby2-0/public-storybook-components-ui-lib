@@ -3,7 +3,7 @@ import { ColDef } from 'ag-grid-community';
 /** Helper to create selection column */
 declare const buildSelectionColumn: <T extends {
     id: string;
-}>(selectionMode: AgGridTableProps<T>["selectionMode"], isDobby: boolean, enableSelectAll?: boolean, disableRowSelectionCondition?: (row: T) => boolean) => ColDef<T>[];
+}>(selectionMode: AgGridTableProps<T>["selectionMode"], isDobby: boolean, enableSelectAll?: boolean, disableRowSelectionCondition?: (row: T) => boolean, paginated?: boolean) => ColDef<T>[];
 /** Helper to create options column */
 declare const buildOptionsColumn: <T extends {
     id: string;

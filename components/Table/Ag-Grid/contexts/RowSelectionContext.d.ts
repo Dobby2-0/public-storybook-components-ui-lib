@@ -4,6 +4,9 @@ interface RowSelectionContextProps {
     excludedIds: Set<string>;
     handleRowSelect: (id: string, selected: boolean) => void;
     handleSelectAll: () => void;
+    handleSelectIds: (ids: string[], selected: boolean) => void;
+    handleClearSelection: () => void;
+    handleSetSelection: (ids: string[]) => void;
     totalCount?: number;
 }
 declare const RowSelectionContext: import('../../../../../node_modules/react').Context<RowSelectionContextProps>;

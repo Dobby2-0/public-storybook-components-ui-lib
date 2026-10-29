@@ -13,6 +13,7 @@ interface UseComposedColumnDefsParams<RowData extends {
     disableColumnOptions?: boolean;
     menuItems?: RowMenuItem[];
     onDetailsClick?: (id: string) => void;
+    paginated?: boolean;
 }
 /**
  * Builds the final columnDefs: Selection column + caller's columns + Options column,
@@ -20,5 +21,5 @@ interface UseComposedColumnDefsParams<RowData extends {
  */
 declare const useComposedColumnDefs: <RowData extends {
     id: string;
-}>({ columnDefs, isDobby, enableDobbySorting, selectionMode, enableSelectAll, disableRowSelectionCondition, addRowButton, disableColumnOptions, menuItems, onDetailsClick, }: UseComposedColumnDefsParams<RowData>) => ColDef<RowData>[];
+}>({ columnDefs, isDobby, enableDobbySorting, selectionMode, enableSelectAll, disableRowSelectionCondition, addRowButton, disableColumnOptions, menuItems, onDetailsClick, paginated, }: UseComposedColumnDefsParams<RowData>) => ColDef<RowData>[];
 export { useComposedColumnDefs };
