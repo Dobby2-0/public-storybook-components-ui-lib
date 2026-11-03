@@ -1,1 +1,0 @@
-import{n as e}from"./rolldown-runtime-BCiCTKAo.js";import{n as t,t as n}from"./Pagination-B6AL4L1x.js";var r,i,a;function o(){return(o=e((()=>{t(),r={component:n},i={args:{defaultCurrentPage:1,totalPages:5}},a=[`Default`]})))()}o();export{i as Default,a as __namedExportsOrder,r as default};
