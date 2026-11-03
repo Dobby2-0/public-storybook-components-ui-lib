@@ -1,6 +1,12 @@
 import { RefObject } from '../../node_modules/react';
 interface UseFillPageSizeOptions {
+    /** Row height of the desktop table, used to fill the container with rows. */
     desktopRowHeight?: number;
+    /**
+     * @deprecated Mobile lists load on scroll instead of paging, so there is no
+     * page to fill. Only used for the deprecated `usePagedList`. Without it,
+     * mobile gets the largest mobile page size option.
+     */
     mobileRowHeight?: number;
 }
 /**

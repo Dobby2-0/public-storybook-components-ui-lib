@@ -19,6 +19,9 @@ interface CreateDatasourceOptions<TKey extends string, TNode> {
 /**
  * Combines `useInfiniteQuery` with an Ag-Grid infinite-row-model datasource
  * built on top of it.
+ *
+ * Tables that page through their data should use `usePagedDatasource`
+ * together with the table's `pagination` prop instead.
  */
 export declare const useInfiniteDatasource: <TKey extends string, TNode>(options: Parameters<typeof useInfiniteQuery<TKey, TNode>>[0] & {
     getSort?: CreateDatasourceOptions<TKey, TNode>["getSort"];
@@ -42,7 +45,10 @@ export declare const useInfiniteDatasource: <TKey extends string, TNode>(options
     readonly totalCount: number;
 };
 export type InfiniteDatasource<TKey extends string, TNode> = ReturnType<typeof useInfiniteDatasource<TKey, TNode>>;
-/** @deprecated Renamed to `useInfiniteDatasource`. */
+/**
+ * @deprecated Renamed. Use `useInfiniteDatasource` (load-on-scroll) or
+ * `usePagedDatasource` (paging) instead.
+ */
 export declare const usePaginatedDatasource: <TKey extends string, TNode>(...args: Parameters<typeof useInfiniteDatasource<TKey, TNode>>) => {
     readonly datasource: IDatasource;
     readonly error: import('@apollo/client').ApolloError | undefined;
@@ -62,6 +68,6 @@ export declare const usePaginatedDatasource: <TKey extends string, TNode>(...arg
     readonly refetch: (variables?: Partial<OperationVariables> | undefined) => Promise<ApolloQueryResult<PaginatedResult<TKey, TNode>>>;
     readonly totalCount: number;
 };
-/** @deprecated Renamed to `InfiniteDatasource`. */
+/** @deprecated See `usePaginatedDatasource`. */
 export type PaginatedDatasource<TKey extends string, TNode> = InfiniteDatasource<TKey, TNode>;
 export {};

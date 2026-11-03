@@ -81,6 +81,6 @@ export declare const usePaginatedData: <TKey extends string, TNode>(options: Par
     /** Total number of items matching the query. */
     readonly totalCount: number;
 };
-/** @deprecated Renamed to `InfiniteQuery`. */
+/** @deprecated See `usePaginatedData`. */
 export type PaginatedData<TKey extends string, TNode> = InfiniteQuery<TKey, TNode>;
 export {};

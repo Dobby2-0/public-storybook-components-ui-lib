@@ -1,0 +1,3 @@
+import{n as e}from"./rolldown-runtime-BCiCTKAo.js";import{F as t,P as n,d as r,l as i}from"./blocks-Dq8_0-8l.js";import{t as a}from"./jsx-runtime-BB9-612F.js";function o(e){let n={h1:`h1`,p:`p`,...t(),...e.components};return(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)(i,{title:`Components library`}),`
+`,(0,c.jsx)(n.h1,{id:`components-library`,children:`Components library`}),`
+`,(0,c.jsx)(n.p,{children:`This library will contain the shared components used by all Dobby micro-frontends.`})]})}function s(e={}){let{wrapper:n}={...t(),...e.components};return n?(0,c.jsx)(n,{...e,children:(0,c.jsx)(o,{...e})}):o(e)}var c;function l(){return(l=e((()=>{c=a(),n(),r()})))()}l();export{s as default};

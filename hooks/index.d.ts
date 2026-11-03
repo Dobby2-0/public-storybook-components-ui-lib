@@ -6,6 +6,7 @@ export { useLoadMoreQuery, type LoadMoreQuery, } from './data-fetching/use-load-
 export { usePagedDatasource, type PagedDatasource, } from './data-fetching/use-paged-datasource.ts';
 export { usePagedList, type PagedList } from './data-fetching/use-paged-list.ts';
 export type { PagedQueryConfig } from './data-fetching/use-paged-query.ts';
+export { useResponsiveList, type DesktopRowModel, type ResponsiveList, type ResponsiveListConfig, type ResponsiveListTableProps, } from './data-fetching/use-responsive-list.ts';
 export { useOperation } from './operations/use-operation';
 export { useAutoPageSize } from './use-auto-page-size.ts';
 export { useDobbyContext } from './use-dobby-context';

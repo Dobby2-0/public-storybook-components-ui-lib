@@ -8,6 +8,10 @@ export interface CardListProps<T> {
     error?: unknown;
     /** Whether more pages can be loaded. */
     hasNextPage?: boolean;
+    /** Whether the next page is being loaded by the consumer's data hook. */
+    isLoadingMore?: boolean;
+    /** Whether the loaded items are being re-fetched in place by the consumer's data hook. */
+    isReloading?: boolean;
     /** Callback fired when the trigger element enters the prefetch area. */
     handleLoadMore?: () => void | Promise<unknown>;
     /** Per-item render function. */
@@ -52,12 +56,17 @@ export interface CardListProps<T> {
     className?: string;
     /** Class applied to each item wrapper. */
     itemClassName?: string;
-    /** Optional: renders a Pagination control below the list instead of infinite-scroll behavior */
+    /**
+     * Optional: renders a Pagination control below the list instead of infinite-scroll behavior
+     *
+     * @deprecated CardList is for mobile lists, which load on scroll. Use
+     * `hasNextPage` and `handleLoadMore` (e.g. from `useLoadMoreQuery`) instead.
+     */
     pagination?: {
         currentPage: number;
         totalPages: number;
         onCurrentPageChange: (page: number) => void | Promise<void>;
     };
 }
-declare const CardList: <T>({ items, loading, error, hasNextPage, handleLoadMore, renderItem, keyExtractor, renderLoadingItem, loadingItemCount, loadingState, errorState, emptyState, loadMoreIndicator, hideLoadMoreIndicator, header, footer, prefetchMargin, className, itemClassName, pagination, }: CardListProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const CardList: <T>({ items, loading, error, hasNextPage, isLoadingMore: isLoadingMoreProp, isReloading, handleLoadMore, renderItem, keyExtractor, renderLoadingItem, loadingItemCount, loadingState, errorState, emptyState, loadMoreIndicator, hideLoadMoreIndicator, header, footer, prefetchMargin, className, itemClassName, pagination, }: CardListProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { CardList };

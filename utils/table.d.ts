@@ -2,6 +2,8 @@ import { Sort, SortDirection } from '../components/Table/Ag-Grid/Ag-grid-table.t
 import { ApplyColumnStateParams, GridApi, SortChangedEvent } from 'ag-grid-community';
 /** Page size options to be used with a table */
 export declare const DEFAULT_PAGE_SIZE_OPTIONS: number[];
+/** The default table page size options plus 100. Only use where the backend accepts a page size of 100. */
+export declare const EXTENDED_PAGE_SIZE_OPTIONS: number[];
 /** Page size options to be used with a list of cards */
 export declare const DEFAULT_MOBILE_PAGE_SIZE_OPTIONS: number[];
 export interface PageInfo {

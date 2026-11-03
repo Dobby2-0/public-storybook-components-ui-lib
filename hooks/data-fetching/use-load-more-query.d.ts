@@ -39,6 +39,9 @@ interface UseLoadMoreQueryConfig<TKey extends string, TNode> {
  * Fetches and accumulates a GraphQL cursor-paginated connection for
  * "Load more"-style lists (as opposed to jump-to-page pagination).
  *
+ * Intended for mobile lists (load-on-scroll) and dropdowns (ComboBox, Select,
+ * ListBox). Desktop tables use paging instead, see `usePagedDatasource`.
+ *
  * @remarks Never hands out Apollo's raw `refetch`/`fetchMore` — exposing those lets a
  * caller bypass the state that keeps `items` consistent, which caused a real
  * bug: calling raw `refetch` after a mutation (e.g. marking a comment read)

@@ -1,14 +1,14 @@
-import { PagedQueryConfig, PagedResultBase } from './use-paged-query.ts';
-interface PagedListResult<TNode> extends PagedResultBase {
-    items: TNode[];
-    page: number;
-    totalPages: number;
-    goToPage: (targetPage: number) => Promise<void>;
-}
+import { PagedRowsResult } from './use-paged-rows.ts';
 /**
  * Pages through a GraphQL cursor-paginated query and exposes the current
  * page's items directly.
+ *
+ * @deprecated Mobile lists are load-on-scroll, not paged. Use
+ * `useLoadMoreQuery` together with `CardList`'s `hasNextPage`/`handleLoadMore`
+ * instead. Desktop tables page through `usePagedDatasource`, or through
+ * `useResponsiveList` with `desktopRowModel: "clientSide"`.
  */
-declare const usePagedList: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, options, defaultPageSize, errorMessage, }: PagedQueryConfig<TKey, TNode>) => PagedListResult<TNode>;
+declare const usePagedList: <TKey extends string, TNode>({ query, queryVariables, dataPropertyName, options, defaultPageSize, errorMessage, }: import('./use-paged-query').PagedQueryConfig<TKey, TNode>) => PagedRowsResult<TNode>;
 export { usePagedList };
-export type PagedList<TNode> = PagedListResult<TNode>;
+/** @deprecated See `usePagedList`. */
+export type PagedList<TNode> = PagedRowsResult<TNode>;

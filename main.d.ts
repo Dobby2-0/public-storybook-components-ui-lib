@@ -22,8 +22,7 @@ export { BulkActions, BulkActionsPopover, } from './components/BulkActions/BulkA
 export { Button } from './components/Button/Button';
 export { IconButton } from './components/Button/IconButton';
 export { Canvas, type CanvasRef } from './components/Canvas/Canvas';
-export { Card } from './components/Card/Card';
-export { CardBasic } from './components/CardBasic/CardBasic.tsx';
+export { Card, CardBasic, type CardBasicProps, type CardProps, } from './components/Card/Card';
 export { CardList, type CardListProps } from './components/CardList/CardList';
 export { Checkbox, CheckboxGroup } from './components/Checkbox/Checkbox';
 export { ComboBox } from './components/ComboBox/ComboBox';

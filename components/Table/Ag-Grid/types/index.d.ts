@@ -54,10 +54,19 @@ export interface BaseAgGridTableProps<RowData extends {
     loading?: boolean;
     /** Optional: customize the empty-state overlay */
     emptyState?: EmptyStateContent;
-    /** Optional: renders our own Pagination + page-size Select instead of AgGrid's built-in panel */
+    /**
+     * Optional: renders our own Pagination + page-size Select instead of AgGrid's built-in panel.
+     * Pass `page` to page the rows yourself: the grid then only holds the current page.
+     */
     pagination?: {
         pageSizeOptions?: number[];
         onPageSizeChange: (size: number) => void;
+        /** Controlled paging: the current page, from 1. */
+        page?: number;
+        /** Controlled paging: the total number of pages. */
+        totalPages?: number;
+        /** Controlled paging: called with the requested page, from 1. */
+        onPageChange?: (page: number) => void;
     };
 }
 interface SingleSelectionProps {
