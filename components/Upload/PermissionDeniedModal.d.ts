@@ -1,6 +1,6 @@
-import { ModalOverlay } from '../Modal/Modal.tsx';
-import { ComponentProps, MouseEventHandler } from '../../../node_modules/react';
-type PermissionDeniedModalProps = ComponentProps<typeof ModalOverlay>;
+import { DialogProps } from '../Dialog/Dialog.tsx';
+import { MouseEventHandler } from '../../../node_modules/react';
+type PermissionDeniedModalProps = Pick<DialogProps, "isOpen" | "onOpenChange">;
 /** Modal shown when camera permission is denied in a native mobile app */
 declare const PermissionDeniedModal: (props: PermissionDeniedModalProps) => import("react/jsx-runtime").JSX.Element;
 /** Hook to manage permission dialog state and checks */
