@@ -2,7 +2,7 @@ interface ButtonClassNameObject {
     button?: string;
     tooltip?: string;
 }
-interface BulkActionsConfirmationButtonProps {
+export interface BulkActionsConfirmationButtonProps {
     disabled?: boolean;
     tooltipContent?: string;
     onConfirm: () => Promise<void> | void;
