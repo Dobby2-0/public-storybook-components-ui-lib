@@ -15,5 +15,7 @@ declare const BrNode: Node<any, any>;
 declare const NbspNode: Node<any, any>;
 declare const DisableImagePaste: Extension<any, any>;
 declare const PasteWithoutFormatting: Extension<any, any>;
+export * from './structuralNodes';
+export * from './structuralTags';
 export * from './table';
 export { BrNode, DisableImagePaste, DivNode, NbspNode, ParagraphNode, PasteWithoutFormatting, SectionNode, TagBlockNode, TagNode, };

@@ -43,6 +43,14 @@ interface RichTextEditorBaseProps {
     disableContentDrop?: boolean;
     /** Disable adding a trailing node */
     disableTrailingNode?: boolean;
+    /**
+     * Show the structural tags (`#if … /if`, `#unless … /unless`, `#each … /each`,
+     * `#with … /with` and their `else`) as frames around their content, which can be
+     * edited but not removed. Without it they are shown as separate tags.
+     *
+     * @Default false
+     */
+    structuralTags?: boolean;
     /** Strip inline formatting from pasted content while keeping html structure */
     pasteWithoutFormatting?: boolean;
     /** Hides the built-in toolbar, e.g. when a shared toolbar is rendered elsewhere */
@@ -55,6 +63,6 @@ interface RichTextEditorBaseProps {
     onEditorFocus?: (editor: Editor) => void;
 }
 /** * RichTextEditor component based on @tiptap/react. */
-declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, contentStyle, disableContentPaste, disableImagePaste, disableContentDrop, disableTrailingNode, pasteWithoutFormatting, hideToolbar, blendContent, onEditorReady, onEditorFocus, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
+declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, contentStyle, disableContentPaste, disableImagePaste, disableContentDrop, disableTrailingNode, structuralTags, pasteWithoutFormatting, hideToolbar, blendContent, onEditorReady, onEditorFocus, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export default RichTextEditorBase;
 export type { RichTextEditorBaseProps };
