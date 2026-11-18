@@ -64,6 +64,8 @@ export { Select } from './components/Select/Select.tsx';
 export { SelectBase } from './components/Select/SelectBase.tsx';
 export { SelectableCard, type SelectableCardProps, } from './components/SelectableCardList/SelectableCard';
 export { SelectableCardList, type SelectableCardListHandle, type SelectableCardListProps, } from './components/SelectableCardList/SelectableCardList';
+export { SidePanel, type SidePanelProps } from './components/SidePanel/SidePanel';
+export { useSidePanelClose } from './components/SidePanel/SidePanelContext';
 export { Skeleton } from './components/Skeleton/Skeleton';
 export { SpellcheckedInput } from './components/SpellcheckedInput/SpellcheckedInput';
 export { SwipeableActionBlock } from './components/SwipeableActionBlock/SwipeableActionBlock.tsx';

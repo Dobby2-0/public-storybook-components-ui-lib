@@ -40,7 +40,7 @@ interface ModalProps extends Omit<ModalContentProps, "children"> {
  *
  * Can also be used as a sheet when setting the side property
  *
- * @deprecated Use `Dialog` instead. Sheets (`side`) have no replacement yet.
+ * @deprecated Use `Dialog` instead. For sheets (`side`) use `SidePanel`.
  *
  * @example
  * <Modal
