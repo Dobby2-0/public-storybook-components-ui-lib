@@ -35,6 +35,8 @@ interface ResponsiveListConfig<TKey extends string, TNode> extends Omit<PagedQue
 }
 declare const useResponsiveListImpl: <TKey extends string, TNode>({ options, queryVariables, desktopRowModel, waitForPageSize, pageSizeOptions, scrollPageSize, loadAll, maxPageSize, ...config }: ResponsiveListConfig<TKey, TNode>) => {
     readonly mode: "scroll";
+    /** Pass to `SelectableCardList` so its selection clears when the filters change */
+    readonly selectionResetKey: string;
     readonly loading: boolean;
     readonly error: unknown;
     readonly totalCount: number;
@@ -71,6 +73,7 @@ declare const useResponsiveListImpl: <TKey extends string, TNode>({ options, que
     readonly tableProps: {
         readonly rowModelType: "clientSide";
         readonly rowData: TNode[];
+        readonly selectionResetKey: string;
         readonly loading: boolean;
         readonly totalCount: number;
         readonly cacheBlockSize: number;
@@ -83,6 +86,8 @@ declare const useResponsiveListImpl: <TKey extends string, TNode>({ options, que
         };
         readonly datasource?: undefined;
     };
+    /** Pass to `SelectableCardList` so its selection clears when the filters change */
+    readonly selectionResetKey?: undefined;
     readonly listProps?: undefined;
     /**
      * Evicts the cached pages without resetting to page 1. Pair with the grid's
@@ -106,6 +111,7 @@ declare const useResponsiveListImpl: <TKey extends string, TNode>({ options, que
     readonly invalidateCache: () => void;
     readonly tableProps: {
         readonly datasource: import('ag-grid-community').IDatasource;
+        readonly selectionResetKey: string;
         readonly cacheBlockSize: number;
         readonly totalCount: number;
         readonly pagination: {
@@ -119,6 +125,8 @@ declare const useResponsiveListImpl: <TKey extends string, TNode>({ options, que
         readonly rowData?: undefined;
         readonly loading?: undefined;
     };
+    /** Pass to `SelectableCardList` so its selection clears when the filters change */
+    readonly selectionResetKey?: undefined;
     readonly listProps?: undefined;
 };
 type ImplResult<TKey extends string, TNode> = ReturnType<typeof useResponsiveListImpl<TKey, TNode>>;

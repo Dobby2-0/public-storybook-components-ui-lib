@@ -1,4 +1,7 @@
+import { SelectAllMenuItemsBuilder } from '../types';
 interface RowSelectionContextProps {
+    /** Custom items for the select-all dropdown, replacing the defaults when set */
+    selectAllMenuItems?: SelectAllMenuItemsBuilder;
     selectedIds: Set<string>;
     allSelected: boolean;
     excludedIds: Set<string>;

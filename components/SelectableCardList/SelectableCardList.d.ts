@@ -20,6 +20,11 @@ export interface SelectableCardListProps<T> extends Omit<CardListProps<T>, "pagi
      * - "always": checkboxes are shown from the start; long press is disabled.
      */
     selectionTrigger?: "longPress" | "always";
+    /**
+     * Clears the selection whenever this key changes, e.g. when the filters change
+     * and the selected cards may no longer be part of the list.
+     */
+    selectionResetKey?: string | number;
     /** Fired whenever selection or selection-mode changes. */
     onSelectionChange?: (selectedIds: Set<string>, isSelecting: boolean) => void;
     ref?: Ref<SelectableCardListHandle>;
@@ -29,5 +34,5 @@ export interface SelectableCardListProps<T> extends Omit<CardListProps<T>, "pagi
  * enters selection mode, rendering each item as a `SelectableCard`. Manages its
  * own selection state unless `selectedIds`/`isSelecting` are passed as controlled props.
  */
-declare const SelectableCardList: <T>({ renderItem, keyExtractor, selectedIds: controlledSelectedIds, isSelecting: controlledIsSelecting, defaultIsSelecting, selectionTrigger, onSelectionChange, ref, ...cardListProps }: SelectableCardListProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const SelectableCardList: <T>({ renderItem, keyExtractor, selectedIds: controlledSelectedIds, isSelecting: controlledIsSelecting, defaultIsSelecting, selectionTrigger, selectionResetKey, onSelectionChange, ref, ...cardListProps }: SelectableCardListProps<T>) => import("react/jsx-runtime").JSX.Element;
 export { SelectableCardList };
