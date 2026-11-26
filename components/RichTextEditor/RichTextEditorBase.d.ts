@@ -55,6 +55,12 @@ interface RichTextEditorBaseProps {
     pasteWithoutFormatting?: boolean;
     /** Hides the built-in toolbar, e.g. when a shared toolbar is rendered elsewhere */
     hideToolbar?: boolean;
+    /**
+     * Focuses the start of the editor on mount. Never applies when the toolbar is hidden.
+     *
+     * @Default true
+     */
+    autoFocus?: boolean;
     /** Removes the border, background and padding so the content blends into its surroundings */
     blendContent?: boolean;
     /** Called when the editor instance is created */
@@ -63,6 +69,6 @@ interface RichTextEditorBaseProps {
     onEditorFocus?: (editor: Editor) => void;
 }
 /** * RichTextEditor component based on @tiptap/react. */
-declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, contentStyle, disableContentPaste, disableImagePaste, disableContentDrop, disableTrailingNode, structuralTags, pasteWithoutFormatting, hideToolbar, blendContent, onEditorReady, onEditorFocus, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
+declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, contentStyle, disableContentPaste, disableImagePaste, disableContentDrop, disableTrailingNode, structuralTags, pasteWithoutFormatting, hideToolbar, autoFocus, blendContent, onEditorReady, onEditorFocus, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export default RichTextEditorBase;
 export type { RichTextEditorBaseProps };
