@@ -4,6 +4,13 @@ type TemplateEditorProps = Omit<RichTextEditorBaseProps, "value" | "onChange" | 
     template: string;
     /** Called with the full html document (template + edited regions) whenever a region changes. */
     onChange?: (template: string) => void;
+    /**
+     * The editor rewrites the content of a region into its own form when it loads it (added
+     * styles, hidden markers, ...). By default that is not reported through `onChange`, so the
+     * template only changes when the user edits a region. Set this to also report the
+     * rewrite, to see what the editor makes of a template.
+     */
+    reportNormalisation?: boolean;
     /** The className of the element wrapping the toolbar and the template */
     className?: string;
     /**

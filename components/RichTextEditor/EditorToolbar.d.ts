@@ -1,5 +1,6 @@
 import { TagDataProps } from './TagSelector.tsx';
 import { Editor } from '@tiptap/react';
+import { ReactNode } from '../../../node_modules/react';
 interface EditorToolbarOptions {
     bold?: boolean;
     italic?: boolean;
@@ -13,6 +14,8 @@ interface EditorToolbarOptions {
     tagSelector?: TagDataProps;
     fullscreen?: boolean;
     image?: boolean;
+    /** Custom buttons, aligned to the right, left of the fullscreen button. */
+    extraActions?: ReactNode;
 }
 interface EditorToolbarProps {
     editor: Editor;

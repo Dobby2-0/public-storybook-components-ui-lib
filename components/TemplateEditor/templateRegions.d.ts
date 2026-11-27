@@ -8,6 +8,7 @@ interface TemplateRegion {
     /** Offset in the template where the inner HTML ends (start of the closing tag). */
     end: number;
 }
+declare const VOID_ELEMENTS: Set<string>;
 interface Tag {
     /** Offset of the `<`. */
     index: number;
@@ -40,5 +41,5 @@ declare const parseTemplateRegions: (template: string) => TemplateRegion[];
  * Region ids without a matching `data-editable` element are ignored.
  */
 declare const applyTemplateRegions: (template: string, values: Record<string, string>) => string;
-export { applyTemplateRegions, nextTag, parseTemplateRegions };
+export { VOID_ELEMENTS, applyTemplateRegions, nextTag, parseTemplateRegions };
 export type { Tag, TemplateRegion };

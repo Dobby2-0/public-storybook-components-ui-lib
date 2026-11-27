@@ -44,6 +44,12 @@ interface RichTextEditorBaseProps {
     /** Disable adding a trailing node */
     disableTrailingNode?: boolean;
     /**
+     * Do not call `onChange` when the editor rewrites a `value` it was given into its own
+     * form (added styles, hidden markers, ...). Only changes made in the editor are reported,
+     * so content nobody edited is not mistaken for an edit.
+     */
+    silentContentSync?: boolean;
+    /**
      * Show the structural tags (`#if … /if`, `#unless … /unless`, `#each … /each`,
      * `#with … /with` and their `else`) as frames around their content, which can be
      * edited but not removed. Without it they are shown as separate tags.
@@ -69,6 +75,6 @@ interface RichTextEditorBaseProps {
     onEditorFocus?: (editor: Editor) => void;
 }
 /** * RichTextEditor component based on @tiptap/react. */
-declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, contentStyle, disableContentPaste, disableImagePaste, disableContentDrop, disableTrailingNode, structuralTags, pasteWithoutFormatting, hideToolbar, autoFocus, blendContent, onEditorReady, onEditorFocus, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
+declare const RichTextEditorBase: ({ value, onChange, className, disabled, toolbarOptions, resizable, pageView, readonly, fullscreen, onToggleFullscreen, spellcheckEnabled, spellcheckLanguage, contentStyle, disableContentPaste, disableImagePaste, disableContentDrop, disableTrailingNode, silentContentSync, structuralTags, pasteWithoutFormatting, hideToolbar, autoFocus, blendContent, onEditorReady, onEditorFocus, }: RichTextEditorBaseProps) => import("react/jsx-runtime").JSX.Element | undefined;
 export default RichTextEditorBase;
 export type { RichTextEditorBaseProps };

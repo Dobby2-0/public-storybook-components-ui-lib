@@ -34,4 +34,4 @@ declare const isElse: (node: Node) => boolean;
 export declare const parseStructuralTags: (html: string | undefined) => string | undefined;
 /** Editor HTML (structural wrappers) → stored HTML (marker tags). */
 export declare const serializeStructuralTags: (html: string) => string;
-export { BLOCK_TAG, ELSE_INLINE_TAG, ELSE_TAG, INLINE_TAG, LIST_TAG, STRUCTURAL_ELEMENTS, isElse as isElseMarker, endName as markerCloses, startName as markerOpens, };
+export { BLOCK_TAG, ELSE_INLINE_TAG, ELSE_TAG, INLINE_TAG, isElse as isElseMarker, LIST_TAG, endName as markerCloses, startName as markerOpens, STRUCTURAL_ELEMENTS, };
